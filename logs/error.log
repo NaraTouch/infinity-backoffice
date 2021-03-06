@@ -41155,3 +41155,1409 @@ Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 75
 Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 128
 [main] - ROOT\webroot\index.php, line 40
 
+2021-03-06 10:31:12 Error: [Cake\View\Exception\MissingTemplateException] Template file `Home\index.php` could not be found.
+
+The following paths were searched:
+
+- `E:\xampp\htdocs\infinity-backoffice\templates\Home\index.php`
+- `E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\templates\Home\index.php`
+ in Home\index.php on line 1354
+Exception Attributes: array (
+  'file' => 'Home\\index.php',
+  'paths' => 
+  array (
+    0 => 'E:\\xampp\\htdocs\\infinity-backoffice\\templates\\',
+    1 => 'E:\\xampp\\htdocs\\infinity-backoffice\\vendor\\cakephp\\cakephp\\templates\\',
+  ),
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\View\View.php:761
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php:699
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php:540
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:151
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /
+
+
+2021-03-06 10:32:06 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/profile-3.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:32:06 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/preview-15.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:32:06 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/profile-9.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:32:06 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/preview-10.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:32:06 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/profile-10.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:32:07 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/preview-6.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:32:07 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/profile-6.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:32:07 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/preview-3.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:42:24 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/logo.svg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:46:53 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/profile-10.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:46:53 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/profile-3.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:46:53 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/preview-10.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:46:53 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/profile-9.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:46:53 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/preview-15.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:46:54 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/preview-6.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:46:56 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/profile-2.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:46:56 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/profile-6.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:46:56 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/profile-13.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:46:56 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/profile-15.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:46:56 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/profile-11.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:46:56 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/preview-3.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:46:56 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/preview-7.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:46:57 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/preview-1.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:46:57 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/preview-9.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:46:57 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/preview-11.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:46:57 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/preview-8.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:46:57 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/preview-4.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:46:57 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/profile-14.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:46:57 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/profile-12.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:51:57 Error: [Cake\View\Exception\MissingElementException] Element file `component/breadcrumbs.php` could not be found.
+
+The following paths were searched:
+
+- `E:\xampp\htdocs\infinity-backoffice\templates\element\component/breadcrumbs.php`
+- `E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\templates\element\component/breadcrumbs.php`
+ in component/breadcrumbs.php on line 661
+Exception Attributes: array (
+  'file' => 'component/breadcrumbs.php',
+  'paths' => 
+  array (
+    0 => 'E:\\xampp\\htdocs\\infinity-backoffice\\templates\\element\\',
+    1 => 'E:\\xampp\\htdocs\\infinity-backoffice\\vendor\\cakephp\\cakephp\\templates\\element\\',
+  ),
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\templates\element\component\top_bar.php:3
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\View\View.php:1176
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\View\View.php:1134
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\View\View.php:1668
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\View\View.php:655
+- E:\xampp\htdocs\infinity-backoffice\templates\layout\default.php:25
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\View\View.php:1176
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\View\View.php:1134
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\View\View.php:816
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\View\View.php:775
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php:699
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php:540
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:151
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /
+
+
+2021-03-06 10:52:15 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/profile-10.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:52:15 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/profile-3.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:52:15 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/preview-10.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:52:15 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/profile-9.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:52:15 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/preview-15.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:52:15 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/preview-6.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:52:16 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/profile-11.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:52:16 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/profile-13.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:52:16 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/profile-15.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:52:16 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/preview-3.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:52:16 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/profile-2.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:52:16 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/profile-6.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:52:17 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/preview-7.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:52:17 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/preview-1.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:52:18 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/preview-11.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:52:18 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/profile-12.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:52:18 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/preview-8.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:52:18 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/profile-14.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:52:19 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/preview-9.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-06 10:52:19 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/preview-4.jpg
+Referer URL: http://localhost/infinity-backoffice/
+
+
