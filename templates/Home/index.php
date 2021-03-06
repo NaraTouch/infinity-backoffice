@@ -1,28 +1,28 @@
-<div class="nk-main">
-	<div class="nk-gap-2"></div>
-	<div class="container">
-		<!-- Start: Image Slider -->
-			<?=$this->element('home/slider'); ?>
-		<!-- END: Image Slider -->
-		<!-- START: Categories -->
-			<?=$this->element('home/categories_widget'); ?>
-		<!-- END: Categories -->
-		<div class="row vertical-gap">
-			<div class="col-lg-8">
-				<!-- START: Latest Matches -->
-					<?=$this->element('home/latest_matches'); ?>
-				<!-- END: Latest Matches -->
-			</div>
-			<div class="col-lg-4">
-				<!-- START: Left Sidebar -->
-					<?=$this->element('home/left_sidebar'); ?>
-				<!-- END: Sidebar -->
-			</div>
-		</div>
-		<div class="nk-gap-2"></div>
-		<!-- START: Latest News -->
-			<?=$this->element('home/latest_new'); ?>
-		<!-- END: Latest News -->
-	</div>
-	<div class="nk-gap-4"></div>
+<div class="container">
+	<ul class="nk-breadcrumbs">
+		<?php
+		$controller = $this->request->getParam('controller');
+		$actions = $this->request->getParam('action');
+		?>
+		<li>
+			<?= $this->Html->link($controller, [
+				'controller' => $controller,
+				'action' => $actions
+			]); ?>
+		</li>
+		<li><span class="fa fa-angle-right"></span></li>
+		<li>
+			<?= $this->Html->link($actions, [
+				'controller' => $controller,
+				'action' => $actions
+			]); ?>
+		</li>
+		<?php if(isset($breadcrumbs)): ?>
+			<li><span class="fa fa-angle-right"></span></li>
+			<li><span><?= $breadcrumbs;?></span></li>
+		<?php else: ?>
+			<li></li>
+			<li></li>
+		<?php endif; ?>
+	</ul>
 </div>
