@@ -8,38 +8,16 @@ class UsersController extends AppController
 	{
 		$this->loadComponent('User');
 		$this->loadComponent('Flash');
-		$this->loadComponent('Auth', [
-			'loginAction' => [
-				'controller' => 'Users',
-				'action' => 'login',
-			],
-			'logoutRedirect' => $this->referer(),
-			'authError' => 'Did you really think you are allowed to see that?',
-			'authenticate' => [
-				'Form' => [
-					'fields' => ['email' => 'password']
-				]
-			],
-			'storage' => 'Session',
-			'unauthorizedRedirect' => $this->referer()
-		]);
+		$this->loadComponent('Auth');
 	}
 	public function beforeFilter(EventInterface $event)
 	{
 		parent::beforeFilter($event);
 	}
 
-	public function isAuthorized($user)
-	{
-		if ($user) {
-			return true;
-		}
-		return false;
-	}
-
 	public function login()
 	{
-		$this->autoRender = false;
+		$this->viewBuilder()->disableAutoLayout();
 		if ($this->request->is('post')) {
 			$request = $this->request->getData();
 			$user = $this->User->login($request);
@@ -48,10 +26,10 @@ class UsersController extends AppController
 				if ($user['ErrorCode'] == 200) {
 					$this->Auth->setUser($user['Data']);
 				} else {
-					$this->Flash->error($user['Message']);
+					$this->Flash->errorlogin($user['Message']);
 				}
 				return $this->redirect([
-					'controller' => 'Home',
+					'controller' => 'Dashboard',
 					'action' => 'index'
 				]);
 			}

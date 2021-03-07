@@ -42561,3 +42561,2089 @@ Request URL: /dist/images/preview-4.jpg
 Referer URL: http://localhost/infinity-backoffice/
 
 
+2021-03-07 05:41:32 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/illustration.svg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-07 05:41:39 Error: [Cake\Http\Exception\MissingControllerException] Controller class LoginDarkLogin.html could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'LoginDarkLogin.html',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:213
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:63
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /login-dark-login.html
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-07 05:41:44 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/illustration.svg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-07 05:41:44 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/logo.svg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-07 05:42:08 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/logo.svg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-07 05:42:08 Error: [Cake\Http\Exception\MissingControllerException] Controller class Dist could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Dist',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dist/images/illustration.svg
+Referer URL: http://localhost/infinity-backoffice/
+
+
+2021-03-07 06:09:43 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/logo.svg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:09:43 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/profile-3.jpg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:09:43 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/profile-10.jpg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:09:44 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/preview-10.jpg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:09:44 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/profile-9.jpg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:09:44 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/profile-6.jpg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:09:44 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/illustration.svg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:09:46 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/preview-15.jpg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:09:46 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/preview-3.jpg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:09:46 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/preview-6.jpg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:10:55 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/profile-3.jpg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:10:55 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/logo.svg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:10:55 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/profile-9.jpg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:10:55 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/profile-10.jpg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:10:55 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/preview-10.jpg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:10:55 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/preview-15.jpg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:10:56 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/preview-6.jpg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:10:56 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/preview-3.jpg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:10:56 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/profile-6.jpg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:10:56 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/illustration.svg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:11:19 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/logo.svg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:11:19 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/profile-3.jpg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:11:19 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/profile-9.jpg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:11:19 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/profile-10.jpg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:11:19 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/preview-10.jpg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:11:20 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/preview-15.jpg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:11:20 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/preview-3.jpg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:11:20 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/preview-6.jpg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:11:20 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/profile-6.jpg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:11:20 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/illustration.svg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:11:24 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/profile-3.jpg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:11:24 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/profile-9.jpg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:11:24 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/profile-10.jpg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:11:24 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/logo.svg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:11:24 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/preview-10.jpg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:11:24 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/preview-15.jpg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:11:25 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/preview-3.jpg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:11:25 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/profile-6.jpg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:11:25 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/preview-6.jpg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:11:26 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/illustration.svg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:13:35 Error: [Error] Call to undefined method Cake\View\ViewBuilder::layout() in E:\xampp\htdocs\infinity-backoffice\src\Controller\UsersController.php on line 20
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php:531
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:151
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/login
+
+
+2021-03-07 06:14:17 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/logo.svg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:14:17 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/profile-3.jpg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:14:17 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/profile-10.jpg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:14:17 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/profile-9.jpg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:14:17 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/preview-10.jpg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:14:17 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/preview-15.jpg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:14:17 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/preview-3.jpg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:14:19 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/illustration.svg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:14:19 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/profile-6.jpg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:14:28 Error: [Error] Call to undefined method Cake\View\ViewBuilder::layout() in E:\xampp\htdocs\infinity-backoffice\src\Controller\UsersController.php on line 20
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php:531
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:151
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/login
+
+
+2021-03-07 06:15:15 Error: [Error] Call to undefined method Cake\View\ViewBuilder::layout() in E:\xampp\htdocs\infinity-backoffice\src\Controller\UsersController.php on line 21
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php:531
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:151
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/login
+
+
+2021-03-07 06:16:10 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/logo.svg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:16:10 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/illustration.svg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:16:11 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::images() could not be found, or is not accessible. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:100
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /users/images/logo.svg
+Referer URL: http://localhost/infinity-backoffice/users/login
+
+
+2021-03-07 06:25:12 Warning: Warning (512): Unable to emit headers. Headers sent in file=E:\xampp\htdocs\infinity-backoffice\vendor\symfony\var-dumper\Dumper\AbstractDumper.php line=176 in [E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 71]
+Request URL: /login
+Referer URL: http://localhost/infinity-backoffice/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 71
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 128
+[main] - ROOT\webroot\index.php, line 40
+
+2021-03-07 06:25:13 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\xampp\htdocs\infinity-backoffice\vendor\symfony\var-dumper\Dumper\AbstractDumper.php:176) in [E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 168]
+Request URL: /login
+Referer URL: http://localhost/infinity-backoffice/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 168
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 74
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 128
+[main] - ROOT\webroot\index.php, line 40
+
+2021-03-07 06:25:13 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\xampp\htdocs\infinity-backoffice\vendor\symfony\var-dumper\Dumper\AbstractDumper.php:176) in [E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 197]
+Request URL: /login
+Referer URL: http://localhost/infinity-backoffice/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 128
+[main] - ROOT\webroot\index.php, line 40
+
+2021-03-07 06:25:14 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\xampp\htdocs\infinity-backoffice\vendor\symfony\var-dumper\Dumper\AbstractDumper.php:176) in [E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 197]
+Request URL: /login
+Referer URL: http://localhost/infinity-backoffice/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 128
+[main] - ROOT\webroot\index.php, line 40
+
+2021-03-07 06:26:54 Warning: Warning (512): Unable to emit headers. Headers sent in file=E:\xampp\htdocs\infinity-backoffice\vendor\symfony\var-dumper\Dumper\AbstractDumper.php line=176 in [E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 71]
+Request URL: /login
+Referer URL: http://localhost/infinity-backoffice/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 71
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 128
+[main] - ROOT\webroot\index.php, line 40
+
+2021-03-07 06:26:55 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\xampp\htdocs\infinity-backoffice\vendor\symfony\var-dumper\Dumper\AbstractDumper.php:176) in [E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 168]
+Request URL: /login
+Referer URL: http://localhost/infinity-backoffice/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 168
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 74
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 128
+[main] - ROOT\webroot\index.php, line 40
+
+2021-03-07 06:26:55 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\xampp\htdocs\infinity-backoffice\vendor\symfony\var-dumper\Dumper\AbstractDumper.php:176) in [E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 197]
+Request URL: /login
+Referer URL: http://localhost/infinity-backoffice/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 128
+[main] - ROOT\webroot\index.php, line 40
+
+2021-03-07 06:26:56 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\xampp\htdocs\infinity-backoffice\vendor\symfony\var-dumper\Dumper\AbstractDumper.php:176) in [E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 197]
+Request URL: /login
+Referer URL: http://localhost/infinity-backoffice/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 128
+[main] - ROOT\webroot\index.php, line 40
+
+2021-03-07 06:27:03 Warning: Warning (512): Unable to emit headers. Headers sent in file=E:\xampp\htdocs\infinity-backoffice\vendor\symfony\var-dumper\Dumper\AbstractDumper.php line=176 in [E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 71]
+Request URL: /login
+Referer URL: http://localhost/infinity-backoffice/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 71
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 128
+[main] - ROOT\webroot\index.php, line 40
+
+2021-03-07 06:27:04 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\xampp\htdocs\infinity-backoffice\vendor\symfony\var-dumper\Dumper\AbstractDumper.php:176) in [E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 168]
+Request URL: /login
+Referer URL: http://localhost/infinity-backoffice/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 168
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 74
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 128
+[main] - ROOT\webroot\index.php, line 40
+
+2021-03-07 06:27:05 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\xampp\htdocs\infinity-backoffice\vendor\symfony\var-dumper\Dumper\AbstractDumper.php:176) in [E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 197]
+Request URL: /login
+Referer URL: http://localhost/infinity-backoffice/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 128
+[main] - ROOT\webroot\index.php, line 40
+
+2021-03-07 06:27:05 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\xampp\htdocs\infinity-backoffice\vendor\symfony\var-dumper\Dumper\AbstractDumper.php:176) in [E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 197]
+Request URL: /login
+Referer URL: http://localhost/infinity-backoffice/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 128
+[main] - ROOT\webroot\index.php, line 40
+
+2021-03-07 06:29:10 Warning: Warning (512): Unable to emit headers. Headers sent in file=E:\xampp\htdocs\infinity-backoffice\vendor\symfony\var-dumper\Dumper\AbstractDumper.php line=176 in [E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 71]
+Request URL: /login
+Referer URL: http://localhost/infinity-backoffice/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 71
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 128
+[main] - ROOT\webroot\index.php, line 40
+
+2021-03-07 06:29:10 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\xampp\htdocs\infinity-backoffice\vendor\symfony\var-dumper\Dumper\AbstractDumper.php:176) in [E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 168]
+Request URL: /login
+Referer URL: http://localhost/infinity-backoffice/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 168
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 74
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 128
+[main] - ROOT\webroot\index.php, line 40
+
+2021-03-07 06:29:11 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\xampp\htdocs\infinity-backoffice\vendor\symfony\var-dumper\Dumper\AbstractDumper.php:176) in [E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 197]
+Request URL: /login
+Referer URL: http://localhost/infinity-backoffice/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 128
+[main] - ROOT\webroot\index.php, line 40
+
+2021-03-07 06:29:12 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\xampp\htdocs\infinity-backoffice\vendor\symfony\var-dumper\Dumper\AbstractDumper.php:176) in [E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 197]
+Request URL: /login
+Referer URL: http://localhost/infinity-backoffice/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 128
+[main] - ROOT\webroot\index.php, line 40
+
+2021-03-07 06:29:30 Warning: Warning (512): Unable to emit headers. Headers sent in file=E:\xampp\htdocs\infinity-backoffice\vendor\symfony\var-dumper\Dumper\AbstractDumper.php line=176 in [E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 71]
+Request URL: /login
+Referer URL: http://localhost/infinity-backoffice/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 71
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 128
+[main] - ROOT\webroot\index.php, line 40
+
+2021-03-07 06:29:30 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\xampp\htdocs\infinity-backoffice\vendor\symfony\var-dumper\Dumper\AbstractDumper.php:176) in [E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 168]
+Request URL: /login
+Referer URL: http://localhost/infinity-backoffice/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 168
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 74
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 128
+[main] - ROOT\webroot\index.php, line 40
+
+2021-03-07 06:29:31 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\xampp\htdocs\infinity-backoffice\vendor\symfony\var-dumper\Dumper\AbstractDumper.php:176) in [E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 197]
+Request URL: /login
+Referer URL: http://localhost/infinity-backoffice/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 128
+[main] - ROOT\webroot\index.php, line 40
+
+2021-03-07 06:29:32 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\xampp\htdocs\infinity-backoffice\vendor\symfony\var-dumper\Dumper\AbstractDumper.php:176) in [E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 197]
+Request URL: /login
+Referer URL: http://localhost/infinity-backoffice/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 128
+[main] - ROOT\webroot\index.php, line 40
+
+2021-03-07 06:40:44 Error: [Error] Call to a member function setUser() on null in E:\xampp\htdocs\infinity-backoffice\src\Controller\UsersController.php on line 26
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php:531
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:151
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /login
+Referer URL: http://localhost/infinity-backoffice/login?redirect=%2Fdashboard
+
+
+2021-03-07 06:40:45 Warning: Warning (512): Unable to emit headers. Headers sent in file=E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Debugger.php line=970 in [E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 71]
+Request URL: /login
+Referer URL: http://localhost/infinity-backoffice/login?redirect=%2Fdashboard
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 71
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 128
+[main] - ROOT\webroot\index.php, line 40
+
+2021-03-07 06:40:46 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Debugger.php:970) in [E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 168]
+Request URL: /login
+Referer URL: http://localhost/infinity-backoffice/login?redirect=%2Fdashboard
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 168
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 74
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 128
+[main] - ROOT\webroot\index.php, line 40
+
+2021-03-07 06:40:47 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Debugger.php:970) in [E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 197]
+Request URL: /login
+Referer URL: http://localhost/infinity-backoffice/login?redirect=%2Fdashboard
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 128
+[main] - ROOT\webroot\index.php, line 40
+
+2021-03-07 06:40:47 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Debugger.php:970) in [E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 197]
+Request URL: /login
+Referer URL: http://localhost/infinity-backoffice/login?redirect=%2Fdashboard
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 128
+[main] - ROOT\webroot\index.php, line 40
+
+2021-03-07 06:41:17 Error: [Cake\View\Exception\MissingTemplateException] Template file `Dashboard\index.php` could not be found.
+
+The following paths were searched:
+
+- `E:\xampp\htdocs\infinity-backoffice\templates\Dashboard\index.php`
+- `E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\templates\Dashboard\index.php`
+ in Dashboard\index.php on line 1354
+Exception Attributes: array (
+  'file' => 'Dashboard\\index.php',
+  'paths' => 
+  array (
+    0 => 'E:\\xampp\\htdocs\\infinity-backoffice\\templates\\',
+    1 => 'E:\\xampp\\htdocs\\infinity-backoffice\\vendor\\cakephp\\cakephp\\templates\\',
+  ),
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\View\View.php:761
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php:699
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php:540
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:151
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dashboard
+Referer URL: http://localhost/infinity-backoffice/login
+
+
+2021-03-07 06:42:08 Warning: Warning (512): Unable to emit headers. Headers sent in file=E:\xampp\htdocs\infinity-backoffice\vendor\symfony\var-dumper\Dumper\AbstractDumper.php line=176 in [E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 71]
+Request URL: /dashboard
+Referer URL: http://localhost/infinity-backoffice/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 71
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 128
+[main] - ROOT\webroot\index.php, line 40
+
+2021-03-07 06:42:09 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\xampp\htdocs\infinity-backoffice\vendor\symfony\var-dumper\Dumper\AbstractDumper.php:176) in [E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 168]
+Request URL: /dashboard
+Referer URL: http://localhost/infinity-backoffice/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 168
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 74
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 128
+[main] - ROOT\webroot\index.php, line 40
+
+2021-03-07 06:42:09 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\xampp\htdocs\infinity-backoffice\vendor\symfony\var-dumper\Dumper\AbstractDumper.php:176) in [E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 197]
+Request URL: /dashboard
+Referer URL: http://localhost/infinity-backoffice/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 128
+[main] - ROOT\webroot\index.php, line 40
+
+2021-03-07 06:42:10 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\xampp\htdocs\infinity-backoffice\vendor\symfony\var-dumper\Dumper\AbstractDumper.php:176) in [E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 197]
+Request URL: /dashboard
+Referer URL: http://localhost/infinity-backoffice/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 128
+[main] - ROOT\webroot\index.php, line 40
+
+2021-03-07 06:54:16 Error: [Cake\View\Exception\MissingElementException] Element file `component/search_recommend.php` could not be found.
+
+The following paths were searched:
+
+- `E:\xampp\htdocs\infinity-backoffice\templates\element\component/search_recommend.php`
+- `E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\templates\element\component/search_recommend.php`
+ in component/search_recommend.php on line 661
+Exception Attributes: array (
+  'file' => 'component/search_recommend.php',
+  'paths' => 
+  array (
+    0 => 'E:\\xampp\\htdocs\\infinity-backoffice\\templates\\element\\',
+    1 => 'E:\\xampp\\htdocs\\infinity-backoffice\\vendor\\cakephp\\cakephp\\templates\\element\\',
+  ),
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\templates\element\component\top_bar.php:12
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\View\View.php:1176
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\View\View.php:1134
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\View\View.php:1668
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\View\View.php:655
+- E:\xampp\htdocs\infinity-backoffice\templates\layout\default.php:26
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\View\View.php:1176
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\View\View.php:1134
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\View\View.php:816
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\View\View.php:775
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php:699
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\Controller.php:540
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:151
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:313
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /dashboard
+Referer URL: http://localhost/infinity-backoffice/login
+
+
+2021-03-07 07:11:09 Error: [Cake\Http\Exception\MissingControllerException] Controller class Logout could not be found. in E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Logout',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:65
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\BaseApplication.php:311
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- E:\xampp\htdocs\infinity-backoffice\vendor\cakephp\cakephp\src\Http\Server.php:90
+- E:\xampp\htdocs\infinity-backoffice\webroot\index.php:40
+
+Request URL: /logout
+Referer URL: http://localhost/infinity-backoffice/dashboard
+
+

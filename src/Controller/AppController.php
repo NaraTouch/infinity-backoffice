@@ -10,17 +10,45 @@ class AppController extends Controller
 	{
 		parent::initialize();
 		$this->loadComponent('RequestHandler');
-		$this->loadComponent('Auth');
 		$this->loadComponent('Flash');
+		$this->loadComponent('Auth', [
+			'loginAction' => [
+				'controller' => 'Users',
+				'action' => 'login',
+			],
+			'logoutRedirect' => [
+				'controller' => 'Users',
+				'action' => 'login',
+			],
+			'authError' => '',
+			'authenticate' => [
+				'Form' => [
+					'fields' => ['email' => 'password']
+				]
+			],
+			'storage' => 'Session',
+			'unauthorizedRedirect' => [
+				'controller' => 'Users',
+				'action' => 'login',
+			],
+		]);
 	}
 	
 	public function beforeFilter(EventInterface $event)
 	{
 		parent::beforeFilter($event);
-		$this->Auth->allow();
+//		$this->Auth->allow();
 		
 	}
-	
+
+	public function isAuthorized($user)
+	{
+		if ($user) {
+			return true;
+		}
+		return false;
+	}
+
 	public function getSession()
 	{
 		return $this->request->getSession();

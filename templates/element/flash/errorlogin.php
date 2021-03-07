@@ -3,14 +3,8 @@ if (!isset($params['escape']) || $params['escape'] !== false) {
 	$message = h($message);
 }
 ?>
-<div class="nk-footer nk-btn-color-main-1" onclick="this.classList.add('hidden');" style="border-style: none;">
-	<div class="container">
-		<div class="nk-gap-1">
-			<center>
-				<h6 style="margin-top: 5px;">
-					<?= $message ?>
-				</h6>
-			</center>
-		</div>
+<div class="intro-x mt-8" onclick="this.classList.add('hidden');">
+	<div class="alert alert-danger show flex items-center mb-2" role="alert">
+		<i data-feather="alert-octagon" class="w-6 h-6 mr-2"></i> <?= $message ?>
 	</div>
 </div>
