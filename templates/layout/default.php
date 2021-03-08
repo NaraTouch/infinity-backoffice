@@ -1,40 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<!-- Required meta tags -->
 		<?php $image_url = $this->Url->build('/', ['escape' => false,'fullBase' => true,]);?>
 		<meta charset="utf-8">
-		<link href="<?= $image_url.'images/logo.svg'?>" rel="shortcut icon">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="Midone admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
-		<meta name="keywords" content="admin template, Midone admin template, dashboard template, flat admin template, responsive admin template, web app">
-		<meta name="author" content="LEFT4CODE">
-		<title>Dashboard - Midone - Tailwind HTML Admin Template</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Skydash Admin</title>
+		<link rel="shortcut icon" href="<?= $image_url.'images/favicon.png'?>" />
 		<?php
-		echo $this->Html->css([
-			'app',
-		]);
-		echo $this->fetch('css');
+			echo $this->Html->css([
+				'vendors/feather/feather',
+				'vendors/ti-icons/css/themify-icons',
+				'vendors/css/vendor.bundle.base',
+				'vertical-layout-light/style',
+			]);
+			echo $this->fetch('css');
 		?>
 	</head>
-
-	<body class="main">
-		<?= $this->element('component/mobile_menu'); ?>
-		<div class="flex">
-			<?= $this->element('component/menu'); ?>
-			<!-- BEGIN: Content -->
-			<div class="content">
-				<?= $this->element('component/top_bar'); ?>
-				<?= $this->fetch('content'); ?>
+	<body>
+		<div class="container-scroller">
+			<!-- navbar -->
+			<?= $this->element('component/nav_bar'); ?>
+			<!-- partial -->
+			<div class="container-fluid page-body-wrapper">
+				<!-- sidebar -->
+				<?= $this->element('component/sidebar'); ?>
+				<div class="main-panel">
+					<?= $this->fetch('content'); ?>
+					<!-- content-wrapper ends -->
+					<!-- footer -->
+					<?= $this->element('footer'); ?>
+				</div>
+				<!-- main-panel ends -->
 			</div>
-			<!-- END: Content -->
+			<!-- page-body-wrapper ends -->
 		</div>
+		<!-- container-scroller -->
+		<?php
+		echo $this->Html->script([
+			'vendors/js/vendor.bundle.base',
+			'off-canvas',
+			'hoverable-collapse',
+			'template',
+		]);
+		echo $this->fetch('script');
+		?>
 	</body>
-	<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=["your-google-map-api"]&libraries=places"></script>
-<?php
-	echo $this->Html->script([
-		'app'
-	]);
-	echo $this->fetch('script');
-?>
 </html>
+

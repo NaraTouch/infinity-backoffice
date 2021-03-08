@@ -20,13 +20,13 @@ class UsersController extends AppController
 		$this->viewBuilder()->disableAutoLayout();
 		if ($this->request->is('post')) {
 			$request = $this->request->getData();
-			$user = $this->User->login($request);
-			if($user){
-				$user = json_decode($user, true);
-				if ($user['ErrorCode'] == 200) {
-					$this->Auth->setUser($user['Data']);
+			$response = $this->User->login($request);
+			if($response){
+				$response = json_decode($response, true);
+				if ($response['ErrorCode'] == 200) {
+					$this->Auth->setUser($response['Data']);
 				} else {
-					$this->Flash->errorlogin($user['Message']);
+					$this->Flash->errorlogin($response['Message']);
 				}
 				return $this->redirect([
 					'controller' => 'Dashboard',
@@ -34,6 +34,22 @@ class UsersController extends AppController
 				]);
 			}
 		}
+	}
+
+	public function index()
+	{
+		$users = [];
+		$token = $this->Auth->user('token');
+		$response = $this->User->getUsers($token, []);
+		if($response){
+			$response = json_decode($response);
+			if ($response->ErrorCode == 200) {
+				$users = $response->Data;
+			} else {
+				$this->Flash->errorlogin($user['Message']);
+			}
+		}
+		$this->set(['users' => $users]);
 	}
 	
 	public function logout()

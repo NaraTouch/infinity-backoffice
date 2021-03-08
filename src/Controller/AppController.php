@@ -38,7 +38,6 @@ class AppController extends Controller
 	{
 		parent::beforeFilter($event);
 //		$this->Auth->allow();
-		
 	}
 
 	public function isAuthorized($user)
