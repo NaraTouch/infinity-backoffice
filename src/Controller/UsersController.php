@@ -46,9 +46,34 @@ class UsersController extends AppController
 			if ($response->ErrorCode == 200) {
 				$users = $response->Data;
 			} else {
-				$this->Flash->errorlogin($user['Message']);
+				$this->Flash->errorlogin($response->Message);
 			}
 		}
+		$this->set(['users' => $users]);
+	}
+
+	public function add()
+	{
+		if ($this->request->is('post')) {
+			$token = $this->Auth->user('token');
+			$request = $this->request->getData();
+			dump($request);
+		}
+	}
+	
+	public function edit()
+	{
+		$users = [];
+		$token = $this->Auth->user('token');
+//		$response = $this->User->getUsers($token, []);
+//		if($response){
+//			$response = json_decode($response);
+//			if ($response->ErrorCode == 200) {
+//				$users = $response->Data;
+//			} else {
+//				$this->Flash->errorlogin($response->Message);
+//			}
+//		}
 		$this->set(['users' => $users]);
 	}
 	
