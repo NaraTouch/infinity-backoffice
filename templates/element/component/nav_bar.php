@@ -49,7 +49,7 @@
 					<?= $this->Html->link(
 						'<i class="ti-power-off text-primary"></i>' . __('Logout'),
 						[
-							'controller' => 'Users',
+							'controller' => '/',
 							'action' => 'logout'
 						],
 						[

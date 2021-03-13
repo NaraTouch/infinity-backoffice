@@ -3,14 +3,14 @@ if (!isset($params['escape']) || $params['escape'] !== false) {
 	$message = h($message);
 }
 ?>
-<div class="nk-footer nk-btn-color-main-1" onclick="this.classList.add('hidden');" style="border-style: none;">
-	<div class="container">
-		<div class="nk-gap-1">
-			<center>
-				<h6 style="margin-top: 5px;">
-					<?= $message ?>
-				</h6>
-			</center>
+<div class="content-wrapper" onclick="this.classList.add('hidden');" style="padding-bottom: 0px;">
+	<div class="row">
+		<div class="col-lg-12 grid-margin stretch-card" style="margin-bottom: 0px;">
+			<div class="card">
+				<div class="card-body" style="padding-bottom: 0px;">
+					<h4 class="card-title text-danger"><?= $message ?></h4>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

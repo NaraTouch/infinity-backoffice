@@ -37,7 +37,6 @@ class AppController extends Controller
 	public function beforeFilter(EventInterface $event)
 	{
 		parent::beforeFilter($event);
-//		$this->Auth->allow();
 	}
 
 	public function isAuthorized($user)
@@ -66,5 +65,11 @@ class AppController extends Controller
 	public function deleteSession($key)
 	{
 		return $this->getSession()->delete($key);
+	}
+
+	public function logout()
+	{
+		$this->deleteSession('Auth.User');
+		return $this->redirect($this->Auth->logout());
 	}
 }

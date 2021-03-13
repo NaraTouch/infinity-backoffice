@@ -1,4 +1,3 @@
-<?= $this->element('script/select2');?>
 <div class="content-wrapper">
 	<div class="row">
 		<div class="col-12 grid-margin">
@@ -30,14 +29,24 @@
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group row">
-									<label>Single select box using select 2</label>
-									<select class="js-example-basic-single w-100">
-										<option value="AL">Alabama</option>
-										<option value="WY">Wyoming</option>
-										<option value="AM">America</option>
-										<option value="CA">Canada</option>
-										<option value="RU">Russia</option>
-									</select>
+									<label class="col-sm-3 col-form-label">Group</label>
+									<div class="col-sm-9">
+										<div class="form-group">
+											<select class="js-example-basic-single w-100" name="groups">
+												<?php
+												if (isset($groups)) :
+													foreach ($groups as $g => $v_g) :
+												?>
+													<option value="<?= $v_g->id; ?>" ><?= $v_g->name; ?></option>
+												<?php
+													endforeach;
+												else:
+												?>
+													<option value="">No Group!!!</option>
+												<?php endif; ?>
+											</select>
+										</div>
+									</div>
 								</div>
 							</div>
 							<div class="col-md-6">
@@ -46,7 +55,7 @@
 									<div class="col-sm-4">
 										<div class="form-check">
 											<label class="form-check-label">
-												<input type="radio" class="form-check-input" name="status" value="1" checked>
+												<input type="radio" class="form-check-input" name="status" value="true" checked>
 												Active
 											</label>
 										</div>
@@ -54,7 +63,7 @@
 									<div class="col-sm-5">
 										<div class="form-check">
 											<label class="form-check-label">
-												<input type="radio" class="form-check-input" name="status" value="0">
+												<input type="radio" class="form-check-input" name="status" value="false">
 												Inactive
 											</label>
 										</div>

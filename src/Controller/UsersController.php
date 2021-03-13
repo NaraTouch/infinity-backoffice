@@ -4,15 +4,24 @@ use Cake\Event\EventInterface;
 
 class UsersController extends AppController
 {
+	private $token;
 	public function initialize(): void
 	{
 		$this->loadComponent('User');
+		$this->loadComponent('Groups');
 		$this->loadComponent('Flash');
 		$this->loadComponent('Auth');
 	}
+
 	public function beforeFilter(EventInterface $event)
 	{
 		parent::beforeFilter($event);
+		$groups = [];
+		if ($this->Auth->user()) {
+			$this->token = $this->Auth->user('token');
+			$groups = $this->Groups->getGroups($this->token);
+		}
+		$this->set(['groups' => $groups]);
 	}
 
 	public function login()
@@ -39,14 +48,13 @@ class UsersController extends AppController
 	public function index()
 	{
 		$users = [];
-		$token = $this->Auth->user('token');
-		$response = $this->User->getUsers($token, []);
+		$response = $this->User->getUsers($this->token, []);
 		if($response){
 			$response = json_decode($response);
-			if ($response->ErrorCode == 200) {
+			if ($response && $response->ErrorCode == '200') {
 				$users = $response->Data;
 			} else {
-				$this->Flash->errorlogin($response->Message);
+				$this->Flash->error($response->Message);
 			}
 		}
 		$this->set(['users' => $users]);
@@ -55,7 +63,6 @@ class UsersController extends AppController
 	public function add()
 	{
 		if ($this->request->is('post')) {
-			$token = $this->Auth->user('token');
 			$request = $this->request->getData();
 			dump($request);
 		}
@@ -64,7 +71,7 @@ class UsersController extends AppController
 	public function edit()
 	{
 		$users = [];
-		$token = $this->Auth->user('token');
+//		$token = $this->Auth->user('token');
 //		$response = $this->User->getUsers($token, []);
 //		if($response){
 //			$response = json_decode($response);
@@ -76,10 +83,5 @@ class UsersController extends AppController
 //		}
 		$this->set(['users' => $users]);
 	}
-	
-	public function logout()
-	{
-		$this->deleteSession('Auth.User');
-		return $this->redirect($this->Auth->logout());
-	}
+
 }

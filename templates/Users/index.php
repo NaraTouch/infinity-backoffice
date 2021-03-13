@@ -25,28 +25,29 @@
 								</tr>
 							</thead>
 							<tbody>
-								<?php if(isset($users)):
-								foreach ($users as $key => $value):
+								<?php if($users):
+									foreach ($users as $key => $value):
 								?>
-								<td><?= h($key) ?></td>
-								<td><?= h($value->name) ?></td>
-								<td><?= h($value->email) ?></td>
-								<td><?= h($value->group->name) ?></td>
-								<td>
-									<?php if($value->active):?>
-									<label class="badge badge-success">Active</label></td>
-									<?php else: ?>
-									<label class="badge badge-danger">InActive</label></td>
-									<?php endif; ?>
-								<td><?= date('Y-m-d H:i:s', strtotime($value->created)); ?></td>
-								<td>
-									<button type="button" class="btn btn-primary btn-sm">Edit</button>
-									<button type="button" class="btn btn-danger btn-sm">Delete</button>
-								</td>
+									<tr>
+										<td><?= h($key) ?></td>
+										<td><?= h($value->name) ?></td>
+										<td><?= h($value->email) ?></td>
+										<td><?= h($value->group->name) ?></td>
+										<td>
+											<?php if($value->active):?>
+											<label class="badge badge-success">Active</label></td>
+											<?php else: ?>
+											<label class="badge badge-danger">InActive</label></td>
+											<?php endif; ?>
+										<td><?= date('Y-m-d H:i:s', strtotime($value->created)); ?></td>
+										<td>
+											<button type="button" class="btn btn-primary btn-sm">Edit</button>
+											<button type="button" class="btn btn-danger btn-sm">Delete</button>
+										</td>
+									</tr>
 								<?php
-								endforeach;
+									endforeach;
 								?>
-								
 								<?php else: ?>
 									<tr>
 										<td colspan="7" class="text-danger text-center"><?= __(NO_DATA) ?></td>

@@ -12,6 +12,8 @@
 				'vendors/feather/feather',
 				'vendors/ti-icons/css/themify-icons',
 				'vendors/css/vendor.bundle.base',
+				'vendors/select2/select2.min',
+				'vendors/select2-bootstrap-theme/select2-bootstrap.min',
 				'vertical-layout-light/style',
 			]);
 			echo $this->fetch('css');
@@ -26,6 +28,7 @@
 				<!-- sidebar -->
 				<?= $this->element('component/sidebar'); ?>
 				<div class="main-panel">
+					<?= $this->Flash->render() ?>
 					<?= $this->fetch('content'); ?>
 					<!-- content-wrapper ends -->
 					<!-- footer -->
@@ -41,6 +44,8 @@
 			'vendors/js/vendor.bundle.base',
 			'off-canvas',
 			'hoverable-collapse',
+			'vendors/select2/select2.min',
+			'select2',
 			'template',
 		]);
 		echo $this->fetch('script');

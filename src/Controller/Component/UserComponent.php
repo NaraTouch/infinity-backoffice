@@ -14,7 +14,7 @@ class UserComponent extends Component
 
 	public function login($request = [])
 	{
-		$url = $this->api_url.'/user/login';
+		$url = $this->api_url.'/users/login';
 		$http_method = 'POST';
 		return $this->openUrl($url, $request, $http_method);
 	}
@@ -43,32 +43,38 @@ class UserComponent extends Component
 
 	public function getUsers($token = null, $request = [])
 	{
-		$url = $this->api_url.'/user';
+		$url = $this->api_url.'/users';
 		$http_method = 'POST';
 		return $this->openUrlWithToken($url, $http_method, $token, $request);
 	}
-
+	
 	private function openUrlWithToken($url = null, $http_method = null, $token = null, $request = [])
 	{
 		if (!$url) {
 			return [];
 		}
+		$response = [];
 		$json = json_encode($request);
 		$header = [
 			'Content-Type: application/json',
 			'Authorization: Bearer '.$token
 		];
-		$ch = curl_init();
-			curl_setopt($ch, CURLOPT_URL, $url);
-			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-			curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
-			curl_setopt($ch, CURLOPT_POST, 1);
-			curl_setopt($ch, CURLOPT_TIMEOUT, 60);
-			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $http_method);
-			curl_setopt($ch, CURLOPT_POSTFIELDS, $json );
-			$output = curl_exec($ch);
-		curl_close($ch);
-		return ($output);
+		$curl = curl_init();
+		curl_setopt_array($curl, [
+			CURLOPT_URL => $url,
+			CURLOPT_RETURNTRANSFER => true,
+			CURLOPT_ENCODING => '',
+			CURLOPT_MAXREDIRS => 10,
+			CURLOPT_TIMEOUT => 0,
+			CURLOPT_FOLLOWLOCATION => true,
+			CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+			CURLOPT_CUSTOMREQUEST => $http_method,
+			CURLOPT_HTTPHEADER => $header,
+			CURLOPT_POSTFIELDS => $json,
+		]);
+		$response = curl_exec($curl);
+		curl_close($curl);
+		return $response;
 	}
 
 }
