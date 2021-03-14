@@ -37,6 +37,7 @@ class AppController extends Controller
 	public function beforeFilter(EventInterface $event)
 	{
 		parent::beforeFilter($event);
+		$this->loadComponent('Auth');
 	}
 
 	public function isAuthorized($user)

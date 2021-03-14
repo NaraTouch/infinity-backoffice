@@ -3,7 +3,6 @@ namespace App\Form;
 
 use Cake\Form\Form;
 use Cake\Form\Schema;
-use Cake\Validation\Validator;
 
 class UsersForm extends Form
 {
@@ -17,17 +16,4 @@ class UsersForm extends Form
 				->addField('active', 'boolean');
 	}
 
-//    public function validationDefault(Validator $validator): Validator
-//    {
-//        $validator->minLength('name', 10)
-//            ->email('email');
-//
-//        return $validator;
-//    }
-//
-//    protected function _execute(array $data): bool
-//    {
-//        // Send an email.
-//        return true;
-//    }
 }

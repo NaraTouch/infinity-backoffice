@@ -9,9 +9,8 @@ class UsersController extends AppController
 	public function initialize(): void
 	{
 		$this->loadComponent('User');
-		$this->loadComponent('Groups');
+		$this->loadComponent('Group');
 		$this->loadComponent('Flash');
-		$this->loadComponent('Auth');
 	}
 
 	public function beforeFilter(EventInterface $event)
@@ -20,7 +19,7 @@ class UsersController extends AppController
 		$groups = [];
 		if ($this->Auth->user()) {
 			$this->token = $this->Auth->user('token');
-			$groups = $this->Groups->getGroups($this->token);
+			$groups = $this->Group->getGroups($this->token);
 		}
 		$this->set(['groups' => $groups]);
 	}
@@ -70,7 +69,6 @@ class UsersController extends AppController
 				if($response){
 					$response = json_decode($response);
 					if ($response && $response->ErrorCode == '200') {
-						$users = $response->Data;
 						$this->Flash->success($response->Message);
 						$this->goingToUrl('Users','/');
 					} else {
@@ -128,7 +126,6 @@ class UsersController extends AppController
 			if($response){
 				$response = json_decode($response);
 				if ($response && $response->ErrorCode == '200') {
-					$users = $response->Data;
 					$this->Flash->success($response->Message);
 					$this->goingToUrl('Users','/');
 				} else {
@@ -160,7 +157,6 @@ class UsersController extends AppController
 			if($response){
 				$response = json_decode($response);
 				if ($response && $response->ErrorCode == '200') {
-					$users = $response->Data;
 					$this->Flash->success($response->Message);
 					
 				} else {

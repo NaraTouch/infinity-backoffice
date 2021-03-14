@@ -1,12 +1,90 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
 	<ul class="nav">
 		<li class="nav-item">
-			<a class="nav-link" href="index.html">
-				<i class="icon-grid menu-icon"></i>
-				<span class="menu-title">Dashboard</span>
-			</a>
+			<?= $this->Html->link(
+				'<i class="icon-grid menu-icon"></i><span class="menu-title">'. __('Dashboard').'</span>' ,
+				[
+					'controller' => 'Dashboard',
+					'action' => 'index'
+				],
+				[
+					'escape' => false,
+					'title' => __('Dashboard'),
+					'class' => 'nav-link'
+				]
+			) ?>
 		</li>
 		<li class="nav-item">
+			<?= $this->Html->link(
+				'<i class="icon-head menu-icon"></i><span class="menu-title">'. __('Users').'</span>' ,
+				[
+					'controller' => 'Users',
+					'action' => 'index'
+				],
+				[
+					'escape' => false,
+					'title' => __('Users'),
+					'class' => 'nav-link'
+				]
+			) ?>
+		</li>
+		<li class="nav-item">
+			<?= $this->Html->link(
+				'<i class="icon-ban menu-icon"></i><span class="menu-title">'. __('Groups').'</span>' ,
+				[
+					'controller' => 'Groups',
+					'action' => 'index'
+				],
+				[
+					'escape' => false,
+					'title' => __('Groups'),
+					'class' => 'nav-link'
+				]
+			) ?>
+		</li>
+		<li class="nav-item">
+			<?= $this->Html->link(
+				'<i class="icon-grid-2 menu-icon"></i><span class="menu-title">'. __('Modules').'</span>' ,
+				[
+					'controller' => 'Modules',
+					'action' => 'index'
+				],
+				[
+					'escape' => false,
+					'title' => __('Modules'),
+					'class' => 'nav-link'
+				]
+			) ?>
+		</li>
+		<li class="nav-item">
+			<?= $this->Html->link(
+				'<i class="icon-contract menu-icon"></i><span class="menu-title">'. __('Methods').'</span>' ,
+				[
+					'controller' => 'Methods',
+					'action' => 'index'
+				],
+				[
+					'escape' => false,
+					'title' => __('Methods'),
+					'class' => 'nav-link'
+				]
+			) ?>
+		</li>
+		<li class="nav-item">
+			<?= $this->Html->link(
+				'<i class="icon-layout menu-icon"></i><span class="menu-title">'. __('Roles').'</span>' ,
+				[
+					'controller' => 'Roles',
+					'action' => 'index'
+				],
+				[
+					'escape' => false,
+					'title' => __('Roles'),
+					'class' => 'nav-link'
+				]
+			) ?>
+		</li>
+<!--		<li class="nav-item">
 			<a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
 				<i class="icon-layout menu-icon"></i>
 				<span class="menu-title">UI Elements</span>
@@ -99,6 +177,6 @@
 				<i class="icon-paper menu-icon"></i>
 				<span class="menu-title">Documentation</span>
 			</a>
-		</li>
+		</li>-->
 	</ul>
 </nav>

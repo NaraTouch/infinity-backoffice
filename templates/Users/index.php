@@ -35,10 +35,11 @@
 										<td><?= h($value->group->name) ?></td>
 										<td>
 											<?php if($value->active):?>
-											<label class="badge badge-success">Active</label></td>
+											<label class="badge badge-success">Active</label>
 											<?php else: ?>
-											<label class="badge badge-danger">InActive</label></td>
+											<label class="badge badge-danger">InActive</label>
 											<?php endif; ?>
+										</td>
 										<td><?= date('Y-m-d H:i:s', strtotime($value->created)); ?></td>
 										<td>
 											<?= $this->Html->link('Edit', [
