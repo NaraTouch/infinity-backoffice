@@ -41,8 +41,24 @@
 											<?php endif; ?>
 										<td><?= date('Y-m-d H:i:s', strtotime($value->created)); ?></td>
 										<td>
-											<button type="button" class="btn btn-primary btn-sm">Edit</button>
-											<button type="button" class="btn btn-danger btn-sm">Delete</button>
+											<?= $this->Html->link('Edit', [
+													'action' => 'edit',
+													$value->id
+												],
+												[
+													'class' => 'btn btn-primary btn-sm',
+													'escape' => false,
+												]
+											); ?>
+											<?= $this->Html->link('Delete', [
+													'action' => 'delete',
+													$value->id
+												],
+												[
+													'class' => 'btn btn-danger btn-sm',
+													'escape' => false,
+												]
+											); ?>
 										</td>
 									</tr>
 								<?php

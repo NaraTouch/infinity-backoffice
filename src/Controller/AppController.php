@@ -72,4 +72,13 @@ class AppController extends Controller
 		$this->deleteSession('Auth.User');
 		return $this->redirect($this->Auth->logout());
 	}
+	
+	public function goingToUrl($controller = null, $action = null, $id = null)
+	{
+		return $this->redirect([
+			'controller' => $controller,
+			'action' => $action,
+			$id
+		]);
+	}
 }

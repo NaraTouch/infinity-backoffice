@@ -47,7 +47,35 @@ class UserComponent extends Component
 		$http_method = 'POST';
 		return $this->openUrlWithToken($url, $http_method, $token, $request);
 	}
+
+	public function createUsers($token = null, $request = [])
+	{
+		$url = $this->api_url.'/users/add';
+		$http_method = 'POST';
+		return $this->openUrlWithToken($url, $http_method, $token, $request);
+	}
 	
+	public function getUserById($token = null, $request = [])
+	{
+		$url = $this->api_url.'/users/view';
+		$http_method = 'POST';
+		return $this->openUrlWithToken($url, $http_method, $token, $request);
+	}
+	
+	public function updateUser($token = null, $request = [])
+	{
+		$url = $this->api_url.'/users/edit';
+		$http_method = 'POST';
+		return $this->openUrlWithToken($url, $http_method, $token, $request);
+	}
+	
+	public function deleteUser($token = null, $request = [])
+	{
+		$url = $this->api_url.'/users/delete';
+		$http_method = 'POST';
+		return $this->openUrlWithToken($url, $http_method, $token, $request);
+	}
+
 	private function openUrlWithToken($url = null, $http_method = null, $token = null, $request = [])
 	{
 		if (!$url) {
