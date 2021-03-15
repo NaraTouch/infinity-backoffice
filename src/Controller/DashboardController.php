@@ -5,6 +5,6 @@ class DashboardController extends AppController
 {
 	public function index()
 	{
-//		dump($this->Auth->user());
+		dump($this->Auth->user());
 	}
 }
