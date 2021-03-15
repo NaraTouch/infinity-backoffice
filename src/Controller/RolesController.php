@@ -2,13 +2,15 @@
 namespace App\Controller;
 use Cake\Event\EventInterface;
 use App\Form\RolesForm;
-
+use App\Form\PermissionsForm;
 class RolesController extends AppController
 {
 	private $token;
 	public function initialize(): void
 	{
 		$this->loadComponent('Role');
+		$this->loadComponent('Module');
+		$this->loadComponent('Permission');
 		$this->loadComponent('Group');
 		$this->loadComponent('Flash');
 	}
@@ -17,11 +19,16 @@ class RolesController extends AppController
 	{
 		parent::beforeFilter($event);
 		$groups = [];
+		$module_list = [];
 		if ($this->Auth->user()) {
 			$this->token = $this->Auth->user('token');
+			$module_list = $this->Module->getMduleList($this->token, []);
 			$groups = $this->Group->getGroups($this->token);
 		}
-		$this->set(['groups' => $groups]);
+		$this->set([
+			'groups' => $groups,
+			'module_list' => $module_list,
+		]);
 	}
 
 	public function index()
@@ -78,7 +85,7 @@ class RolesController extends AppController
 		if ($id && $this->request->is('get')) {
 			$request = ['id' => $id];
 			$response = $this->Role->getRoleById($this->token, $request);
-			if($response){
+			if($response) {
 				$response = json_decode($response, true);
 				if ($response && $response['ErrorCode'] == '200') {
 						$role->setData($response['Data']);
@@ -95,7 +102,7 @@ class RolesController extends AppController
 		} else if ($this->request->is('post')) {
 			$request = $this->request->getData();
 			$response = $this->Role->updateRole($this->token, $request);
-			if($response){
+			if($response) {
 				$response = json_decode($response);
 				if ($response && $response->ErrorCode == '200') {
 					$this->Flash->success($response->Message);
@@ -130,12 +137,50 @@ class RolesController extends AppController
 				$response = json_decode($response);
 				if ($response && $response->ErrorCode == '200') {
 					$this->Flash->success($response->Message);
-					
 				} else {
 					$this->Flash->error($response->Message);
 				}
 			}
 		}
 		$this->goingToUrl('Roles','/');
+	}
+
+	public function permission($role_id = null)
+	{
+		$permission = new PermissionsForm();
+		$permission->setData(['role_id' => $role_id]);
+		$request_body = $this->request->getQuery();
+		$role_name = $request_body['name'];
+		$permission_list = $this->Permission->permissionListByRole($this->token, ['role_id' => $role_id]);
+		if ($this->request->is('post')) {
+			$request = $this->request->getData();
+			$permission_data['role_id'] = $request['role_id'];
+			$permission_data['permissions'] = [];
+			if (isset($request['permission'])) {
+				foreach ($request['permission'] as $key => $value) {
+					$permission_data['permissions'][]= [
+						'role_id' => $request['role_id'],
+						'method_id' => $value['method_id']
+					];
+				}
+			}
+			$response = $this->Permission->createPermission($this->token, $permission_data);
+			if($response){
+				$response = json_decode($response);
+				if ($response && $response->ErrorCode == '200') {
+					$this->Flash->success($response->Message);
+					$this->goIndex();
+				} else {
+					$this->Flash->error($response->Message);
+					$this->goIndex();
+				}
+			}
+		}
+		$this->set([
+			'permission_list' => $permission_list,
+			'permission' => $permission,
+			'role_name' => $role_name,
+			'role_id' => $role_id
+			]);
 	}
 }

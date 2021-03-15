@@ -82,4 +82,10 @@ class AppController extends Controller
 			$id
 		]);
 	}
+	
+	public function goIndex()
+	{
+		$parram = $this->request->getAttribute('params');
+		return $this->redirect(['action' => 'index', '?' => (isset($parram['?'])?$parram['?']:[])]);
+	}
 }

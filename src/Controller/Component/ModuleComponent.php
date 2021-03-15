@@ -60,6 +60,26 @@ class ModuleComponent extends Component
 		return $this->openUrlWithToken($url, $http_method, $token, $request);
 	}
 
+	public function getMduleList($token = null, $request = [])
+	{
+		$modules = [];
+		$response = $this->moduleList($token, $request);
+		if($response){
+			$response = json_decode($response);
+			if ($response->ErrorCode == 200) {
+				$modules = $response->Data;
+			}
+		}
+		return $modules;
+	}
+
+	public function moduleList($token = null, $request = [])
+	{
+		$url = $this->api_url.'/modules/list';
+		$http_method = 'POST';
+		return $this->openUrlWithToken($url, $http_method, $token, $request);
+	}
+
 	private function openUrlWithToken($url = null, $http_method = null, $token = null, $request = [])
 	{
 		if (!$url) {

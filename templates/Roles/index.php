@@ -60,6 +60,17 @@
 													'escape' => false,
 												]
 											); ?>
+											<?= $this->Html->link('Permission', [
+													'action' => 'permission',
+													$value->id,
+													'?' =>
+														['name' => $value->display]
+												],
+												[
+													'class' => 'btn btn-warning btn-sm',
+													'escape' => false,
+												]
+											); ?>
 										</td>
 									</tr>
 								<?php
