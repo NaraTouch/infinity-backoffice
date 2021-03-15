@@ -9,6 +9,7 @@ class UsersController extends AppController
 	public function initialize(): void
 	{
 		$this->loadComponent('User');
+		$this->loadComponent('Security');
 		$this->loadComponent('Group');
 		$this->loadComponent('Flash');
 	}
@@ -33,7 +34,12 @@ class UsersController extends AppController
 			if($response){
 				$response = json_decode($response, true);
 				if ($response['ErrorCode'] == 200) {
-					$this->Auth->setUser($response['Data']);
+					$user_data = $response['Data'];
+					$menu = $this->Security->getMenu($response['Data']['token'], []);
+					if (!empty($menu)) {
+						$user_data['menu'] = $menu;
+					}
+					$this->Auth->setUser($user_data);
 				} else {
 					$this->Flash->errorlogin($response['Message']);
 				}
