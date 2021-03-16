@@ -11,6 +11,61 @@
 							<?= $this->element('component/button_add'); ?>
 						</div>
 					</div>
+					<form class="form-sample">
+						<div class="row">
+							<div class="col-2">
+								<div class="form-group row">
+								<div class="col-12">
+									<select class="js-example-basic-single w-100" name="module_id">
+										<?php
+											if (isset($modules)) :
+												$default_s = 'selected';
+												$id = null;
+												if ($this->request->getQuery('module_id')) :
+													$id = $this->request->getQuery('module_id');
+													$default_s = '';
+												endif;
+											?>
+											<option value="" <?= $default_s;?>>Please select Modules</option>
+										<?php
+										
+											foreach ($modules as $key => $value) :
+											$selected = '';
+											if ($id == $value->id) {
+												$selected = 'selected';
+											}
+										?>
+											<option value="<?= $value->id; ?>" <?= $selected;?>><?= $value->name; ?></option>
+										<?php
+											endforeach;
+										else:
+										?>
+											<option value="">No Modules!!!</option>
+										<?php endif; ?>
+									</select>
+								</div>
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="form-group row">
+									<div class="col-12">
+										<input 
+											type="text" 
+											class="form-control" 
+											name="keywords"
+											placeholder="Methods Name"/>
+									</div>
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="form-group row">
+									<div class="col-12">
+										<button type="submit" class="btn btn-primary mb-2">Submit</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
 					<div class="table-responsive">
 						<table class="table">
 							<thead>

@@ -27,7 +27,16 @@ class MethodsController extends AppController
 	public function index()
 	{
 		$methods = [];
-		$response = $this->Method->getAllMethods($this->token, []);
+		$module_id = $this->request->getQuery('module_id');
+		$keywords = $this->request->getQuery('keywords');
+		$conditions = [];
+		if ($module_id) {
+			$conditions['module_id'] = $module_id;
+		}
+		if ($keywords) {
+			$conditions['keywords'] = $keywords;
+		}
+		$response = $this->Method->getAllMethods($this->token, $conditions);
 		if($response){
 			$response = json_decode($response);
 			if ($response && $response->ErrorCode == '200') {
