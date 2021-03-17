@@ -23,7 +23,12 @@ class ModulesController extends AppController
 	public function index()
 	{
 		$modules = [];
-		$response = $this->Module->getAllModules($this->token, []);
+		$keywords = $this->request->getQuery('keywords');
+		$conditions = [];
+		if ($keywords) {
+			$conditions['keywords'] = $keywords;
+		}
+		$response = $this->Module->getAllModules($this->token, $conditions);
 		if($response){
 			$response = json_decode($response);
 			if ($response && $response->ErrorCode == '200') {

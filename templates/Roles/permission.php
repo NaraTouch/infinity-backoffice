@@ -21,12 +21,12 @@
 	<div class="row">
 		<?php if (isset($module_list)) :
 				foreach ($module_list as $k_module => $module) : ?>
-			<div class="col-md-6 grid-margin stretch-card">
+			<div class="col-2 grid-margin stretch-card">
 				<div class="card">
 					<div class="card-body">
 						<h4 class="card-title"><?= h($module->display);?></h4>
 						<div class="row">
-							<div class="col-md-6">
+							<div class="col-12">
 								<?php foreach ($module->methods as $k_method => $method):
 									$name = 'permission['.$method->id.'][method_id]';
 									$checked = '';

@@ -34,7 +34,16 @@ class RolesController extends AppController
 	public function index()
 	{
 		$roles = [];
-		$response = $this->Role->getAllRoles($this->token, []);
+		$group_id = $this->request->getQuery('group_id');
+		$keywords = $this->request->getQuery('keywords');
+		$conditions = [];
+		if ($group_id) {
+			$conditions['group_id'] = $group_id;
+		}
+		if ($keywords) {
+			$conditions['keywords'] = $keywords;
+		}
+		$response = $this->Role->getAllRoles($this->token, $conditions);
 		if($response){
 			$response = json_decode($response);
 			if ($response && $response->ErrorCode == '200') {

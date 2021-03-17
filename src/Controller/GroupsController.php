@@ -23,7 +23,12 @@ class GroupsController extends AppController
 	public function index()
 	{
 		$groups = [];
-		$response = $this->Group->getAllGroups($this->token, []);
+		$keywords = $this->request->getQuery('keywords');
+		$conditions = [];
+		if ($keywords) {
+			$conditions['keywords'] = $keywords;
+		}
+		$response = $this->Group->getAllGroups($this->token, $conditions);
 		if($response){
 			$response = json_decode($response);
 			if ($response && $response->ErrorCode == '200') {
