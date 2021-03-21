@@ -1,0 +1,128 @@
+.folder {
+	width: 150px;
+	height: 105px;
+	margin: 50px 50px;
+	float: left;
+	position: relative;
+	background: rgb(110,166,239);
+	background: linear-gradient(183deg, rgba(110,166,239,1) 11%, rgba(30,92,172,1) 100%);
+	border-radius: 0 6px 6px 6px;
+	transition: 0.10s ease-out;
+	box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.59); 
+}
+/*-------------folder box----x------- */
+.folder:hover{
+	transform: scale(1.2);
+}
+/*-------------file opener----------- */
+.folder:before {
+	content: '';
+	width: 46%;
+	height: 21px;
+	clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+	border-radius: 4px 0px 0 0;
+	background-color: #1e5cac;
+	position: absolute;
+	top: -10.3px;
+	left: 0px;
+}
+/*-------------file opener----x------- */
+
+.folder:after {
+	content: '';
+	width: 29%;
+	height: 5px;
+	border-radius: 2px 2px 0 0;
+	background-color: #ffffff;
+	position: absolute;
+	top: 5.6px;
+	left: 4px;
+}
+
+/*------------- text  ----------- */
+.folder-p{
+	position: absolute;
+	left: 5px;
+	top: 75px;
+	margin: 0%;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 20px;
+	color: white;
+}
+/*-------------Document ----x------- */
+
+.document {
+	width: 150px;
+	height: 105px;
+	margin: 50px 50px;
+	float: left;
+	position: relative;
+	background: rgb(81 184 136);
+	background: linear-gradient(183deg, rgb(110 239 165) 11%, rgb(30 172 100) 100%);
+	transition: 0.10s ease-out;
+	box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.59); 
+}
+/*-------------Document box----x------- */
+.document:hover{
+	transform: scale(1.2);
+}
+/*-------------Document opener----------- */
+
+.document:after {
+	content: '';
+	width: 50%;
+	height: 5px;
+	border-radius: 2px 2px 0 0;
+	background-color: #ffffff;
+	position: absolute;
+	top: 5.6px;
+	left: 38px;
+}
+
+/*------------- Document text  ----------- */
+.document-p{
+	position: absolute;
+	left: 5px;
+	top: 75px;
+	margin: 0%;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 20px;
+	color: white;
+}
+@media only screen and (max-width : 1024px) {
+	.folder {
+		width: 100px;
+		height: 70px;
+		margin: 40px 35px;
+	}
+	.folder-p{
+		font-size: 12px;
+		top: 46px;
+	}
+	.img-n {
+		font-size: 0.6rem;
+	}
+	.img-details-p {
+		padding: 0.5rem !important;
+	}
+	.document {
+		width: 100px;
+		height: 70px;
+		margin: 40px 35px;
+	}
+	.document-p{
+		font-size: 12px;
+		top: 46px;
+	}
+	.document:after {
+		left: 26px;
+	}
+}
+@media only screen and (max-width : 540px) {
+	.folder {
+		margin: 25px 25px;
+	}
+	.document {
+		margin: 25px 25px;
+	}
+}
