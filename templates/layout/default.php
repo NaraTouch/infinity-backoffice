@@ -15,6 +15,7 @@
 				'vendors/select2/select2.min',
 				'vendors/select2-bootstrap-theme/select2-bootstrap.min',
 				'vertical-layout-light/style',
+				'vendors/mdi/css/materialdesignicons.min',
 			]);
 			echo $this->fetch('css');
 		?>

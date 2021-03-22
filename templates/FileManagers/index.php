@@ -15,42 +15,57 @@
 					<?php
 						if ($list && isset($list)) :
 					?>
-					<div class="row">
+					<div class="row mb-5">
 						<div class="col-12">
-							<?php
-								if ($list->metadata->path == '/') :
-									echo $this->Html->link('Root', [
-										'controller' => 'FileManagers',
-										'action' => 'index',
-									],[
-										'class' => 'card-description pr-1'
-									]);
-								else :
-									$dir = explode('/', $list->metadata->path);
-									$path = '';
-									foreach ($dir as $key => $value) :
-										if ($value) :
-											$path .= '/'.$value;
-											echo $this->Html->link('/'.$value, [
-												'controller' => 'FileManagers',
-												'action' => 'index',
-												'?' =>
-													['path' => $path]
-											],[
-												'class' => 'card-description pr-1'
-											]);
+							<nav aria-label="breadcrumb">
+								<ol class="breadcrumb" style="background-color: #e9ecef;">
+									<?php
+										if ($list->metadata->path == '/') :
+									?>
+										<li class="breadcrumb-item">
+											<?php
+												echo $this->Html->link('Home', [
+													'controller' => 'FileManagers',
+													'action' => 'index',
+												]);
+											?>
+										</li>
+									<?php
 										else :
-											echo $this->Html->link('Root', [
-												'controller' => 'FileManagers',
-												'action' => 'index',
-											],[
-												'class' => 'card-description pr-1'
-											]);
+											$dir = explode('/', $list->metadata->path);
+											$path = '';
+											foreach ($dir as $key => $value) :
+												if ($value) :
+													$path .= '/'.$value;
+									?>
+										<li class="breadcrumb-item">
+											<?php
+												echo $this->Html->link($value, [
+													'controller' => 'FileManagers',
+													'action' => 'index',
+													'?' =>
+														['path' => $path]
+												]);
+											?>
+										</li>
+									<?php
+												else :
+									?>
+										<li class="breadcrumb-item">
+											<?php
+												echo $this->Html->link('Home', [
+													'controller' => 'FileManagers',
+													'action' => 'index',
+												]);
+											?>
+										</li>
+									<?php
+												endif;
+											endforeach;
 										endif;
-									endforeach;
-								endif;
-								
-							?>
+									?>
+								</ol>
+							</nav>
 						</div>
 					</div>
 					<div class="row">
@@ -79,10 +94,10 @@
 							<?php
 									elseif ($list->metadata->path != '/' && strtolower($value->icon) == 'image') :
 									$ext = explode('/', $value->contenttype);
-									https://api.pcloud.com/getpubthumb?fileid=fileid&code=code&size=widthxheight
 									$image_url = $list->metadata->pub_url.
 											'?fileid='.$value->fileid
 											.'&code='.$list->metadata->auth->code
+											.'&type='.$ext[1]
 											.'&size='.$value->width.'x'.$value->height;
 							?>
 									<!-- Gallery item -->
