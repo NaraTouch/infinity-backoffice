@@ -18,33 +18,58 @@
 					<div class="row">
 						<div class="col-12">
 							<?php
-								$dir = explode('/', $list->path);
-								$path = '';
-								foreach ($dir as $key => $value) :
-									if ($value) :
-										$path .= '/'.$value;
-										echo $this->Html->link('/'.$value, [
-											'controller' => 'FileManagers',
-											'action' => 'index',
-											'?' =>
-												['path' => $path]
-										],[
-											'class' => 'card-description pr-1'
-										]);
-									endif;
-								endforeach;
+								if ($list->metadata->path == '/') :
+									echo $this->Html->link('Root', [
+										'controller' => 'FileManagers',
+										'action' => 'index',
+									],[
+										'class' => 'card-description pr-1'
+									]);
+								else :
+									$dir = explode('/', $list->metadata->path);
+									$path = '';
+									foreach ($dir as $key => $value) :
+										if ($value) :
+											$path .= '/'.$value;
+											echo $this->Html->link('/'.$value, [
+												'controller' => 'FileManagers',
+												'action' => 'index',
+												'?' =>
+													['path' => $path]
+											],[
+												'class' => 'card-description pr-1'
+											]);
+										else :
+											echo $this->Html->link('Root', [
+												'controller' => 'FileManagers',
+												'action' => 'index',
+											],[
+												'class' => 'card-description pr-1'
+											]);
+										endif;
+									endforeach;
+								endif;
+								
 							?>
 						</div>
 					</div>
 					<div class="row">
 						<?php
-							if ($list->contents && count($list->contents) > 0) :
-								foreach ($list->contents as $key => $value):
+							if ($list->metadata->contents && count($list->metadata->contents) > 0) :
+								foreach ($list->metadata->contents as $key => $value):
 									if (strtolower($value->icon) == 'folder') :
+										$url = $this->Url->build([
+											'controller' => 'file_managers',
+											'action' => 'index', '?' => [
+												'path' => $value->path,
+											]
+										]);
 							?>
-									<div class="folder">
-										<p class="folder-p"><?= h($value->name)?></p>
-									</div>
+									<a href="<?= $url;?>">
+										<div class="folder">
+											<p class="folder-p"><?= h($value->name)?></p>
+										</div>
+									</a>
 							<?php
 									elseif (strtolower($value->icon) == 'document') :
 							?>
@@ -52,15 +77,16 @@
 										<p class="document-p"><?= h($value->name)?></p>
 									</div>
 							<?php
-									elseif (strtolower($value->icon) == 'image') :
+									elseif ($list->metadata->path != '/' && strtolower($value->icon) == 'image') :
 									$ext = explode('/', $value->contenttype);
-									$image_url = $value->public_url
-											.'?fileid='.$value->fileid
-											.'&code='.$value->link->code
-											.'&size=600x400';
+									https://api.pcloud.com/getpubthumb?fileid=fileid&code=code&size=widthxheight
+									$image_url = $list->metadata->pub_url.
+											'?fileid='.$value->fileid
+											.'&code='.$list->metadata->auth->code
+											.'&size='.$value->width.'x'.$value->height;
 							?>
 									<!-- Gallery item -->
-									<div class="col-lg-3 col-md-3 col-4 mb-4">
+									<div class="col-lg-4 col-md-6  col-sm-6 col-6 mb-4">
 										<div class="bg-white rounded shadow-sm">
 											<img src="<?= $image_url;?>" alt="<?= $value->name;?>" class="img-fluid card-img-top">
 											<div class="p-4 img-details-p">
@@ -81,15 +107,13 @@
 									</div>
 									<!-- End -->
 							<?php
-								
 									endif;
 							?>
-							
 						<?php
 								endforeach;
 							else :
 						?>
-							<h2>No Data</h2>
+								<h4 class="card-title text-center ml-5 mt-5">Empty Folder</h4>
 						<?php
 							endif;
 						?>
