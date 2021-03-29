@@ -14,13 +14,17 @@
 					</div>
 					<?php
 						if ($list && isset($list)) :
+						$_dir_id = '';
+						$_current_dir = '';
 					?>
-					<div class="row mb-5">
+					<div class="row">
 						<div class="col-12">
 							<nav aria-label="breadcrumb">
-								<ol class="breadcrumb" style="background-color: #e9ecef;">
+								<ol class="breadcrumb bg-light">
 									<?php
 										if ($list->metadata->path == '/') :
+											$_current_dir = '/';
+											$_dir_id = $list->metadata->folderid;
 									?>
 										<li class="breadcrumb-item">
 											<?php
@@ -33,10 +37,12 @@
 									<?php
 										else :
 											$dir = explode('/', $list->metadata->path);
+											$_dir_id = $list->metadata->folderid;
 											$path = '';
 											foreach ($dir as $key => $value) :
 												if ($value) :
 													$path .= '/'.$value;
+													$_current_dir = $path;
 									?>
 										<li class="breadcrumb-item">
 											<?php
@@ -69,69 +75,176 @@
 						</div>
 					</div>
 					<div class="row">
-						<?php
-							if ($list->metadata->contents && count($list->metadata->contents) > 0) :
-								foreach ($list->metadata->contents as $key => $value):
-									if (strtolower($value->icon) == 'folder') :
-										$url = $this->Url->build([
-											'controller' => 'file_managers',
-											'action' => 'index', '?' => [
-												'path' => $value->path,
+						<div class="col-12">
+							<nav aria-label="breadcrumb">
+								<ol class="breadcrumb bg-light mb-0 pb-0">
+									<li class="breadcrumb-item">
+										<?= $this->Html->link(
+											'<i class="mdi mdi-folder-plus"></i>' ,
+											[
+												'controller' => 'FileManagers',
+												'action' => 'createFolder',
+												'?' =>
+													[
+														'path' => $_current_dir,
+														'folder_id' => $_dir_id
+												],
+											],
+											[
+												'alt' => 'create folder',
+												'escape' => false,
+												'class' => 'h3 mb-0',
 											]
-										]);
-							?>
-									<a href="<?= $url;?>">
-										<div class="folder">
-											<p class="folder-p"><?= h($value->name)?></p>
-										</div>
-									</a>
-							<?php
-									elseif (strtolower($value->icon) == 'document') :
-							?>
-									<div class="document">
-										<p class="document-p"><?= h($value->name)?></p>
-									</div>
-							<?php
-									elseif ($list->metadata->path != '/' && strtolower($value->icon) == 'image') :
-									$ext = explode('/', $value->contenttype);
-									$image_url = $list->metadata->pub_url.
-											'?fileid='.$value->fileid
-											.'&code='.$list->metadata->auth->code
-											.'&type='.$ext[1]
-											.'&size='.$value->width.'x'.$value->height;
-							?>
-									<!-- Gallery item -->
-									<div class="col-lg-4 col-md-6  col-sm-6 col-6 mb-4">
-										<div class="bg-white rounded shadow-sm">
-											<img src="<?= $image_url;?>" alt="<?= $value->name;?>" class="img-fluid card-img-top">
-											<div class="p-4 img-details-p">
-												<h5 class="img-n">
-													<a href="#" class="text-dark"><?= $value->name;?></a>
-												</h5>
-												<p class="small text-muted mb-0 img-n">
-													<?= date('Y-m-d H:i:s', strtotime($value->created)); ?>
-												</p>
-												<div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
-													<p class="small mb-0">
-														<span class="font-weight-bold img-n"><?= $ext[1];?></span>
-													</p>
-													<div class="badge badge-danger px-3 rounded-pill font-weight-normal img-n">New</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<!-- End -->
-							<?php
-									endif;
-							?>
-						<?php
-								endforeach;
-							else :
-						?>
-								<h4 class="card-title text-center ml-5 mt-5">Empty Folder</h4>
-						<?php
-							endif;
-						?>
+										) ?>
+									</li>
+									<li class="breadcrumb-item">
+										<?= $this->Html->link(
+											'<i class="mdi mdi-file"></i>' ,
+											[
+												'controller' => 'FileManagers',
+												'action' => 'uploadFile',
+												'?' =>
+													['path' => $_current_dir]
+											],
+											[
+												'alt' => 'upload files',
+												'escape' => false,
+												'class' => 'h3 mb-0',
+											]
+										) ?>
+									</li>
+								</ol>
+							</nav>
+						</div>
+					</div>
+					<div class="row">
+						<div class="table-responsive">
+							<table class="table table-striped">
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>Asset</th>
+										<th>Name</th>
+										<th>Sized</th>
+										<th>Date</th>
+										<th>Action</th>
+									</tr>
+								</thead>
+								<tbody>
+									<?php if ($list->metadata->contents && count($list->metadata->contents) > 0) : ?>
+										<?php foreach ($list->metadata->contents as $key => $value):?>
+										<tr>
+											<td><?= h($key) ?></td>
+											<td class="py-1">
+												<?php
+												if (strtolower($value->icon) == 'folder') :
+													$url = $this->Url->build([
+														'controller' => 'file_managers',
+														'action' => 'index', '?' => [
+															'path' => $value->path,
+														]
+													]);
+												?>
+													<a href="<?= $url;?>" class="h3">
+														<i class="mdi mdi-folder"></i>
+													</a>
+												<?php elseif (strtolower($value->icon) == 'document') : ?>
+													<i class="mdi mdi-file-document"></i>
+												<?php elseif ($list->metadata->path != '/' && strtolower($value->icon) == 'image') :
+													$ext = explode('/', $value->contenttype);
+													$image_url = $list->metadata->pub_url.
+															'?fileid='.$value->fileid
+															.'&code='.$list->metadata->auth->code
+															.'&type='.$ext[1]
+															.'&size=100x100';
+												?>
+													<a>
+														<img src="<?= $image_url;?>" alt="<?= $value->name;?>">
+													</a>
+												<?php else:?>
+													<a class="h3">
+														<i class="mdi mdi-file-outline"></i>
+													</a>
+												<?php endif;?>
+											</td>
+											<td><?= h($value->name)?></td>
+											<td>
+												<?php
+													if (strtolower($value->icon) == 'image' || strtolower($value->icon) == 'document') :
+														echo number_format($value->size / 1024, 2) . ' KB';
+													else :
+														echo '-';
+													endif;
+												?>
+											</td>
+											<td><?= date('Y-m-d H:i:s', strtotime($value->created)); ?></td>
+											<td>
+												<?php
+												if (strtolower($value->icon) == 'folder') :
+													echo $this->Html->link('Edit', [
+																'action' => 'edit_folder',
+																'?' => [
+																	'path' => $_current_dir,
+																	'name' => $value->name,
+																	'folder_id' => $value->folderid,
+																]
+															],
+															[
+																'class' => 'btn btn-primary btn-sm',
+																'escape' => false,
+															]
+														);
+													echo $this->Html->link('Delete', [
+															'action' => 'delete_folder',
+															'?' => [
+																'path' => $_current_dir,
+																'folder_id' => $value->folderid,
+															]
+														],
+														[
+															'class' => 'btn btn-danger btn-sm',
+															'escape' => false,
+														]
+													);
+												else :
+													echo $this->Html->link('Edit', [
+																'action' => 'edit_file',
+																'?' => [
+																	'path' => $_current_dir,
+																	'name' => $value->name,
+																	'file_id' => $value->fileid,
+																]
+															],
+															[
+																'class' => 'btn btn-primary btn-sm',
+																'escape' => false,
+															]
+														);
+													echo $this->Html->link('Delete', [
+															'action' => 'delete_file',
+															'?' => [
+																'path' => $_current_dir,
+																'file_id' => $value->fileid,
+															]
+														],
+														[
+															'class' => 'btn btn-danger btn-sm',
+															'escape' => false,
+														]
+													);
+												endif;
+												?>
+											</td>
+										</tr>
+										<?php endforeach; ?>
+									<?php else :?>
+										<tr>
+											<td colspan="6" class="text-danger text-center"><?= __(NO_DATA) ?></td>
+										</tr>
+									<?php endif; ?>
+								</tbody>
+							</table>
+						</div>
 					</div>
 					<?php else: ?>
 					<h4 class="card-title text-center">File not found!!!</h4>
