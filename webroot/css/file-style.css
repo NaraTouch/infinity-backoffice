@@ -1,0 +1,15 @@
+.dropFiles {
+	width: 100%;
+	min-height: 100px; 
+	height: 100%; 
+	text-align: center;
+	font-size: 25px;
+}
+
+.highlightDropArea {
+	border: 5px green dashed;
+}
+.progress-bar {
+	-webkit-transition: none !important;
+	transition: none !important;
+}

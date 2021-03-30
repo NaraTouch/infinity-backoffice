@@ -45,6 +45,11 @@ class FileManagersController extends AppController
 		]);
 	}
 
+	public function uploadFile()
+	{
+		
+	}
+
 	public function createFolder()
 	{
 		$folder = new FolderForm();
