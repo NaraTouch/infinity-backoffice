@@ -173,7 +173,6 @@ class UsersController extends AppController
 				$response = json_decode($response);
 				if ($response && $response->ErrorCode == '200') {
 					$this->Flash->success($response->Message);
-					
 				} else {
 					$this->Flash->error($response->Message);
 				}

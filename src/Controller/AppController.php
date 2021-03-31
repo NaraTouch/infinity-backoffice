@@ -83,6 +83,15 @@ class AppController extends Controller
 		]);
 	}
 	
+	public function goingToUrlWithParam($controller = null, $action = null, $param = null)
+	{
+		return $this->redirect([
+			'controller' => $controller,
+			'action' => $action,
+			'?' => $param
+		]);
+	}
+	
 	public function goIndex()
 	{
 		$parram = $this->request->getAttribute('params');

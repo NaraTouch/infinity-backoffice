@@ -18,6 +18,41 @@ class FileManagerComponent extends Component
 		$http_method = 'POST';
 		return $this->openUrlWithToken($url, $http_method, $token, $request);
 	}
+	
+	public function createFolder($token = null, $request = [])
+	{
+		$url = $this->api_url.'/pclouds/createfolderifnotexists';
+		$http_method = 'POST';
+		return $this->openUrlWithToken($url, $http_method, $token, $request);
+	}
+	
+	public function renameFolder($token = null, $request = [])
+	{
+		$url = $this->api_url.'/pclouds/renamefolder';
+		$http_method = 'POST';
+		return $this->openUrlWithToken($url, $http_method, $token, $request);
+	}
+	
+	public function deleteFolder($token = null, $request = [])
+	{
+		$url = $this->api_url.'/pclouds/deletefolder';
+		$http_method = 'POST';
+		return $this->openUrlWithToken($url, $http_method, $token, $request);
+	}
+
+	public function renameFile($token = null, $request = [])
+	{
+		$url = $this->api_url.'/pclouds/renamefile';
+		$http_method = 'POST';
+		return $this->openUrlWithToken($url, $http_method, $token, $request);
+	}
+	
+	public function deleteFile($token = null, $request = [])
+	{
+		$url = $this->api_url.'/pclouds/deletefile';
+		$http_method = 'POST';
+		return $this->openUrlWithToken($url, $http_method, $token, $request);
+	}
 
 	private function openUrlWithToken($url = null, $http_method = null, $token = null, $request = [])
 	{
