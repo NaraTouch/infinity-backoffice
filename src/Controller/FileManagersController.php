@@ -11,6 +11,7 @@ class FileManagersController extends AppController
 	{
 		$this->loadComponent('Flash');
 		$this->loadComponent('FileManager');
+		
 	}
 
 	public function beforeFilter(EventInterface $event)
@@ -24,10 +25,10 @@ class FileManagersController extends AppController
 	public function index()
 	{
 		$list = [];
-		$path = $this->request->getQuery('path');
 		$request = [
 			'path' => '/'
 		];
+		$path = $this->request->getQuery('path');
 		if ($path) {
 			$request['path'] = $path;
 		}
@@ -47,7 +48,84 @@ class FileManagersController extends AppController
 
 	public function uploadFile()
 	{
-		
+		if ($this->request->is('post')) {
+			$http_status = 404;
+			$message = '';
+			$data = [];
+			$error = [];
+			if ($this->request->is('ajax')) {
+				$path = $this->request->getQuery('path');
+				$folder_id = $this->request->getQuery('folder_id');
+				$progresshash = $this->request->getQuery('progresshash');
+				$request = [
+					'path' => $path,
+					'folder_id' => $folder_id,
+					'progresshash' => $progresshash
+				];
+				$file = $this->request->getData();
+				$response = $this->FileManager->uploadFile($this->token, $request,$file);
+				if($response){
+					$response = json_decode($response);
+					if ($response && $response->ErrorCode == '200') {
+						$http_status = $response->ErrorCode;
+						$message = $response->Message;
+						$data = $response->Data;
+					} else {
+						$http_status = $response->ErrorCode;
+						$message = $response->Message;
+					}
+				}
+			} else {
+				$http_status = 404;
+				$message = 'Request Not found!!!';
+			}
+			$response = [
+				'ErrorCode' => $http_status,
+				'Message' => $message,
+				'Data' => $data,
+				'Error' => $error
+			];
+			return $this->response->withType('application/json')
+				->withStatus($http_status)
+				->withStringBody(json_encode($response));
+		}
+	}
+	public function uploadFileProgress()
+	{
+		$http_status = 404;
+		$message = '';
+		$data = [];
+		$error = [];
+		if ($this->request->is('ajax')) {
+			$request = [
+				'progresshash' => false
+			];
+			$progresshash = $this->request->getQuery('progresshash');
+			if ($progresshash) {
+				$request['progresshash'] = $progresshash;
+			}
+			$response = $this->FileManager->uploadFileProgress($this->token, $request);
+			if($response){
+				$response = json_decode($response);
+				if ($response && $response->ErrorCode == '200') {
+					$http_status = $response->ErrorCode;
+					$message = $response->Message;
+					$data = $response->Data;
+				} else {
+					$http_status = $response->ErrorCode;
+					$message = $response->Message;
+				}
+			} else {
+				$http_status = 500;
+				$message = 'Internal server error!!!';
+			}
+		} else {
+			$http_status = 404;
+			$message = 'Request Not found!!!';
+		}
+		return $this->response->withType('application/json')
+				->withStatus($http_status)
+				->withStringBody(json_encode($response));
 	}
 
 	public function createFolder()

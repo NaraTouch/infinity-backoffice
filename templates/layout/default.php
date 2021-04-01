@@ -7,6 +7,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>Skydash Admin</title>
 		<link rel="shortcut icon" href="<?= $image_url.'images/favicon.png'?>" />
+		<script>
+			var base_url = '<?php echo $this->Url->build('/', ['escape' => false,'fullBase' => true,]); ?>';
+		</script>
 		<?php
 			echo $this->Html->css([
 				'vendors/feather/feather',

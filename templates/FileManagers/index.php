@@ -103,8 +103,10 @@
 											[
 												'controller' => 'FileManagers',
 												'action' => 'uploadFile',
-												'?' =>
-													['path' => $_current_dir]
+												'?' => [
+													'path' => $_current_dir,
+													'folder_id' => $_dir_id
+												]
 											],
 											[
 												'alt' => 'upload files',
