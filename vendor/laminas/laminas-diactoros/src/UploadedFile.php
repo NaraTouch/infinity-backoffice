@@ -236,6 +236,11 @@ class UploadedFile implements UploadedFileInterface
     {
         return $this->clientFilename;
     }
+	
+	public function getFile() : ?string
+    {
+        return $this->file;
+    }
 
     /**
      * {@inheritdoc}
