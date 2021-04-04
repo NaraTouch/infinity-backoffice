@@ -37,7 +37,7 @@
 														$selected_module = 'selected';
 													}
 												?>
-													<option value="<?= $v_m->id; ?>" <?= $selected_module;?>><?= $v_m->name; ?></option>
+													<option value="<?= $v_m->id; ?>" <?= $selected_module;?>><?= $v_m->display; ?></option>
 												<?php
 													endforeach;
 												else:

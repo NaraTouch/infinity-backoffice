@@ -35,7 +35,7 @@
 													$selected = 'selected';
 												}
 											?>
-												<option value="<?= $value->id; ?>" <?= $selected;?>><?= $value->name; ?></option>
+												<option value="<?= $value->id; ?>" <?= $selected;?>><?= $value->display; ?></option>
 											<?php
 												endforeach;
 											else:
