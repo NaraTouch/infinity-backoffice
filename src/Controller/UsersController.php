@@ -31,8 +31,8 @@ class UsersController extends AppController
 		if ($this->request->is('post')) {
 			$request = $this->request->getData();
 			$response = $this->User->login($request);
+			$response = json_decode($response, true);
 			if($response){
-				$response = json_decode($response, true);
 				if ($response['ErrorCode'] == 200) {
 					$user_data = $response['Data'];
 					$menu = $this->Security->getMenu($response['Data']['token'], []);

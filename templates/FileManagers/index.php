@@ -133,7 +133,7 @@
 									</tr>
 								</thead>
 								<tbody>
-									<?php if ($list->metadata->contents && count($list->metadata->contents) > 0) : ?>
+									<?php if ($list->metadata->contents && count($list->metadata->contents) > 0) :?>
 										<?php foreach ($list->metadata->contents as $key => $value):?>
 										<tr>
 											<td><?= h($key) ?></td>
@@ -154,14 +154,21 @@
 													<i class="mdi mdi-file-document"></i>
 												<?php elseif ($list->metadata->path != '/' && strtolower($value->icon) == 'image') :
 													$ext = explode('/', $value->contenttype);
+													$origin_width = $value->width;
+													$origin_height = $value->height;
+													$url = $list->metadata->pub_url.
+														'?fileid='.$value->fileid
+														.'&code='.$list->metadata->auth->code
+														.'&type='.$ext[1]
+														.'&size='.$origin_width.'x'.$origin_height;
 													$image_url = $list->metadata->pub_url.
 															'?fileid='.$value->fileid
 															.'&code='.$list->metadata->auth->code
 															.'&type='.$ext[1]
 															.'&size=100x100';
 												?>
-													<a>
-														<img src="<?= $image_url;?>" alt="<?= $value->name;?>">
+													<a href="<?=$url?>" target="_blank">
+														<img class="rounded-0" src="<?= $image_url;?>" alt="<?= $value->name;?>">
 													</a>
 												<?php else:?>
 													<a class="h3">
