@@ -30,11 +30,19 @@ $(document).ready(function()
 
 	function trFileUpload(droppedFiles)
 	{
+		var total_size = 0;
+		var allow_upload = false;
 		for(var i = 0; i < droppedFiles.length; i++)
 		{
+			var file_size = (droppedFiles[i].size / 1024);
+			total_size += file_size;
 			var progresshash = droppedFiles[i].lastModified+'-'+i;
 			var name = droppedFiles[i].name;
-			var size = (droppedFiles[i].size / 1024)+' KB';
+			var size = file_size+' KB';
+			// if biger than 10MB
+			if (file_size > 10000) {
+				return false;
+			}
 			var html = 
 				'<tr>'+
 					'<td>'+i+'</td>'+
@@ -61,16 +69,11 @@ $(document).ready(function()
 				'</tr>';
 			$("#file-table-console").append(html);
 		}
-	}
-	function listFileUpload(droppedFiles)
-	{
-		for(var i = 0; i < droppedFiles.length; i++)
-		{
-			var progresshash = droppedFiles[i].lastModified+'-'+i;
-			var name = droppedFiles[i].name;
-			var html = '<b>Dropped File </b>'+name+'<div class="progress"><div id="'+progresshash+'" class="progress-bar progress-bar-striped bg-success" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div></div>';
-			$("#messages").append(html);
+		// if biger than 40MB
+		if (total_size < 40000) {
+			allow_upload = true;
 		}
+		return allow_upload;
 	}
 
 	function ajaxUploadFile(formData, param, progresshash) {
@@ -145,17 +148,26 @@ $(document).ready(function()
 			var folder_id = $(this).data('folder_id');
 			var files = $(this)[0].files;
 			var filesCount = files.length;
-			var $textContainer = $(this).prev();
-			if (filesCount === 1) {
-				var fileName = $(this).val().split('\\').pop();
-				$textContainer.text(fileName);
+			if (filesCount <= 100) {
+				var $textContainer = $(this).prev();
+				if (filesCount === 1) {
+					var fileName = $(this).val().split('\\').pop();
+					$textContainer.text(fileName);
+				} else {
+					$textContainer.text(filesCount + ' files selected');
+				}
+				var verify_upload = trFileUpload(files);
+				if (verify_upload) {
+					setTimeout(function(){
+						uploadFile(path, folder_id, files);
+					}, 100);
+				} else {
+					alert('each file must be smaller that 10MB and total size of all file must be lower than 40MB.');
+				}
 			} else {
-				$textContainer.text(filesCount + ' files selected');
+				// if over 100 file
+				alert('We are allowed only 100file per upload.');
 			}
-			trFileUpload(files);
-//			listFileUpload(files);
-			setTimeout(function(){
-				uploadFile(path, folder_id, files);
-			}, 100);
+			
 		});
 	})

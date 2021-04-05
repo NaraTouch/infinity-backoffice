@@ -2,7 +2,6 @@
 namespace App\Controller;
 use Cake\Event\EventInterface;
 use App\Form\FolderForm;
-use App\Form\FileForm;
 
 class FileManagersController extends AppController
 {
