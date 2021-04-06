@@ -187,6 +187,55 @@ $(document).ready(function()
 				// if over 100 file
 				alert('We are allowed only 100file per upload.');
 			}
-			
 		});
-	})
+		$("#checkAll").click(function(){
+			$('input:checkbox').not(this).prop('checked', this.checked);
+		});
+		$("input:checkbox").click(function(){
+			$('#checkAll').prop('checked', this.checked);
+		});
+		$("#deleteAllFile").click(function(event){
+			event.preventDefault();
+			$("input:checkbox[type=checkbox]:checked").each(function(){
+				var value = [];
+				var path = $(this).data('path');
+				var type = $(this).data('type');
+				var id = $(this).val();
+				if (path && type) {
+					value[type] = id;
+					value['path'] = path;
+					ajaxDeletFileOrFolder(value, type);
+				}
+			});
+		});
+		function ajaxDeletFileOrFolder(data, type) {
+			var formData = new FormData();
+			var sub_url = '';
+			formData.append('data', data);
+			if (type === 'folderid') {
+				sub_url = 'ajaxDeleteFolder';
+			} else if (type === 'fileid') {
+				sub_url = 'ajaxDeleteFile';
+			}
+			$.ajax({
+				url: base_url+'FileManagers/'+sub_url,
+				dataType: 'text',
+				type: 'post',
+				data: formData,
+				contentType: false,
+				processData: false,
+					success: function(response){
+						console.log(response);
+	//					var objJSON = JSON.parse(response);
+	//					if (objJSON.ErrorCode === 200) {
+	//						percentageAnimate(progresshash,100);
+	//					} else {
+	//						failedUpload(progresshash, objJSON.Error);
+	//					}
+					},
+					error: function(response){
+						console.log(response);
+					}
+			});
+	}
+})

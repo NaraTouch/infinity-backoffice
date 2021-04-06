@@ -20,7 +20,7 @@
 					<div class="row">
 						<div class="col-12">
 							<nav aria-label="breadcrumb">
-								<ol class="breadcrumb bg-light">
+								<ol class="breadcrumb bg-light border-0">
 									<?php
 										if ($list->metadata->path == '/') :
 											$_current_dir = '/';
@@ -77,44 +77,63 @@
 					<div class="row">
 						<div class="col-12">
 							<nav aria-label="breadcrumb">
-								<ol class="breadcrumb bg-light mb-0 pb-0">
-									<li class="breadcrumb-item">
-										<?= $this->Html->link(
-											'<i class="mdi mdi-folder-plus"></i>' ,
-											[
-												'controller' => 'FileManagers',
-												'action' => 'createFolder',
-												'?' =>
-													[
+								<ol class="breadcrumb bg-light mb-0 pb-0 pl-0 border-0 bg-white" >
+									<li class="breadcrumb-item dropdown">
+										<button class="btn btn-outline-info btn-sm dropdown-toggle"
+												type="button"
+												id="dropdownMenuSizeButton3"
+												data-toggle="dropdown"
+												aria-haspopup="true"
+												aria-expanded="false"
+										>
+											Option
+										</button>
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuSizeButton3">
+											<h6 class="dropdown-header">Settings</h6>
+											<?= $this->Html->link(
+												'Create Folder' ,
+												[
+													'controller' => 'FileManagers',
+													'action' => 'createFolder',
+													'?' =>
+														[
+															'path' => $_current_dir,
+															'folder_id' => $_dir_id
+													],
+												],
+												[
+													'alt' => 'create folder',
+													'target' => '_blank',
+													'escape' => false,
+													'class' => 'dropdown-item',
+												]
+											) ?>
+											<?= $this->Html->link('Upload Files' ,
+												[
+													'controller' => 'FileManagers',
+													'action' => 'uploadFile',
+													'?' => [
 														'path' => $_current_dir,
 														'folder_id' => $_dir_id
+													]
 												],
-											],
-											[
-												'alt' => 'create folder',
-												'escape' => false,
-												'class' => 'h3 mb-0',
-											]
-										) ?>
-									</li>
-									<li class="breadcrumb-item">
-										<?= $this->Html->link(
-											'<i class="mdi mdi-file-import"></i>' ,
-											[
-												'controller' => 'FileManagers',
-												'action' => 'uploadFile',
-												'?' => [
-													'path' => $_current_dir,
-													'folder_id' => $_dir_id
+												[
+													'alt' => 'upload files',
+													'target' => '_blank',
+													'escape' => false,
+													'class' => 'dropdown-item',
 												]
-											],
-											[
-												'alt' => 'upload files',
-												'target' => '_blank',
-												'escape' => false,
-												'class' => 'h3 mb-0',
-											]
-										) ?>
+											) ?>
+											<?= $this->Html->link('Delete checked' ,
+												[ ],
+												[
+													'alt' => 'Delete checked files',
+													'escape' => false,
+													'class' => 'dropdown-item',
+													'id' => 'deleteAllFile'
+												]
+											) ?>
+										</div>
 									</li>
 								</ol>
 							</nav>
@@ -125,7 +144,13 @@
 							<table class="table table-striped">
 								<thead>
 									<tr>
-										<th>#</th>
+										<th>
+											<div class="form-check form-check-flat form-check-primary mt-0 mb-0">
+												<label class="form-check-label">
+													<input type="checkbox" class="form-check-input" id="checkAll">
+												</label>
+											</div>
+										</th>
 										<th>Asset</th>
 										<th>Name</th>
 										<th>Sized</th>
@@ -137,7 +162,33 @@
 									<?php if ($list->metadata->contents && count($list->metadata->contents) > 0) :?>
 										<?php foreach ($list->metadata->contents as $key => $value):?>
 										<tr>
-											<td><?= h($key) ?></td>
+											<td>
+												<div class="form-check form-check-flat form-check-primary mt-0 mb-0">
+													<label class="form-check-label">
+														<?php
+															$id = '';
+															$type = '';
+															if (strtolower($value->icon) == 'folder') :
+																$type = 'folderid';
+																$id = $value->folderid;
+															elseif (strtolower($value->icon) == 'document') :
+																$type = 'fileid';
+																$id = $value->fileid;
+															elseif (strtolower($value->icon) == 'image') :
+																$type = 'fileid';
+																$id = $value->fileid;
+															endif;
+														?>
+														<input 
+															type="checkbox"
+															value="<?=$id?>"
+															class="form-check-input"
+															data-path="<?=$_current_dir;?>"
+															data-type="<?=$type;?>"
+														>
+													</label>
+												</div>
+											</td>
 											<td class="py-1">
 												<?php
 												if (strtolower($value->icon) == 'folder') :
@@ -206,6 +257,7 @@
 																]
 															],
 															[
+																'target' => '_blank',
 																'class' => 'btn btn-primary btn-sm',
 																'escape' => false,
 															]
@@ -218,6 +270,7 @@
 															]
 														],
 														[
+															'target' => '_self',
 															'class' => 'btn btn-danger btn-sm',
 															'escape' => false,
 														]
@@ -232,6 +285,7 @@
 																]
 															],
 															[
+																'target' => '_blank',
 																'class' => 'btn btn-primary btn-sm',
 																'escape' => false,
 															]
@@ -244,6 +298,7 @@
 															]
 														],
 														[
+															'target' => '_self',
 															'class' => 'btn btn-danger btn-sm',
 															'escape' => false,
 														]
@@ -276,3 +331,10 @@
 		</div>
 	</div>
 </div>
+<?php
+	echo $this->Html->script([
+		'jquery-3.6.0.min',
+		'file-scritp',
+	]);
+	echo $this->fetch('script');
+?>

@@ -93,6 +93,7 @@ class FileManagersController extends AppController
 				->withStringBody(json_encode($response));
 		}
 	}
+
 	public function uploadFileProgress()
 	{
 		$http_status = 404;
@@ -199,7 +200,7 @@ class FileManagersController extends AppController
 		if ($this->request->is('get')) {
 			$request['path'] = $path;
 			$request['folder_id'] = $folder_id;
-			$response = $this->FileManager->deleteFolder($this->token, $request);
+			$response = $this->deleteFolderApi($this->token, $request);
 			if($response){
 				$response = json_decode($response);
 				if ($response && $response->ErrorCode == '200') {
@@ -255,7 +256,7 @@ class FileManagersController extends AppController
 		if ($this->request->is('get')) {
 			$request['path'] = $path;
 			$request['file_id'] = $file_id;
-			$response = $this->FileManager->deleteFile($this->token, $request);
+			$response = $this->deleteFileApi($this->token, $request);
 			if($response){
 				$response = json_decode($response);
 				if ($response && $response->ErrorCode == '200') {
@@ -267,4 +268,53 @@ class FileManagersController extends AppController
 		}
 		$this->goingToUrlWithParam('FileManagers','index', $param);
 	}
+
+	public function deleteFolderApi($token = null, $request = [])
+	{
+		return $this->FileManager->deleteFolder($token, $request);
+	}
+
+	public function deleteFileApi($token = null, $request = [])
+	{
+		return $this->FileManager->deleteFile($token, $request);
+	}
+
+	public function ajaxDeleteFile()
+	{
+		if ($this->request->is('post')) {
+			$http_status = 404;
+			$message = '';
+			$data = [];
+			$error = [];
+			dump($http_status);
+//			if ($this->request->is('ajax')) {
+//				$file = $this->request->getData();
+//				dump($file);
+//	//			$response = $this->deleteFileApi($this->token, $file);
+//	//			if($response){
+//	//				$response = json_decode($response);
+//	//				if ($response && $response->ErrorCode == '200') {
+//	//					$http_status = $response->ErrorCode;
+//	//					$message = $response->Message;
+//	//					$data = $response->Data;
+//	//					$error = $response->Error;
+//	//				} else {
+//	//					$error = $response->Error;
+//	//					$http_status = $response->ErrorCode;
+//	//					$message = $response->Message;
+//	//				}
+//	//			}
+//			} else {
+//				$http_status = 404;
+//				$message = 'Request Not found!!!';
+//			}
+//			$response = [
+//				'ErrorCode' => $http_status,
+//				'Message' => $message,
+//				'Data' => $data,
+//				'Error' => $error
+//			];
+		}
+	}
+
 }
