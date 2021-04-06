@@ -53,23 +53,27 @@ class FileManagersController extends AppController
 			$data = [];
 			$error = [];
 			if ($this->request->is('ajax')) {
+				$name = $this->request->getQuery('name');
 				$path = $this->request->getQuery('path');
 				$folder_id = $this->request->getQuery('folder_id');
 				$progresshash = $this->request->getQuery('progresshash');
 				$request = [
+					'filename' => $name,
 					'path' => $path,
-					'folder_id' => $folder_id,
+					'folderid' => $folder_id,
 					'progresshash' => $progresshash
 				];
 				$file = $this->request->getData();
-				$response = $this->FileManager->uploadFile($this->token, $request,$file);
+				$response = $this->FileManager->uploadFile($this->token, $request, $file);
 				if($response){
 					$response = json_decode($response);
 					if ($response && $response->ErrorCode == '200') {
 						$http_status = $response->ErrorCode;
 						$message = $response->Message;
 						$data = $response->Data;
+						$error = $response->Error;
 					} else {
+						$error = $response->Error;
 						$http_status = $response->ErrorCode;
 						$message = $response->Message;
 					}

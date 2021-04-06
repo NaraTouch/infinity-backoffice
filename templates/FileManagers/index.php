@@ -55,7 +55,7 @@
 											?>
 										</li>
 									<?php
-												else :
+											else :
 									?>
 										<li class="breadcrumb-item">
 											<?php
@@ -110,6 +110,7 @@
 											],
 											[
 												'alt' => 'upload files',
+												'target' => '_blank',
 												'escape' => false,
 												'class' => 'h3 mb-0',
 											]
@@ -154,8 +155,14 @@
 													<i class="mdi mdi-file-document"></i>
 												<?php elseif ($list->metadata->path != '/' && strtolower($value->icon) == 'image') :
 													$ext = explode('/', $value->contenttype);
-													$origin_width = $value->width;
-													$origin_height = $value->height;
+													$origin_width = 500;
+													$origin_height = 100;
+													if (isset($value->width)) {
+														$origin_width = $value->width;
+													}
+													if (isset($value->height)) {
+														$origin_height = $value->height;
+													}
 													$url = $list->metadata->pub_url.
 														'?fileid='.$value->fileid
 														.'&code='.$list->metadata->auth->code

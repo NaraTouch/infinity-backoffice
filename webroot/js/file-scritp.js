@@ -16,6 +16,21 @@ $(document).ready(function()
 		}, 2500);
 	}
 
+	function failedUpload(progresshash, message)
+	{
+		for (const [key, value] of Object.entries(message)) {
+			for (const [k, v] of Object.entries(value)) {
+				$("#label-"+progresshash).empty();
+				var label = 
+				'<label '+
+					'class="badge badge-danger">'+
+					key+' '+v+
+				'</label>';
+				$("#label-"+progresshash).append(label);
+			}
+		}
+	}
+
 	function uploadFile(path, folder_id, droppedFiles)
 	{
 		var formData = new FormData();
@@ -23,7 +38,8 @@ $(document).ready(function()
 		{
 			var progresshash = droppedFiles[i].lastModified+'-'+i;
 			formData.append('file', droppedFiles[i]);
-			var param = '?path='+path+'&folder_id='+folder_id+'&progresshash='+progresshash;
+			var name = droppedFiles[i].name;
+			var param = '?name='+name+'&path='+path+'&folder_id='+folder_id+'&progresshash='+progresshash;
 			ajaxUploadFile(formData, param, progresshash);
 		}
 	}
@@ -88,6 +104,8 @@ $(document).ready(function()
 					var objJSON = JSON.parse(response);
 					if (objJSON.ErrorCode === 200) {
 						percentageAnimate(progresshash,100);
+					} else {
+						failedUpload(progresshash, objJSON.Error);
 					}
 				},
 				error: function(response){
@@ -116,6 +134,7 @@ $(document).ready(function()
 		if(event.originalEvent.dataTransfer){
 			if(event.originalEvent.dataTransfer.files.length) {
 				var droppedFiles = event.originalEvent.dataTransfer.files;
+				var name = droppedFiles[i].name;
 				listFileUpload(droppedFiles);
 				setTimeout(function(){
 					uploadFile(path, folder_id, droppedFiles);
