@@ -45,7 +45,7 @@ class ModuleComponent extends Component
 		$http_method = 'POST';
 		return $this->openUrlWithToken($url, $http_method, $token, $request);
 	}
-	
+
 	public function updateModule($token = null, $request = [])
 	{
 		$url = $this->api_url.'/modules/edit';
@@ -60,7 +60,7 @@ class ModuleComponent extends Component
 		return $this->openUrlWithToken($url, $http_method, $token, $request);
 	}
 
-	public function getMduleList($token = null, $request = [])
+	public function getModuleList($token = null, $request = [])
 	{
 		$modules = [];
 		$response = $this->moduleList($token, $request);
@@ -75,7 +75,7 @@ class ModuleComponent extends Component
 
 	public function moduleList($token = null, $request = [])
 	{
-		$url = $this->api_url.'/modules/list';
+		$url = $this->api_url.'/modules/lists';
 		$http_method = 'POST';
 		return $this->openUrlWithToken($url, $http_method, $token, $request);
 	}

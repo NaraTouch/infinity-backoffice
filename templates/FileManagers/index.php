@@ -94,7 +94,7 @@
 												'Create Folder' ,
 												[
 													'controller' => 'FileManagers',
-													'action' => 'createFolder',
+													'action' => 'createFolderIfNotExists',
 													'?' =>
 														[
 															'path' => $_current_dir,

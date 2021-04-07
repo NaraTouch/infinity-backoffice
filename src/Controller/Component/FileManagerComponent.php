@@ -14,7 +14,7 @@ class FileManagerComponent extends Component
 
 	public function getFolderList($token = null, $request = [])
 	{
-		$url = $this->api_url.'/pclouds/listfolder';
+		$url = $this->api_url.'/pclouds';
 		$http_method = 'POST';
 		return $this->openUrlWithToken($url, $http_method, $token, $request);
 	}

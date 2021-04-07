@@ -22,7 +22,7 @@ class RolesController extends AppController
 		$module_list = [];
 		if ($this->Auth->user()) {
 			$this->token = $this->Auth->user('token');
-			$module_list = $this->Module->getMduleList($this->token, []);
+			$module_list = $this->Module->getModuleList($this->token, []);
 			$groups = $this->Group->getGroups($this->token);
 		}
 		$this->set([

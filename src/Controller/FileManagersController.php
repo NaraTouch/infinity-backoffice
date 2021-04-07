@@ -132,7 +132,7 @@ class FileManagersController extends AppController
 				->withStringBody(json_encode($response));
 	}
 
-	public function createFolder()
+	public function createFolderIfNotExists()
 	{
 		$folder = new FolderForm();
 		$path = $this->request->getQuery('path');
@@ -156,7 +156,7 @@ class FileManagersController extends AppController
 		}
 		$this->set(['folder' => $folder]);
 	}
-	
+
 	public function editFolder()
 	{
 		$folder = new FolderForm();

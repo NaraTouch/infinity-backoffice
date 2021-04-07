@@ -38,7 +38,7 @@ class GroupComponent extends Component
 		$http_method = 'POST';
 		return $this->openUrlWithToken($url, $http_method, $token, $request);
 	}
-	
+
 	public function getGroupById($token = null, $request = [])
 	{
 		$url = $this->api_url.'/groups/view';

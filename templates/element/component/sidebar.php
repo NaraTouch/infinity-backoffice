@@ -30,6 +30,14 @@
 				endforeach;
 			else : ?>
 				<li class="nav-item">
+					<?php
+					$show_main_menu = false;
+					foreach ($value['methods'] as $m_k => $m_v) :
+						if ($m_v['is_menu']):
+							$show_main_menu = true;
+						endif;
+					endforeach;?>
+					<?php if ($show_main_menu):?>
 					<a class="nav-link"
 						data-toggle="collapse"
 						href="<?='#'.$value['name'];?>"
@@ -39,6 +47,7 @@
 						<span class="menu-title"><?=$value['display'];?></span>
 						<i class="menu-arrow"></i>
 					</a>
+					<?php endif;?>
 					<div class="collapse" id="<?=$value['name'];?>">
 						<ul class="nav flex-column sub-menu">
 							<?php foreach ($value['methods'] as $_k => $_v) :
