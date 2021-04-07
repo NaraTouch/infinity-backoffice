@@ -279,6 +279,58 @@ class FileManagersController extends AppController
 		return $this->FileManager->deleteFile($token, $request);
 	}
 
+	public function ajaxDeleteFolder()
+	{
+		if ($this->request->is('post')) {
+			$http_status = 404;
+			$message = '';
+			$data = [];
+			$error = [];
+			if ($this->request->is('ajax')) {
+				$request = $this->request->getData();
+				$request_data = [
+					'path' => $request['path'],
+					'folder_id' => $request['folderid']
+				];
+				$param = ['path' => $file['path']];
+				$response = $this->deleteFolderApi($this->token, $request_data);
+				if($response){
+					$response = json_decode($response);
+					if ($response && $response->ErrorCode == '200') {
+						$http_status = $response->ErrorCode;
+						$message = $response->Message;
+						$data = $response->Data;
+						if (isset($response->Error)) {
+							$error = $response->Error;
+						}
+						$this->Flash->success($response->Message);
+						return $this->goingToUrlWithParam('FileManagers','index', $param);
+					} else {
+						if (isset($response->Error)) {
+							$error = $response->Error;
+						}
+						$http_status = 200;
+						$message = $response->Message;
+						$this->Flash->error($response->Message);
+						return $this->goingToUrlWithParam('FileManagers','index', $param);
+					}
+				}
+			} else {
+				$http_status = 404;
+				$message = 'Request Not found!!!';
+			}
+			$response = [
+				'ErrorCode' => $http_status,
+				'Message' => $message,
+				'Data' => $data,
+				'Error' => $error
+			];
+			return $this->response->withType('application/json')
+				->withStatus($http_status)
+				->withStringBody(json_encode($response));
+		}
+	}
+	
 	public function ajaxDeleteFile()
 	{
 		if ($this->request->is('post')) {
@@ -286,34 +338,48 @@ class FileManagersController extends AppController
 			$message = '';
 			$data = [];
 			$error = [];
-			dump($http_status);
-//			if ($this->request->is('ajax')) {
-//				$file = $this->request->getData();
-//				dump($file);
-//	//			$response = $this->deleteFileApi($this->token, $file);
-//	//			if($response){
-//	//				$response = json_decode($response);
-//	//				if ($response && $response->ErrorCode == '200') {
-//	//					$http_status = $response->ErrorCode;
-//	//					$message = $response->Message;
-//	//					$data = $response->Data;
-//	//					$error = $response->Error;
-//	//				} else {
-//	//					$error = $response->Error;
-//	//					$http_status = $response->ErrorCode;
-//	//					$message = $response->Message;
-//	//				}
-//	//			}
-//			} else {
-//				$http_status = 404;
-//				$message = 'Request Not found!!!';
-//			}
-//			$response = [
-//				'ErrorCode' => $http_status,
-//				'Message' => $message,
-//				'Data' => $data,
-//				'Error' => $error
-//			];
+			if ($this->request->is('ajax')) {
+				$file = $this->request->getData();
+				$request_data = [
+					'path' => $file['path'],
+					'file_id' => $file['fileid']
+				];
+				$param = ['path' => $file['path']];
+				$response = $this->deleteFileApi($this->token, $request_data);
+				if($response){
+					$response = json_decode($response);
+					if ($response && $response->ErrorCode == '200') {
+						$http_status = $response->ErrorCode;
+						$message = $response->Message;
+						$data = $response->Data;
+						if (isset($response->Error)) {
+							$error = $response->Error;
+						}
+						$this->Flash->success($response->Message);
+						return $this->goingToUrlWithParam('FileManagers','index', $param);
+					} else {
+						if (isset($response->Error)) {
+							$error = $response->Error;
+						}
+						$http_status = 200;
+						$message = $response->Message;
+						$this->Flash->error($response->Message);
+						return $this->goingToUrlWithParam('FileManagers','index', $param);
+					}
+				}
+			} else {
+				$http_status = 404;
+				$message = 'Request Not found!!!';
+			}
+			$response = [
+				'ErrorCode' => $http_status,
+				'Message' => $message,
+				'Data' => $data,
+				'Error' => $error
+			];
+			return $this->response->withType('application/json')
+				->withStatus($http_status)
+				->withStringBody(json_encode($response));
 		}
 	}
 

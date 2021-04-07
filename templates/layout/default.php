@@ -51,7 +51,6 @@
 			'vendors/select2/select2.min',
 			'select2',
 			'template',
-			'custom',
 		]);
 		echo $this->fetch('script');
 		?>

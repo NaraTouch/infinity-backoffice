@@ -195,23 +195,23 @@ $(document).ready(function()
 			$('#checkAll').prop('checked', this.checked);
 		});
 		$("#deleteAllFile").click(function(event){
-			event.preventDefault();
+//			event.preventDefault();
 			$("input:checkbox[type=checkbox]:checked").each(function(){
 				var value = [];
 				var path = $(this).data('path');
 				var type = $(this).data('type');
 				var id = $(this).val();
+				var formData = new FormData();
 				if (path && type) {
-					value[type] = id;
-					value['path'] = path;
-					ajaxDeletFileOrFolder(value, type);
+					formData.append(type, id);
+					formData.append("path", path);
+					ajaxDeletFileOrFolder(formData, type);
 				}
 			});
 		});
-		function ajaxDeletFileOrFolder(data, type) {
-			var formData = new FormData();
+	
+		function ajaxDeletFileOrFolder(formData, type) {
 			var sub_url = '';
-			formData.append('data', data);
 			if (type === 'folderid') {
 				sub_url = 'ajaxDeleteFolder';
 			} else if (type === 'fileid') {
@@ -226,12 +226,6 @@ $(document).ready(function()
 				processData: false,
 					success: function(response){
 						console.log(response);
-	//					var objJSON = JSON.parse(response);
-	//					if (objJSON.ErrorCode === 200) {
-	//						percentageAnimate(progresshash,100);
-	//					} else {
-	//						failedUpload(progresshash, objJSON.Error);
-	//					}
 					},
 					error: function(response){
 						console.log(response);
