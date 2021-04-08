@@ -29,7 +29,7 @@
 										<li class="breadcrumb-item">
 											<?php
 												echo $this->Html->link('Home', [
-													'controller' => 'FileManagers',
+													'controller' => 'PClouds',
 													'action' => 'index',
 												]);
 											?>
@@ -47,7 +47,7 @@
 										<li class="breadcrumb-item">
 											<?php
 												echo $this->Html->link($value, [
-													'controller' => 'FileManagers',
+													'controller' => 'PClouds',
 													'action' => 'index',
 													'?' =>
 														['path' => $path]
@@ -60,7 +60,7 @@
 										<li class="breadcrumb-item">
 											<?php
 												echo $this->Html->link('Home', [
-													'controller' => 'FileManagers',
+													'controller' => 'PClouds',
 													'action' => 'index',
 												]);
 											?>
@@ -93,7 +93,7 @@
 											<?= $this->Html->link(
 												'Create Folder' ,
 												[
-													'controller' => 'FileManagers',
+													'controller' => 'PClouds',
 													'action' => 'createFolderIfNotExists',
 													'?' =>
 														[
@@ -110,7 +110,7 @@
 											) ?>
 											<?= $this->Html->link('Upload Files' ,
 												[
-													'controller' => 'FileManagers',
+													'controller' => 'PClouds',
 													'action' => 'uploadFile',
 													'?' => [
 														'path' => $_current_dir,
@@ -193,7 +193,7 @@
 												<?php
 												if (strtolower($value->icon) == 'folder') :
 													$url = $this->Url->build([
-														'controller' => 'file_managers',
+														'controller' => 'PClouds',
 														'action' => 'index', '?' => [
 															'path' => $value->path,
 														]

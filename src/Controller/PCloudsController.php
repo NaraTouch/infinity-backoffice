@@ -3,7 +3,7 @@ namespace App\Controller;
 use Cake\Event\EventInterface;
 use App\Form\FolderForm;
 
-class FileManagersController extends AppController
+class PCloudsController extends AppController
 {
 	private $token;
 	public function initialize(): void
@@ -147,7 +147,7 @@ class FileManagersController extends AppController
 				$response = json_decode($response);
 				if ($response && $response->ErrorCode == '200') {
 					$param = ['path' => $path];
-					$this->goingToUrlWithParam('FileManagers','index', $param);
+					$this->goingToUrlWithParam('PClouds','index', $param);
 					$this->Flash->success($response->Message);
 				} else {
 					$this->Flash->error($response->Message);
@@ -179,7 +179,7 @@ class FileManagersController extends AppController
 				$response = json_decode($response);
 				if ($response && $response->ErrorCode == '200') {
 					$param = ['path' => $path];
-					$this->goingToUrlWithParam('FileManagers','index', $param);
+					$this->goingToUrlWithParam('PClouds','index', $param);
 					$this->Flash->success($response->Message);
 				} else {
 					$this->Flash->error($response->Message);
@@ -210,7 +210,7 @@ class FileManagersController extends AppController
 				}
 			}
 		}
-		$this->goingToUrlWithParam('FileManagers','index', $param);
+		$this->goingToUrlWithParam('PClouds','index', $param);
 	}
 
 	public function editFile()
@@ -235,7 +235,7 @@ class FileManagersController extends AppController
 				$response = json_decode($response);
 				if ($response && $response->ErrorCode == '200') {
 					$param = ['path' => $path];
-					$this->goingToUrlWithParam('FileManagers','index', $param);
+					$this->goingToUrlWithParam('PClouds','index', $param);
 					$this->Flash->success($response->Message);
 				} else {
 					$this->Flash->error($response->Message);
@@ -266,7 +266,7 @@ class FileManagersController extends AppController
 				}
 			}
 		}
-		$this->goingToUrlWithParam('FileManagers','index', $param);
+		$this->goingToUrlWithParam('PClouds','index', $param);
 	}
 
 	public function deleteFolderApi($token = null, $request = [])
@@ -304,7 +304,7 @@ class FileManagersController extends AppController
 							$error = $response->Error;
 						}
 						$this->Flash->success($response->Message);
-						return $this->goingToUrlWithParam('FileManagers','index', $param);
+						return $this->goingToUrlWithParam('PClouds','index', $param);
 					} else {
 						if (isset($response->Error)) {
 							$error = $response->Error;
@@ -312,7 +312,7 @@ class FileManagersController extends AppController
 						$http_status = 200;
 						$message = $response->Message;
 						$this->Flash->error($response->Message);
-						return $this->goingToUrlWithParam('FileManagers','index', $param);
+						return $this->goingToUrlWithParam('PClouds','index', $param);
 					}
 				}
 			} else {
@@ -356,7 +356,7 @@ class FileManagersController extends AppController
 							$error = $response->Error;
 						}
 						$this->Flash->success($response->Message);
-						return $this->goingToUrlWithParam('FileManagers','index', $param);
+						return $this->goingToUrlWithParam('PClouds','index', $param);
 					} else {
 						if (isset($response->Error)) {
 							$error = $response->Error;
@@ -364,7 +364,7 @@ class FileManagersController extends AppController
 						$http_status = 200;
 						$message = $response->Message;
 						$this->Flash->error($response->Message);
-						return $this->goingToUrlWithParam('FileManagers','index', $param);
+						return $this->goingToUrlWithParam('PClouds','index', $param);
 					}
 				}
 			} else {

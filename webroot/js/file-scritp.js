@@ -94,7 +94,7 @@ $(document).ready(function()
 
 	function ajaxUploadFile(formData, param, progresshash) {
 		$.ajax({
-			url: base_url+'FileManagers/uploadFile'+param,
+			url: base_url+'PClouds/uploadFile'+param,
 			dataType: 'text',
 			type: 'post',
 			data: formData,
@@ -218,7 +218,7 @@ $(document).ready(function()
 				sub_url = 'ajaxDeleteFile';
 			}
 			$.ajax({
-				url: base_url+'FileManagers/'+sub_url,
+				url: base_url+'PClouds/'+sub_url,
 				dataType: 'text',
 				type: 'post',
 				data: formData,
