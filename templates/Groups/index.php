@@ -17,8 +17,8 @@
 								<div class="form-group row">
 									<div class="col-12">
 										<input 
-											type="text" 
-											class="form-control" 
+											type="text"
+											class="form-control"
 											name="keywords"
 											value="<?= ($this->request->getQuery('keywords')) ? $this->request->getQuery('keywords') : ''?>"
 											placeholder="Group Name"/>
@@ -43,6 +43,7 @@
 									<th>Display</th>
 									<th>Code</th>
 									<th>Status</th>
+									<th>Super User</th>
 									<th>Created</th>
 									<th>Actions</th>
 								</tr>
@@ -56,6 +57,13 @@
 										<td><?= h($value->name) ?></td>
 										<td><?= h($value->display) ?></td>
 										<td><?= h($value->code) ?></td>
+										<td>
+											<?php if($value->super_user):?>
+											<label class="badge badge-success">Super User</label>
+											<?php else: ?>
+											<label class="badge badge-danger">Not Super User</label>
+											<?php endif; ?>
+										</td>
 										<td>
 											<?php if($value->active):?>
 											<label class="badge badge-success">Active</label>

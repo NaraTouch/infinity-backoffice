@@ -46,6 +46,7 @@ class GroupsController extends AppController
 	{
 		$group = new GroupsForm();
 		$active = true;
+		$super_user = false;
 		if ($this->request->is('post')) {
 			$request = $this->request->getData();
 			$response = $this->Group->createGroup($this->token, $request);
@@ -67,14 +68,16 @@ class GroupsController extends AppController
 		}
 		$this->set([
 			'group' => $group,
-			'active' => $active
+			'active' => $active,
+			'super_user' => $super_user
 			]);
 	}
 	
 	public function edit($id = null)
 	{
 		$group = new GroupsForm();
-		$active = '';
+		$active = true;
+		$super_user = false;
 		if ($id && $this->request->is('get')) {
 			$request = ['id' => $id];
 			$response = $this->Group->getGroupById($this->token, $request);
@@ -83,6 +86,7 @@ class GroupsController extends AppController
 				if ($response && $response['ErrorCode'] == '200') {
 						$group->setData($response['Data']);
 						$active = $response['Data']['active'];
+						$super_user = $response['Data']['super_user'];
 				} else {
 					$this->Flash->error($response['Message']);
 					$this->goingToUrl('Groups','/');
@@ -115,7 +119,8 @@ class GroupsController extends AppController
 		}
 		$this->set([
 			'group' => $group,
-			'active' => $active
+			'active' => $active,
+			'super_user' => $super_user
 			]);
 	}
 

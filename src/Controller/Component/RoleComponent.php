@@ -18,7 +18,7 @@ class RoleComponent extends Component
 		$response = $this->getAllRoles($token);
 		if($response){
 			$response = json_decode($response);
-			if ($response->ErrorCode == 200) {
+			if ($response && $response->ErrorCode == 200) {
 				$roles = $response->Data;
 			}
 		}

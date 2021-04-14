@@ -13,7 +13,8 @@ class GroupsForm extends Form
 				->addField('name', ['type' => 'string'])
 				->addField('display', ['type' => 'string'])
 				->addField('code', ['type' => 'string'])
-				->addField('active', 'boolean');
+				->addField('active', 'boolean')
+				->addField('super_user', 'boolean');
 	}
 
 }

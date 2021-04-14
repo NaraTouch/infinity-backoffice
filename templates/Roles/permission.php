@@ -41,7 +41,7 @@
 											<label class="form-check-label">
 												<input 
 													type="checkbox"
-													value="<?= $method->id ?>"
+													value="<?= $method->id.'-'.$module->id ?>"
 													name="<?= $name ?>"
 													class="form-check-input"
 													<?= $checked;?>

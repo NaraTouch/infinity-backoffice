@@ -18,7 +18,7 @@ class GroupComponent extends Component
 		$response = $this->getAllGroups($token);
 		if($response){
 			$response = json_decode($response);
-			if ($response->ErrorCode == 200) {
+			if ($response && $response->ErrorCode == 200) {
 				$groups = $response->Data;
 			}
 		}

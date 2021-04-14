@@ -108,6 +108,49 @@
 								</div>
 							</div>
 						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group row">
+									<label class="col-sm-3 col-form-label">Authenticator</label>
+									<?php
+										$_super_user = 'checked';
+										$_not_super_user = '';
+										if (!$super_user) {
+											$_super_user = '';
+											$_not_super_user = 'checked';
+										}
+									?>
+									<div class="col-sm-4">
+										<div class="form-check">
+											<label class="form-check-label">
+												<input 
+													type="radio"
+													class="form-check-input"
+													name="super_user"
+													value=1
+													<?= $_super_user;?>
+												>
+												Super User
+											</label>
+										</div>
+									</div>
+									<div class="col-sm-5">
+										<div class="form-check">
+											<label class="form-check-label">
+												<input
+													type="radio"
+													class="form-check-input"
+													name="super_user"
+													value=0
+													<?= $_not_super_user;?>
+												>
+												Not Super User
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 						<?= $this->element('component/button_submit'); ?>
 						<?= $this->element('component/button_cancel'); ?>
 					<?= $this->Form->end(); ?>

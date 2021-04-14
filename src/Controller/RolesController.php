@@ -167,9 +167,13 @@ class RolesController extends AppController
 			$permission_data['permissions'] = [];
 			if (isset($request['permission'])) {
 				foreach ($request['permission'] as $key => $value) {
+					$_exp = explode("-", $value['method_id']);
+					$method_id = $_exp[0];
+					$module_id = $_exp[1];
 					$permission_data['permissions'][]= [
 						'role_id' => $request['role_id'],
-						'method_id' => $value['method_id']
+						'method_id' => $method_id,
+						'module_id' => $module_id,
 					];
 				}
 			}

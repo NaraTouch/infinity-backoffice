@@ -17,7 +17,7 @@ class PermissionComponent extends Component
 		$response = $this->getPermissionByRole($token, $request);
 		if($response){
 			$response = json_decode($response);
-			if ($response->ErrorCode == 200) {
+			if ($response && $response->ErrorCode == 200) {
 				$permissions = $response->Data;
 			}
 		}
