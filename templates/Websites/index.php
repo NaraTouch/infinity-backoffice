@@ -16,45 +16,12 @@
 							<div class="col-2">
 								<div class="form-group row">
 									<div class="col-12">
-										<select class="js-example-basic-single w-100" name="website_id">
-											<?php
-												if (isset($websites)) :
-													$default_s = 'selected';
-													$id = null;
-													if ($this->request->getQuery('website_id')) :
-														$id = $this->request->getQuery('website_id');
-														$default_s = '';
-													endif;
-												?>
-												<option value="" <?= $default_s;?>>Please select Website</option>
-											<?php
-
-												foreach ($websites as $key => $value) :
-												$selected = '';
-												if ($id == $value->id) {
-													$selected = 'selected';
-												}
-											?>
-												<option value="<?= $value->id; ?>" <?= $selected;?>><?= $value->display; ?></option>
-											<?php
-												endforeach;
-											else:
-											?>
-												<option value="">No Website!!!</option>
-											<?php endif; ?>
-										</select>
-									</div>
-								</div>
-							</div>
-							<div class="col-2">
-								<div class="form-group row">
-									<div class="col-12">
 										<input 
 											type="text"
 											class="form-control"
 											name="keywords"
 											value="<?= ($this->request->getQuery('keywords')) ? $this->request->getQuery('keywords') : ''?>"
-											placeholder="Group Name"/>
+											placeholder="Website Name"/>
 									</div>
 								</div>
 							</div>
@@ -72,8 +39,8 @@
 							<thead>
 								<tr>
 									<th>#</th>
-									<th>Website</th>
 									<th>Name</th>
+									<th>Domain</th>
 									<th>Display</th>
 									<th>Code</th>
 									<th>Status</th>
@@ -83,22 +50,15 @@
 								</tr>
 							</thead>
 							<tbody>
-								<?php if($groups):
-									foreach ($groups as $key => $value):
+								<?php if($websites):
+									foreach ($websites as $key => $value):
 								?>
 									<tr>
 										<td><?= h($key) ?></td>
-										<td><?= (isset($value->website->display)) ? h($value->website->display) : '-' ?></td>
 										<td><?= h($value->name) ?></td>
+										<td><?= h($value->domain) ?></td>
 										<td><?= h($value->display) ?></td>
 										<td><?= h($value->code) ?></td>
-										<td>
-											<?php if($value->super_user):?>
-											<label class="badge badge-success">Super User</label>
-											<?php else: ?>
-											<label class="badge badge-danger">Not Super User</label>
-											<?php endif; ?>
-										</td>
 										<td>
 											<?php if($value->active):?>
 											<label class="badge badge-success">Active</label>

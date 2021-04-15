@@ -1,14 +1,13 @@
 <?php
 namespace App\Controller;
 use Cake\Event\EventInterface;
-use App\Form\GroupsForm;
+use App\Form\WebsitesForm;
 
-class GroupsController extends AppController
+class WebsitesController extends AppController
 {
 	private $token;
 	public function initialize(): void
 	{
-		$this->loadComponent('Group');
 		$this->loadComponent('Website');
 		$this->loadComponent('Flash');
 	}
@@ -16,54 +15,46 @@ class GroupsController extends AppController
 	public function beforeFilter(EventInterface $event)
 	{
 		parent::beforeFilter($event);
-		$websites = [];
 		if ($this->Auth->user()) {
 			$this->token = $this->Auth->user('token');
-			$websites = $this->Website->getWebsites($this->token);
 		}
-		$this->set(['websites' => $websites]);
 	}
 
 	public function index()
 	{
-		$groups = [];
+		$websites = [];
 		$keywords = $this->request->getQuery('keywords');
-		$website_id = $this->request->getQuery('website_id');
 		$conditions = [];
 		if ($keywords) {
 			$conditions['keywords'] = $keywords;
 		}
-		if ($website_id) {
-			$conditions['website_id'] = $website_id;
-		}
-		$response = $this->Group->getAllGroups($this->token, $conditions);
+		$response = $this->Website->getAllWebsites($this->token, $conditions);
 		if($response){
 			$response = json_decode($response);
 			if ($response && $response->ErrorCode == '200') {
-				$groups = $response->Data;
+				$websites = $response->Data;
 			} else {
 				$this->Flash->error($response->Message);
 			}
 		}
 		$this->set([
-			'groups' => $groups,
+			'websites' => $websites,
 		]);
 	}
 
 	public function add()
 	{
-		$group = new GroupsForm();
-		$website = null;
+		$website = new WebsitesForm();
 		$active = true;
 		$super_user = false;
 		if ($this->request->is('post')) {
 			$request = $this->request->getData();
-			$response = $this->Group->createGroup($this->token, $request);
+			$response = $this->Website->createWebsite($this->token, $request);
 			if($response){
 				$response = json_decode($response);
 				if ($response && $response->ErrorCode == '200') {
 					$this->Flash->success($response->Message);
-					$this->goingToUrl('Groups','/');
+					$this->goingToUrl('Websites','/');
 				} else {
 					foreach ($response->Error as $key => $value) {
 						$message = $key;
@@ -76,45 +67,40 @@ class GroupsController extends AppController
 			}
 		}
 		$this->set([
-			'group' => $group,
 			'website' => $website,
 			'active' => $active,
 			'super_user' => $super_user
 			]);
 	}
-
+	
 	public function edit($id = null)
 	{
-		$group = new GroupsForm();
-		$website = null;
+		$website = new WebsitesForm();
 		$active = true;
-		$super_user = false;
 		if ($id && $this->request->is('get')) {
 			$request = ['id' => $id];
-			$response = $this->Group->getGroupById($this->token, $request);
+			$response = $this->Website->getWebsiteById($this->token, $request);
 			if($response){
 				$response = json_decode($response, true);
 				if ($response && $response['ErrorCode'] == '200') {
-						$group->setData($response['Data']);
-						$website = $response['Data']['website_id'];
+						$website->setData($response['Data']);
 						$active = $response['Data']['active'];
-						$super_user = $response['Data']['super_user'];
 				} else {
 					$this->Flash->error($response['Message']);
-					$this->goingToUrl('Groups','/');
+					$this->goingToUrl('Websites','/');
 				}
 			} else {
-				$this->Flash->error("Group Not Found");
-				$this->goingToUrl('Groups','/');
+				$this->Flash->error("Website Not Found");
+				$this->goingToUrl('Websites','/');
 			}
 		} else if ($this->request->is('post')) {
 			$request = $this->request->getData();
-			$response = $this->Group->updateGroup($this->token, $request);
+			$response = $this->Website->updateWebsite($this->token, $request);
 			if($response){
 				$response = json_decode($response);
 				if ($response && $response->ErrorCode == '200') {
 					$this->Flash->success($response->Message);
-					$this->goingToUrl('Groups','/');
+					$this->goingToUrl('Websites','/');
 				} else {
 					foreach ($response->Error as $key => $value) {
 						$message = $key;
@@ -126,14 +112,12 @@ class GroupsController extends AppController
 				}
 			}
 		} else {
-			$this->Flash->error("Group Not Found");
-			$this->goingToUrl('Groups','/');
+			$this->Flash->error("Website Not Found");
+			$this->goingToUrl('Websites','/');
 		}
 		$this->set([
-			'group' => $group,
 			'website' => $website,
 			'active' => $active,
-			'super_user' => $super_user
 			]);
 	}
 
@@ -141,7 +125,7 @@ class GroupsController extends AppController
 	{
 		if ($id && $this->request->is('get')) {
 			$request = ['id' => $id];
-			$response = $this->Group->deleteGroup($this->token, $request);
+			$response = $this->Website->deleteWebsite($this->token, $request);
 			if($response){
 				$response = json_decode($response);
 				if ($response && $response->ErrorCode == '200') {
@@ -152,6 +136,6 @@ class GroupsController extends AppController
 				}
 			}
 		}
-		$this->goingToUrl('Groups','/');
+		$this->goingToUrl('Websites','/');
 	}
 }

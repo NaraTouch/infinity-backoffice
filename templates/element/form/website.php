@@ -5,10 +5,10 @@
 				<div class="card-body">
 					<?= $this->element('component/table_head'); ?>
 						<?php
-							echo $this->Form->create($group, [
+							echo $this->Form->create($website, [
 								'class' => 'form-sample',
 							]);
-							if (isset($group)) {
+							if (isset($website)) {
 								echo $this->Form->hidden('id');
 							}
 						?>
@@ -16,39 +16,6 @@
 							Personal info
 						</p>
 						<div class="row">
-							<div class="col-md-6">
-								<div class="form-group row">
-									<label class="col-sm-3 col-form-label">Websites</label>
-									<div class="col-sm-9">
-										<div class="form-group">
-											<select class="js-example-basic-single w-100" name="website_id">
-												<?php
-												if (isset($websites)) :
-													$selected = 'selected';
-													if ($website) {
-														$selected = '';
-													}
-												?>
-												<option value="" <?= $selected;?>>Please select Website</option>
-												<?php
-													foreach ($websites as $k => $v) :
-													$_selected = '';
-													if ($website == $v->id) {
-														$_selected = 'selected';
-													}
-												?>
-													<option value="<?= $v->id; ?>" <?= $_selected;?>><?= $v->display; ?></option>
-												<?php
-													endforeach;
-												else:
-												?>
-													<option value="">No Website!!!</option>
-												<?php endif; ?>
-											</select>
-										</div>
-									</div>
-								</div>
-							</div>
 							<div class="col-md-6">
 								<div class="form-group row">
 									<label class="col-sm-3 col-form-label">Name</label>
@@ -65,8 +32,6 @@
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group row">
 									<label class="col-sm-3 col-form-label">Display</label>
@@ -76,6 +41,24 @@
 												'type' => 'text',
 												'class' => 'form-control form-control-lg',
 												'placeholder' => 'Display',
+												'label' => false,
+												'required' => false,
+											]);
+										?>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group row">
+									<label class="col-sm-3 col-form-label">Domain</label>
+									<div class="col-sm-9">
+										<?php
+											echo $this->Form->input('domain', [
+												'type' => 'text',
+												'class' => 'form-control',
+												'placeholder' => 'Domain',
 												'label' => false,
 												'required' => false,
 											]);
@@ -99,7 +82,6 @@
 									</div>
 								</div>
 							</div>
-							
 						</div>
 						<div class="row">
 							<div class="col-md-6">
@@ -138,47 +120,6 @@
 													<?= $_inactive;?>
 												>
 												Inactive
-											</label>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group row">
-									<label class="col-sm-3 col-form-label">Authenticator</label>
-									<?php
-										$_super_user = 'checked';
-										$_not_super_user = '';
-										if (!$super_user) {
-											$_super_user = '';
-											$_not_super_user = 'checked';
-										}
-									?>
-									<div class="col-sm-4">
-										<div class="form-check">
-											<label class="form-check-label">
-												<input 
-													type="radio"
-													class="form-check-input"
-													name="super_user"
-													value=1
-													<?= $_super_user;?>
-												>
-												Super User
-											</label>
-										</div>
-									</div>
-									<div class="col-sm-5">
-										<div class="form-check">
-											<label class="form-check-label">
-												<input
-													type="radio"
-													class="form-check-input"
-													name="super_user"
-													value=0
-													<?= $_not_super_user;?>
-												>
-												Not Super User
 											</label>
 										</div>
 									</div>
