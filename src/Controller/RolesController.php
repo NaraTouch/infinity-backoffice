@@ -97,9 +97,10 @@ class RolesController extends AppController
 			if($response) {
 				$response = json_decode($response, true);
 				if ($response && $response['ErrorCode'] == '200') {
-						$role->setData($response['Data']);
-						$group = $response['Data']['group_id'];
-						$active = $response['Data']['active'];
+						$data = $response['Data'][0];
+						$role->setData($data);
+						$group = $data['group_id'];
+						$active = $data['active'];
 				} else {
 					$this->Flash->error($response['Message']);
 					$this->goingToUrl('Roles','/');

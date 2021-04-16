@@ -118,9 +118,10 @@ class UsersController extends AppController
 			if($response){
 				$response = json_decode($response, true);
 				if ($response && $response['ErrorCode'] == '200') {
-						$user->setData($response['Data']);
-						$group = $response['Data']['group_id'];
-						$active = $response['Data']['active'];
+						$data = $response['Data'][0];
+						$user->setData($data);
+						$group = $data['group_id'];
+						$active = $data['active'];
 				} else {
 					$this->Flash->error($response['Message']);
 					$this->goingToUrl('Users','/');
