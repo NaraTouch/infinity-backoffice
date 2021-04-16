@@ -28,7 +28,6 @@
 												?>
 												<option value="" <?= $default_s;?>>Please select Group</option>
 											<?php
-
 												foreach ($groups as $key => $value) :
 												$selected = '';
 												if ($id == $value->id) {
@@ -77,7 +76,7 @@
 									<th>Groups</th>
 									<th>Status</th>
 									<th>Created</th>
-									<th>Actions</th>
+									<?= $this->element('component/th_action'); ?>
 								</tr>
 							</thead>
 							<tbody>
@@ -98,16 +97,24 @@
 										</td>
 										<td><?= date('Y-m-d H:i:s', strtotime($value->created)); ?></td>
 										<td>
-											<?= $this->Html->link('Edit', [
-													'action' => 'edit',
-													$value->id
-												],
-												[
-													'class' => 'btn btn-primary btn-sm',
-													'escape' => false,
-												]
-											); ?>
-											<?= $this->Html->link('Delete', [
+											<?php
+											if (!empty($features)
+												&& (isset($features['edit'])
+												&& $features['edit'] == true)):
+												echo $this->Html->link('Edit', [
+														'action' => 'edit',
+														$value->id
+													],
+													[
+														'class' => 'btn btn-primary btn-sm',
+														'escape' => false,
+													]
+												);
+											endif;
+											if (!empty($features)
+												&& (isset($features['delete'])
+												&& $features['delete'] == true)):
+												echo $this->Html->link('Delete', [
 													'action' => 'delete',
 													$value->id
 												],
@@ -115,7 +122,9 @@
 													'class' => 'btn btn-danger btn-sm',
 													'escape' => false,
 												]
-											); ?>
+											);
+											endif;
+											?>
 										</td>
 									</tr>
 								<?php

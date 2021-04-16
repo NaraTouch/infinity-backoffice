@@ -33,11 +33,19 @@ class AppController extends Controller
 			],
 		]);
 	}
-	
+
 	public function beforeFilter(EventInterface $event)
 	{
 		parent::beforeFilter($event);
 		$this->loadComponent('Auth');
+		$this->loadComponent('FeatureSettings');
+		$features = [];
+		if ($this->Auth->user()) {
+			$parram = $this->request->getAttribute('params');
+			$menu = $this->Auth->user('menu');
+			$features = $this->FeatureSettings->enableFeature($parram, $menu);
+		}
+		$this->set(['features' => $features]);
 	}
 
 	public function isAuthorized($user)

@@ -90,49 +90,67 @@
 										</button>
 										<div class="dropdown-menu" aria-labelledby="dropdownMenuSizeButton3">
 											<h6 class="dropdown-header">Settings</h6>
-											<?= $this->Html->link(
-												'Create Folder' ,
-												[
-													'controller' => 'PClouds',
-													'action' => 'createFolderIfNotExists',
-													'?' =>
-														[
+											<?php
+											if (!empty($features)
+												&& (isset($features['createFolderIfNotExists'])
+												&& $features['createFolderIfNotExists'] == true)):
+													echo $this->Html->link(
+													'Create Folder' ,
+													[
+														'controller' => 'PClouds',
+														'action' => 'createFolderIfNotExists',
+														'?' =>
+															[
+																'path' => $_current_dir,
+																'folder_id' => $_dir_id
+														],
+													],
+													[
+														'alt' => 'create folder',
+														'target' => '_blank',
+														'escape' => false,
+														'class' => 'dropdown-item',
+													]
+												);
+											endif;
+											
+											if (!empty($features)
+												&& (isset($features['uploadFile'])
+												&& $features['uploadFile'] == true)):
+												echo $this->Html->link('Upload Files' ,
+													[
+														'controller' => 'PClouds',
+														'action' => 'uploadFile',
+														'?' => [
 															'path' => $_current_dir,
 															'folder_id' => $_dir_id
+														]
 													],
-												],
-												[
-													'alt' => 'create folder',
-													'target' => '_blank',
-													'escape' => false,
-													'class' => 'dropdown-item',
-												]
-											) ?>
-											<?= $this->Html->link('Upload Files' ,
-												[
-													'controller' => 'PClouds',
-													'action' => 'uploadFile',
-													'?' => [
-														'path' => $_current_dir,
-														'folder_id' => $_dir_id
+													[
+														'alt' => 'upload files',
+														'target' => '_blank',
+														'escape' => false,
+														'class' => 'dropdown-item',
 													]
-												],
-												[
-													'alt' => 'upload files',
-													'target' => '_blank',
-													'escape' => false,
-													'class' => 'dropdown-item',
-												]
-											) ?>
-											<?= $this->Html->link('Delete checked' ,
-												[ ],
-												[
-													'alt' => 'Delete checked files',
-													'escape' => false,
-													'class' => 'dropdown-item',
-													'id' => 'deleteAllFile'
-												]
-											) ?>
+												);
+											endif;
+											
+											if (!empty($features) && (
+													(isset($features['deleteFolder']) && $features['deleteFolder'] == true) ||
+													(isset($features['deleteFile']) && $features['deleteFile'] == true)
+												)):
+												echo $this->Html->link('Delete checked' ,
+													[ ],
+													[
+														'alt' => 'Delete checked files',
+														'escape' => false,
+														'class' => 'dropdown-item',
+														'id' => 'deleteAllFile'
+													]
+												);
+											endif;
+											
+										?>
 										</div>
 									</li>
 								</ol>
@@ -155,7 +173,7 @@
 										<th>Name</th>
 										<th>Sized</th>
 										<th>Date</th>
-										<th>Action</th>
+										<?= $this->element('component/th_action'); ?>
 									</tr>
 								</thead>
 								<tbody>
@@ -248,61 +266,78 @@
 											<td>
 												<?php
 												if (strtolower($value->icon) == 'folder') :
-													echo $this->Html->link('Edit', [
-																'action' => 'edit_folder',
+													if (!empty($features)
+														&& (isset($features['renameFolder'])
+														&& $features['renameFolder'] == true)):
+														echo $this->Html->link('Edit', [
+																	'action' => 'edit_folder',
+																	'?' => [
+																		'path' => $_current_dir,
+																		'name' => $value->name,
+																		'folder_id' => $value->folderid,
+																	]
+																],
+																[
+																	'target' => '_blank',
+																	'class' => 'btn btn-primary btn-sm',
+																	'escape' => false,
+																]
+															);
+													endif;
+													
+													if (!empty($features)
+														&& (isset($features['deleteFolder'])
+														&& $features['deleteFolder'] == true)):
+														echo $this->Html->link('Delete', [
+																'action' => 'delete_folder',
 																'?' => [
 																	'path' => $_current_dir,
-																	'name' => $value->name,
 																	'folder_id' => $value->folderid,
 																]
 															],
 															[
-																'target' => '_blank',
-																'class' => 'btn btn-primary btn-sm',
+																'target' => '_self',
+																'class' => 'btn btn-danger btn-sm',
 																'escape' => false,
 															]
 														);
-													echo $this->Html->link('Delete', [
-															'action' => 'delete_folder',
-															'?' => [
-																'path' => $_current_dir,
-																'folder_id' => $value->folderid,
-															]
-														],
-														[
-															'target' => '_self',
-															'class' => 'btn btn-danger btn-sm',
-															'escape' => false,
-														]
-													);
+													endif;
 												else :
-													echo $this->Html->link('Edit', [
-																'action' => 'edit_file',
+													if (!empty($features)
+														&& (isset($features['renameFile'])
+														&& $features['renameFile'] == true)):
+														echo $this->Html->link('Edit', [
+																	'action' => 'edit_file',
+																	'?' => [
+																		'path' => $_current_dir,
+																		'name' => $value->name,
+																		'file_id' => $value->fileid,
+																	]
+																],
+																[
+																	'target' => '_blank',
+																	'class' => 'btn btn-primary btn-sm',
+																	'escape' => false,
+																]
+															);
+													endif;
+													if (!empty($features)
+														&& (isset($features['deleteFile'])
+														&& $features['deleteFile'] == true)):
+														echo $this->Html->link('Delete', [
+																'action' => 'delete_file',
 																'?' => [
 																	'path' => $_current_dir,
-																	'name' => $value->name,
 																	'file_id' => $value->fileid,
 																]
 															],
 															[
-																'target' => '_blank',
-																'class' => 'btn btn-primary btn-sm',
+																'target' => '_self',
+																'class' => 'btn btn-danger btn-sm',
 																'escape' => false,
 															]
 														);
-													echo $this->Html->link('Delete', [
-															'action' => 'delete_file',
-															'?' => [
-																'path' => $_current_dir,
-																'file_id' => $value->fileid,
-															]
-														],
-														[
-															'target' => '_self',
-															'class' => 'btn btn-danger btn-sm',
-															'escape' => false,
-														]
-													);
+													endif;
 												endif;
 												?>
 											</td>

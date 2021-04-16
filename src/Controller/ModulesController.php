@@ -55,12 +55,16 @@ class ModulesController extends AppController
 					$this->Flash->success($response->Message);
 					$this->goingToUrl('Modules','/');
 				} else {
-					foreach ($response->Error as $key => $value) {
-						$message = $key;
-						foreach ($value as $k => $v) {
-							$message .= ' ('.$k.') Error Message : '.$v;
+					if (isset($response->Error)) {
+						foreach ($response->Error as $key => $value) {
+							$message = $key;
+							foreach ($value as $k => $v) {
+								$message .= ' ('.$k.') Error Message : '.$v;
+							}
+							$this->Flash->error($message);
 						}
-						$this->Flash->error($message);
+					} else {
+						$this->Flash->error($response->Message);
 					}
 				}
 			}
@@ -100,12 +104,16 @@ class ModulesController extends AppController
 					$this->Flash->success($response->Message);
 					$this->goingToUrl('Modules','/');
 				} else {
-					foreach ($response->Error as $key => $value) {
-						$message = $key;
-						foreach ($value as $k => $v) {
-							$message .= ' ('.$k.') Error Message : '.$v;
+					if (isset($response->Error)) {
+						foreach ($response->Error as $key => $value) {
+							$message = $key;
+							foreach ($value as $k => $v) {
+								$message .= ' ('.$k.') Error Message : '.$v;
+							}
+							$this->Flash->error($message);
 						}
-						$this->Flash->error($message);
+					} else {
+						$this->Flash->error($response->Message);
 					}
 				}
 			}

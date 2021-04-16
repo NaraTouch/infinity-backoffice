@@ -65,12 +65,16 @@ class GroupsController extends AppController
 					$this->Flash->success($response->Message);
 					$this->goingToUrl('Groups','/');
 				} else {
-					foreach ($response->Error as $key => $value) {
-						$message = $key;
-						foreach ($value as $k => $v) {
-							$message .= ' ('.$k.') Error Message : '.$v;
+					if (isset($response->Error)) {
+						foreach ($response->Error as $key => $value) {
+							$message = $key;
+							foreach ($value as $k => $v) {
+								$message .= ' ('.$k.') Error Message : '.$v;
+							}
+							$this->Flash->error($message);
 						}
-						$this->Flash->error($message);
+					} else {
+						$this->Flash->error($response->Message);
 					}
 				}
 			}
@@ -116,12 +120,16 @@ class GroupsController extends AppController
 					$this->Flash->success($response->Message);
 					$this->goingToUrl('Groups','/');
 				} else {
-					foreach ($response->Error as $key => $value) {
-						$message = $key;
-						foreach ($value as $k => $v) {
-							$message .= ' ('.$k.') Error Message : '.$v;
+					if (isset($response->Error)) {
+						foreach ($response->Error as $key => $value) {
+							$message = $key;
+							foreach ($value as $k => $v) {
+								$message .= ' ('.$k.') Error Message : '.$v;
+							}
+							$this->Flash->error($message);
 						}
-						$this->Flash->error($message);
+					} else {
+						$this->Flash->error($response->Message);
 					}
 				}
 			}
@@ -146,7 +154,6 @@ class GroupsController extends AppController
 				$response = json_decode($response);
 				if ($response && $response->ErrorCode == '200') {
 					$this->Flash->success($response->Message);
-					
 				} else {
 					$this->Flash->error($response->Message);
 				}
