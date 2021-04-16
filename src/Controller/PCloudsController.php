@@ -2,6 +2,7 @@
 namespace App\Controller;
 use Cake\Event\EventInterface;
 use App\Form\FolderForm;
+use App\Form\PCloundsForm;
 
 class PCloudsController extends AppController
 {
@@ -10,15 +11,130 @@ class PCloudsController extends AppController
 	{
 		$this->loadComponent('Flash');
 		$this->loadComponent('FileManager');
-		
+		$this->loadComponent('Website');
 	}
 
 	public function beforeFilter(EventInterface $event)
 	{
 		parent::beforeFilter($event);
+		$websites = [];
 		if ($this->Auth->user()) {
 			$this->token = $this->Auth->user('token');
+			$websites = $this->Website->getWebsites($this->token);
 		}
+		$this->set(['websites' => $websites]);
+	}
+
+	public function accounts()
+	{
+		$accounts = [];
+		$website_id = $this->request->getQuery('website_id');
+		$conditions = [];
+		if ($website_id) {
+			$conditions['website_id'] = $website_id;
+		}
+		$response = $this->FileManager->accounts($this->token, $conditions);
+		if($response){
+			$response = json_decode($response);
+			if ($response && $response->ErrorCode == '200') {
+				$accounts = $response->Data;
+			} else {
+				$this->Flash->error($response->Message);
+			}
+		}
+		$this->set([
+			'accounts' => $accounts,
+		]);
+	}
+
+	public function add()
+	{
+		$account = new PCloundsForm();
+		$website = null;
+		$active = true;
+		if ($this->request->is('post')) {
+			$request = $this->request->getData();
+			$response = $this->FileManager->add($this->token, $request);
+			if($response){
+				$response = json_decode($response);
+				if ($response && $response->ErrorCode == '200') {
+					$this->Flash->success($response->Message);
+					$this->goingToUrl('PClouds','accounts');
+				} else {
+					if (isset($response->Error)) {
+						foreach ($response->Error as $key => $value) {
+							$message = $key;
+							foreach ($value as $k => $v) {
+								$message .= ' ('.$k.') Error Message : '.$v;
+							}
+							$this->Flash->error($message);
+						}
+					} else {
+						$this->Flash->error($response->Message);
+					}
+				}
+			}
+		}
+		$this->set([
+			'account' => $account,
+			'website' => $website,
+			'active' => $active,
+			]);
+	}
+
+	public function edit($id = null)
+	{
+		$account = new PCloundsForm();
+		$website = null;
+		$active = true;
+		if ($id && $this->request->is('get')) {
+			$request = ['id' => $id];
+			$response = $this->FileManager->getAccountById($this->token, $request);
+			if($response){
+				$response = json_decode($response, true);
+				if ($response && $response['ErrorCode'] == '200') {
+						$account->setData($response['Data']);
+						$website = $response['Data']['website_id'];
+						$active = $response['Data']['active'];
+				} else {
+					$this->Flash->error($response['Message']);
+					$this->goingToUrl('PClouds','accounts');
+				}
+			} else {
+				$this->Flash->error("PClouds Not Found");
+				$this->goingToUrl('PClouds','accounts');
+			}
+		} else if ($this->request->is('post')) {
+			$request = $this->request->getData();
+			$response = $this->FileManager->updateAccount($this->token, $request);
+			if($response){
+				$response = json_decode($response);
+				if ($response && $response->ErrorCode == '200') {
+					$this->Flash->success($response->Message);
+					$this->goingToUrl('PClouds','accounts');
+				} else {
+					if (isset($response->Error)) {
+						foreach ($response->Error as $key => $value) {
+							$message = $key;
+							foreach ($value as $k => $v) {
+								$message .= ' ('.$k.') Error Message : '.$v;
+							}
+							$this->Flash->error($message);
+						}
+					} else {
+						$this->Flash->error($response->Message);
+					}
+				}
+			}
+		} else {
+			$this->Flash->error("PClouds Not Found");
+			$this->goingToUrl('PClouds','accounts');
+		}
+		$this->set([
+			'account' => $account,
+			'website' => $website,
+			'active' => $active,
+			]);
 	}
 
 	public function index()

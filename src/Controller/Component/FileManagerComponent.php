@@ -12,6 +12,35 @@ class FileManagerComponent extends Component
 		$this->api_url = 'http://localhost/infinity-api';
 	}
 
+	public function accounts($token = null, $request = [])
+	{
+		$url = $this->api_url.'/pclouds/accounts';
+		$http_method = 'POST';
+		return $this->openUrlWithToken($url, $http_method, $token, $request);
+	}
+	
+
+	public function add($token = null, $request = [])
+	{
+		$url = $this->api_url.'/pclouds/add';
+		$http_method = 'POST';
+		return $this->openUrlWithToken($url, $http_method, $token, $request);
+	}
+	
+	public function updateAccount($token = null, $request = [])
+	{
+		$url = $this->api_url.'/pclouds/edit';
+		$http_method = 'POST';
+		return $this->openUrlWithToken($url, $http_method, $token, $request);
+	}
+
+	public function getAccountById($token = null, $request = [])
+	{
+		$url = $this->api_url.'/pclouds/view';
+		$http_method = 'POST';
+		return $this->openUrlWithToken($url, $http_method, $token, $request);
+	}
+
 	public function getFolderList($token = null, $request = [])
 	{
 		$url = $this->api_url.'/pclouds';
