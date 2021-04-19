@@ -13,6 +13,10 @@
 						<?= $this->element('component/table_head'); ?>
 					</div>
 					<?php
+						$website_id = '';
+						if ($this->request->getQuery('website_id')) {
+							$website_id = $this->request->getQuery('website_id');
+						}
 						if ($list && isset($list)) :
 						$_dir_id = '';
 						$_current_dir = '';
@@ -31,6 +35,8 @@
 												echo $this->Html->link('Home', [
 													'controller' => 'PClouds',
 													'action' => 'index',
+													'?' =>
+														['website_id' => $website_id]
 												]);
 											?>
 										</li>
@@ -50,7 +56,10 @@
 													'controller' => 'PClouds',
 													'action' => 'index',
 													'?' =>
-														['path' => $path]
+														[
+															'website_id' => $website_id,
+															'path' => $path
+														]
 												]);
 											?>
 										</li>
@@ -62,6 +71,8 @@
 												echo $this->Html->link('Home', [
 													'controller' => 'PClouds',
 													'action' => 'index',
+													'?' =>
+														['website_id' => $website_id]
 												]);
 											?>
 										</li>
@@ -101,6 +112,7 @@
 														'action' => 'createFolderIfNotExists',
 														'?' =>
 															[
+																'website_id' => $website_id,
 																'path' => $_current_dir,
 																'folder_id' => $_dir_id
 														],
@@ -122,6 +134,7 @@
 														'controller' => 'PClouds',
 														'action' => 'uploadFile',
 														'?' => [
+															'website_id' => $website_id,
 															'path' => $_current_dir,
 															'folder_id' => $_dir_id
 														]
@@ -201,6 +214,7 @@
 															type="checkbox"
 															value="<?=$id?>"
 															class="form-check-input"
+															data-website_id="<?=$website_id;?>"
 															data-path="<?=$_current_dir;?>"
 															data-type="<?=$type;?>"
 														>
@@ -212,7 +226,9 @@
 												if (strtolower($value->icon) == 'folder') :
 													$url = $this->Url->build([
 														'controller' => 'PClouds',
-														'action' => 'index', '?' => [
+														'action' => 'index',
+														'?' => [
+															'website_id' => $website_id,
 															'path' => $value->path,
 														]
 													]);
@@ -272,6 +288,7 @@
 														echo $this->Html->link('Edit', [
 																	'action' => 'edit_folder',
 																	'?' => [
+																		'website_id' => $website_id,
 																		'path' => $_current_dir,
 																		'name' => $value->name,
 																		'folder_id' => $value->folderid,
@@ -291,6 +308,7 @@
 														echo $this->Html->link('Delete', [
 																'action' => 'delete_folder',
 																'?' => [
+																	'website_id' => $website_id,
 																	'path' => $_current_dir,
 																	'folder_id' => $value->folderid,
 																]
@@ -309,6 +327,7 @@
 														echo $this->Html->link('Edit', [
 																	'action' => 'edit_file',
 																	'?' => [
+																		'website_id' => $website_id,
 																		'path' => $_current_dir,
 																		'name' => $value->name,
 																		'file_id' => $value->fileid,
@@ -327,6 +346,7 @@
 														echo $this->Html->link('Delete', [
 																'action' => 'delete_file',
 																'?' => [
+																	'website_id' => $website_id,
 																	'path' => $_current_dir,
 																	'file_id' => $value->fileid,
 																]

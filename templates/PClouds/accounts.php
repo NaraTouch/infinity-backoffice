@@ -98,6 +98,17 @@
 													]
 												);
 											endif;
+											
+											echo $this->Html->link('FileManager', [
+														'action' => 'index',
+														'?' =>
+														['website_id' => $value->website_id]
+													],
+													[
+														'class' => 'btn btn-info btn-sm',
+														'escape' => false,
+													]
+												);
 											?>
 										</td>
 									</tr>

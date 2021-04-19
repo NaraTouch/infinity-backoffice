@@ -26,6 +26,7 @@
 								<span class="fake-btn">Choose files</span>
 								<span class="file-msg">or drag and drop files here</span>
 								<input 
+									data-website_id="<?= $this->request->getQuery('website_id')?>"
 									data-path="<?= $this->request->getQuery('path')?>"
 									data-folder_id="<?= $this->request->getQuery('folder_id')?>"
 									class="file-input" 

@@ -1,6 +1,7 @@
 <?php
 namespace App\Controller;
 use Cake\Event\EventInterface;
+use App\Form\FileForm;
 use App\Form\FolderForm;
 use App\Form\PCloundsForm;
 
@@ -141,11 +142,16 @@ class PCloudsController extends AppController
 	{
 		$list = [];
 		$request = [
-			'path' => '/'
+			'path' => '/',
+			'website_id' => '',
 		];
 		$path = $this->request->getQuery('path');
+		$website_id = $this->request->getQuery('website_id');
 		if ($path) {
 			$request['path'] = $path;
+		}
+		if ($website_id) {
+			$request['website_id'] = $website_id;
 		}
 		$response = $this->FileManager->getFolderList($this->token, $request);
 		if($response){
@@ -169,11 +175,13 @@ class PCloudsController extends AppController
 			$data = [];
 			$error = [];
 			if ($this->request->is('ajax')) {
+				$website_id = $this->request->getQuery('website_id');
 				$name = $this->request->getQuery('name');
 				$path = $this->request->getQuery('path');
 				$folder_id = $this->request->getQuery('folder_id');
 				$progresshash = $this->request->getQuery('progresshash');
 				$request = [
+					'website_id' => $website_id,
 					'filename' => $name,
 					'path' => $path,
 					'folderid' => $folder_id,
@@ -215,7 +223,6 @@ class PCloudsController extends AppController
 		$http_status = 404;
 		$message = '';
 		$data = [];
-		$error = [];
 		if ($this->request->is('ajax')) {
 			$request = [
 				'progresshash' => false
@@ -253,8 +260,10 @@ class PCloudsController extends AppController
 		$folder = new FolderForm();
 		$path = $this->request->getQuery('path');
 		$folder_id = $this->request->getQuery('folder_id');
+		$website_id = $this->request->getQuery('website_id');
 		if ($this->request->is('post')) {
 			$request = $this->request->getData();
+			$request['website_id'] = $website_id;
 			$request['path'] = $path;
 			$request['folder_id'] = $folder_id;
 			$request['name'] = $request['name'];
@@ -262,7 +271,10 @@ class PCloudsController extends AppController
 			if($response){
 				$response = json_decode($response);
 				if ($response && $response->ErrorCode == '200') {
-					$param = ['path' => $path];
+					$param = [
+						'path' => $path,
+						'website_id' => $website_id,
+					];
 					$this->goingToUrlWithParam('PClouds','index', $param);
 					$this->Flash->success($response->Message);
 				} else {
@@ -276,25 +288,33 @@ class PCloudsController extends AppController
 	public function editFolder()
 	{
 		$folder = new FolderForm();
+		$website_id = '';
 		$folder_id = '';
 		$name = '';
 		$path = $this->request->getQuery('path');
 		if($this->request->getQuery('folder_id')) {
 			$folder_id = $this->request->getQuery('folder_id');
 		}
-		if($this->request->getQuery('name')) {
-			$name = $this->request->getQuery('name');
+		if($this->request->getQuery('folder_id')) {
+			$folder_id = $this->request->getQuery('folder_id');
+		}
+		if($this->request->getQuery('website_id')) {
+			$website_id = $this->request->getQuery('website_id');
 		}
 		$folder->setData(['name' => $name]);
 		if ($this->request->is('post')) {
 			$data = $this->request->getData();
+			$request['website_id'] = $website_id;
 			$request['folder_id'] = $folder_id;
 			$request['name'] = $data['name'];
 			$response = $this->FileManager->renameFolder($this->token, $request);
 			if($response){
 				$response = json_decode($response);
 				if ($response && $response->ErrorCode == '200') {
-					$param = ['path' => $path];
+					$param = [
+						'path' => $path,
+						'website_id' => $website_id,
+					];
 					$this->goingToUrlWithParam('PClouds','index', $param);
 					$this->Flash->success($response->Message);
 				} else {
@@ -307,13 +327,21 @@ class PCloudsController extends AppController
 
 	public function deleteFolder()
 	{
+		$website_id = '';
 		$folder_id = '';
 		$path = $this->request->getQuery('path');
+		if($this->request->getQuery('website_id')) {
+			$website_id = $this->request->getQuery('website_id');
+		}
 		if($this->request->getQuery('folder_id')) {
 			$folder_id = $this->request->getQuery('folder_id');
 		}
-		$param = ['path' => $path];
+		$param = [
+			'path' => $path,
+			'website_id' => $website_id
+		];
 		if ($this->request->is('get')) {
+			$request['website_id'] = $website_id;
 			$request['path'] = $path;
 			$request['folder_id'] = $folder_id;
 			$response = $this->deleteFolderApi($this->token, $request);
@@ -332,9 +360,13 @@ class PCloudsController extends AppController
 	public function editFile()
 	{
 		$file = new FileForm();
+		$website_id = '';
 		$file_id = '';
 		$name = '';
 		$path = $this->request->getQuery('path');
+		if($this->request->getQuery('website_id')) {
+			$website_id = $this->request->getQuery('website_id');
+		}
 		if($this->request->getQuery('file_id')) {
 			$file_id = $this->request->getQuery('file_id');
 		}
@@ -344,13 +376,17 @@ class PCloudsController extends AppController
 		$file->setData(['name' => $name]);
 		if ($this->request->is('post')) {
 			$data = $this->request->getData();
+			$request['website_id'] = $website_id;
 			$request['file_id'] = $file_id;
 			$request['name'] = $data['name'];
 			$response = $this->FileManager->renameFile($this->token, $request);
 			if($response){
 				$response = json_decode($response);
 				if ($response && $response->ErrorCode == '200') {
-					$param = ['path' => $path];
+					$param = [
+						'path' => $path,
+						'website_id' => $website_id
+					];
 					$this->goingToUrlWithParam('PClouds','index', $param);
 					$this->Flash->success($response->Message);
 				} else {
@@ -363,13 +399,21 @@ class PCloudsController extends AppController
 
 	public function deleteFile()
 	{
+		$website_id = '';
 		$file_id = '';
 		$path = $this->request->getQuery('path');
 		if($this->request->getQuery('file_id')) {
 			$file_id = $this->request->getQuery('file_id');
 		}
-		$param = ['path' => $path];
+		if($this->request->getQuery('website_id')) {
+			$website_id = $this->request->getQuery('website_id');
+		}
+		$param = [
+			'path' => $path,
+			'website_id' => $website_id,
+		];
 		if ($this->request->is('get')) {
+			$request['website_id'] = $website_id;
 			$request['path'] = $path;
 			$request['file_id'] = $file_id;
 			$response = $this->deleteFileApi($this->token, $request);
@@ -405,10 +449,14 @@ class PCloudsController extends AppController
 			if ($this->request->is('ajax')) {
 				$request = $this->request->getData();
 				$request_data = [
+					'website_id' => $request['website_id'],
 					'path' => $request['path'],
 					'folder_id' => $request['folderid']
 				];
-				$param = ['path' => $file['path']];
+				$param = [
+					'path' => $request['path'],
+					'website_id' => $request['website_id']
+				];
 				$response = $this->deleteFolderApi($this->token, $request_data);
 				if($response){
 					$response = json_decode($response);
@@ -457,10 +505,14 @@ class PCloudsController extends AppController
 			if ($this->request->is('ajax')) {
 				$file = $this->request->getData();
 				$request_data = [
+					'website_id' => $file['website_id'],
 					'path' => $file['path'],
 					'file_id' => $file['fileid']
 				];
-				$param = ['path' => $file['path']];
+				$param = [
+					'path' => $file['path'],
+					'website_id' => $file['website_id']
+				];
 				$response = $this->deleteFileApi($this->token, $request_data);
 				if($response){
 					$response = json_decode($response);

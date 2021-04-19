@@ -31,7 +31,7 @@ $(document).ready(function()
 		}
 	}
 
-	function uploadFile(path, folder_id, droppedFiles)
+	function uploadFile(path, folder_id, droppedFiles, website_id)
 	{
 		var formData = new FormData();
 		for(var i = 0; i < droppedFiles.length; i++)
@@ -39,7 +39,7 @@ $(document).ready(function()
 			var progresshash = droppedFiles[i].lastModified+'-'+i;
 			formData.append('file', droppedFiles[i]);
 			var name = droppedFiles[i].name;
-			var param = '?name='+name+'&path='+path+'&folder_id='+folder_id+'&progresshash='+progresshash;
+			var param = '?website_id='+website_id+'&name='+name+'&path='+path+'&folder_id='+folder_id+'&progresshash='+progresshash;
 			ajaxUploadFile(formData, param, progresshash);
 		}
 	}
@@ -127,6 +127,7 @@ $(document).ready(function()
 
 	$("#dropFiles").on('drop', function(event)
 	{
+		var website_id = $(this).data('website_id');
 		var path = $(this).data('path');
 		var folder_id = $(this).data('folder_id');
 		event.preventDefault();
@@ -134,10 +135,9 @@ $(document).ready(function()
 		if(event.originalEvent.dataTransfer){
 			if(event.originalEvent.dataTransfer.files.length) {
 				var droppedFiles = event.originalEvent.dataTransfer.files;
-				var name = droppedFiles[i].name;
 				listFileUpload(droppedFiles);
 				setTimeout(function(){
-					uploadFile(path, folder_id, droppedFiles);
+					uploadFile(path, folder_id, droppedFiles, website_id);
 				}, 100);
 			}
 		}
@@ -163,6 +163,7 @@ $(document).ready(function()
 
 		// change inner text
 		$fileInput.on('change', function() {
+			var website_id = $(this).data('website_id');
 			var path = $(this).data('path');
 			var folder_id = $(this).data('folder_id');
 			var files = $(this)[0].files;
@@ -178,7 +179,7 @@ $(document).ready(function()
 				var verify_upload = trFileUpload(files);
 				if (verify_upload) {
 					setTimeout(function(){
-						uploadFile(path, folder_id, files);
+						uploadFile(path, folder_id, files, website_id);
 					}, 100);
 				} else {
 					alert('each file must be smaller that 10MB and total size of all file must be lower than 40MB.');
@@ -197,7 +198,7 @@ $(document).ready(function()
 		$("#deleteAllFile").click(function(event){
 //			event.preventDefault();
 			$("input:checkbox[type=checkbox]:checked").each(function(){
-				var value = [];
+				var website_id = $(this).data('website_id');
 				var path = $(this).data('path');
 				var type = $(this).data('type');
 				var id = $(this).val();
@@ -205,6 +206,7 @@ $(document).ready(function()
 				if (path && type) {
 					formData.append(type, id);
 					formData.append("path", path);
+					formData.append("website_id", website_id);
 					ajaxDeletFileOrFolder(formData, type);
 				}
 			});
