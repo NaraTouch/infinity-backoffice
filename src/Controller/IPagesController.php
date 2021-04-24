@@ -1,69 +1,68 @@
 <?php
 namespace App\Controller;
 use Cake\Event\EventInterface;
-use App\Form\WebsitesForm;
+use App\Form\PagesForm;
 
-class WebsitesController extends AppController
+class IPagesController extends AppController
 {
 	private $token;
 	public function initialize(): void
 	{
+		$this->loadComponent('Page');
 		$this->loadComponent('Website');
-		$this->loadComponent('Template');
 		$this->loadComponent('Flash');
 	}
 
 	public function beforeFilter(EventInterface $event)
 	{
 		parent::beforeFilter($event);
-		$templates = [];
+		$websites = [];
 		if ($this->Auth->user()) {
 			$this->token = $this->Auth->user('token');
-			$templates = $this->Template->getTemplates($this->token);
+			$websites = $this->Website->getWebsites($this->token);
 		}
-		$this->set(['templates' => $templates]);
+		$this->set(['websites' => $websites]);
 	}
 
 	public function index()
 	{
-		$websites = [];
+		$data = [];
 		$keywords = $this->request->getQuery('keywords');
-		$template_id = $this->request->getQuery('template_id');
+		$website_id = $this->request->getQuery('website_id');
 		$conditions = [];
 		if ($keywords) {
 			$conditions['keywords'] = $keywords;
 		}
-		if ($template_id) {
-			$conditions['template_id'] = $template_id;
+		if ($website_id) {
+			$conditions['website_id'] = $website_id;
 		}
-		$response = $this->Website->getAllWebsites($this->token, $conditions);
+		$response = $this->Page->getAllPages($this->token, $conditions);
 		if($response){
 			$response = json_decode($response);
 			if ($response && $response->ErrorCode == '200') {
-				$websites = $response->Data;
+				$data = $response->Data;
 			} else {
 				$this->Flash->error($response->Message);
 			}
 		}
 		$this->set([
-			'websites' => $websites,
+			'data' => $data,
 		]);
 	}
 
 	public function add()
 	{
-		$website = new WebsitesForm();
+		$page = new PagesForm();
 		$active = true;
-		$super_user = false;
-		$template = null;
+		$website = null;
 		if ($this->request->is('post')) {
 			$request = $this->request->getData();
-			$response = $this->Website->createWebsite($this->token, $request);
+			$response = $this->Page->createPage($this->token, $request);
 			if($response){
 				$response = json_decode($response);
 				if ($response && $response->ErrorCode == '200') {
 					$this->Flash->success($response->Message);
-					$this->goingToUrl('Websites','/');
+					$this->goingToUrl('IPages','/');
 				} else {
 					if (isset($response->Error)) {
 						foreach ($response->Error as $key => $value) {
@@ -80,43 +79,42 @@ class WebsitesController extends AppController
 			}
 		}
 		$this->set([
+			'page' => $page,
 			'website' => $website,
 			'active' => $active,
-			'super_user' => $super_user,
-			'template' => $template,
 			]);
 	}
-	
+
 	public function edit($id = null)
 	{
-		$website = new WebsitesForm();
+		$page = new PagesForm();
 		$active = true;
-		$template = null;
+		$website = null;
 		if ($id && $this->request->is('get')) {
 			$request = ['id' => $id];
-			$response = $this->Website->getWebsiteById($this->token, $request);
+			$response = $this->Page->getPageById($this->token, $request);
 			if($response){
 				$response = json_decode($response, true);
 				if ($response && $response['ErrorCode'] == '200') {
-						$website->setData($response['Data']);
+						$page->setData($response['Data']);
+						$website = $response['Data']['website_id'];
 						$active = $response['Data']['active'];
-						$template = $response['Data']['template_id'];
 				} else {
 					$this->Flash->error($response['Message']);
-					$this->goingToUrl('Websites','/');
+					$this->goingToUrl('IPages','/');
 				}
 			} else {
-				$this->Flash->error("Website Not Found");
-				$this->goingToUrl('Websites','/');
+				$this->Flash->error("Page Not Found");
+				$this->goingToUrl('IPages','/');
 			}
 		} else if ($this->request->is('post')) {
 			$request = $this->request->getData();
-			$response = $this->Website->updateWebsite($this->token, $request);
+			$response = $this->Page->updatePage($this->token, $request);
 			if($response){
 				$response = json_decode($response);
 				if ($response && $response->ErrorCode == '200') {
 					$this->Flash->success($response->Message);
-					$this->goingToUrl('Websites','/');
+					$this->goingToUrl('IPages','/');
 				} else {
 					if (isset($response->Error)) {
 						foreach ($response->Error as $key => $value) {
@@ -132,13 +130,13 @@ class WebsitesController extends AppController
 				}
 			}
 		} else {
-			$this->Flash->error("Website Not Found");
-			$this->goingToUrl('Websites','/');
+			$this->Flash->error("Page Not Found");
+			$this->goingToUrl('IPages','/');
 		}
 		$this->set([
+			'page' => $page,
 			'website' => $website,
 			'active' => $active,
-			'template' => $template,
 			]);
 	}
 
@@ -146,17 +144,16 @@ class WebsitesController extends AppController
 	{
 		if ($id && $this->request->is('get')) {
 			$request = ['id' => $id];
-			$response = $this->Website->deleteWebsite($this->token, $request);
+			$response = $this->Page->deletePage($this->token, $request);
 			if($response){
 				$response = json_decode($response);
 				if ($response && $response->ErrorCode == '200') {
 					$this->Flash->success($response->Message);
-					
 				} else {
 					$this->Flash->error($response->Message);
 				}
 			}
 		}
-		$this->goingToUrl('Websites','/');
+		$this->goingToUrl('IPages','/');
 	}
 }

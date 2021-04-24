@@ -16,31 +16,31 @@
 							<div class="col-2">
 								<div class="form-group row">
 									<div class="col-12">
-										<select class="js-example-basic-single w-100" name="template_id">
+										<select class="js-example-basic-single w-100" name="page_id">
 											<?php
-												if (isset($templates)) :
+												if (isset($pages)) :
 													$default_s = 'selected';
 													$id = null;
-													if ($this->request->getQuery('template_id')) :
-														$id = $this->request->getQuery('template_id');
+													if ($this->request->getQuery('page_id')) :
+														$id = $this->request->getQuery('page_id');
 														$default_s = '';
 													endif;
 												?>
-												<option value="" <?= $default_s;?>>Please select Template</option>
+												<option value="" <?= $default_s;?>>Please select Page</option>
 											<?php
 
-												foreach ($templates as $key => $value) :
+												foreach ($pages as $key => $value) :
 												$selected = '';
 												if ($id == $value->id) {
 													$selected = 'selected';
 												}
 											?>
-												<option value="<?= $value->id; ?>" <?= $selected;?>><?= $value->name; ?></option>
+												<option value="<?= $value->id; ?>" <?= $selected;?>><?= $value->display; ?></option>
 											<?php
 												endforeach;
 											else:
 											?>
-												<option value="">No Template!!!</option>
+												<option value="">No Page!!!</option>
 											<?php endif; ?>
 										</select>
 									</div>
@@ -54,7 +54,7 @@
 											class="form-control"
 											name="keywords"
 											value="<?= ($this->request->getQuery('keywords')) ? $this->request->getQuery('keywords') : ''?>"
-											placeholder="Website Name"/>
+											placeholder="Page Name"/>
 									</div>
 								</div>
 							</div>
@@ -72,27 +72,33 @@
 							<thead>
 								<tr>
 									<th>#</th>
+									<th>Page</th>
 									<th>Name</th>
-									<th>Domain</th>
-									<th>Template</th>
 									<th>Display</th>
+									<th>Tag Link</th>
+									<th>Icon</th>
 									<th>Code</th>
+									<th>Sort</th>
 									<th>Status</th>
 									<th>Created</th>
 									<?= $this->element('component/th_action'); ?>
 								</tr>
 							</thead>
 							<tbody>
-								<?php if($websites):
-									foreach ($websites as $key => $value):
+								<?php if($data):
+									foreach ($data as $key => $value):
 								?>
 									<tr>
 										<td><?= h($key) ?></td>
+										<td><?= h($value->page->display) ?></td>
 										<td><?= h($value->name) ?></td>
-										<td><?= h($value->domain) ?></td>
-										<td><?= (isset($value->template->name)) ? h($value->template->name) : '-' ?></td>
 										<td><?= h($value->display) ?></td>
+										<td><?= h($value->tag_links) ?></td>
+										<td><?= (isset($value->icon)) ? h($value->icon) : '-'?></td>
 										<td><?= h($value->code) ?></td>
+										<td>
+											<label class="badge badge-success"><?= h($value->sort) ?></label>
+										</td>
 										<td>
 											<?php if($value->active):?>
 											<label class="badge badge-success">Active</label>
@@ -106,9 +112,9 @@
 											if (!empty($features)
 												&& (isset($features['edit'])
 												&& $features['edit'] == true)):
-													echo $this->Html->link('Edit', [
-													'action' => 'edit',
-													$value->id
+												echo $this->Html->link('Edit', [
+														'action' => 'edit',
+														$value->id
 													],
 													[
 														'class' => 'btn btn-primary btn-sm',
@@ -116,12 +122,11 @@
 													]
 												);
 											endif;
-											
 											if (!empty($features)
 												&& (isset($features['delete'])
 												&& $features['delete'] == true)):
-													echo $this->Html->link('Delete', [
-													'action' => 'delete',
+												echo $this->Html->link('Delete', [
+														'action' => 'delete',
 														$value->id
 													],
 													[
@@ -138,7 +143,7 @@
 								?>
 								<?php else: ?>
 									<tr>
-										<td colspan="7" class="text-danger text-center"><?= __(NO_DATA) ?></td>
+										<td colspan="10" class="text-danger text-center"><?= __(NO_DATA) ?></td>
 									</tr>
 								<?php endif; ?>
 							</tbody>

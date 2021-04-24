@@ -5,44 +5,41 @@
 				<div class="card-body">
 					<?= $this->element('component/table_head'); ?>
 						<?php
-							echo $this->Form->create($website, [
+							echo $this->Form->create($page, [
 								'class' => 'form-sample',
 							]);
-							if (isset($website)) {
+							if (isset($page)) {
 								echo $this->Form->hidden('id');
 							}
 						?>
-						<p class="card-description">
-							Personal info
-						</p>
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group row">
-									<label class="col-sm-3 col-form-label">Templates</label>
+									<label class="col-sm-3 col-form-label">Websites</label>
 									<div class="col-sm-9">
 										<div class="form-group">
-											<select class="js-example-basic-single w-100" name="template_id">
+											<select class="js-example-basic-single w-100" name="website_id">
 												<?php
-												if (isset($templates)) :
+												if (isset($websites)) :
 													$selected = 'selected';
-													if ($templates) {
+													if ($website) {
 														$selected = '';
 													}
 												?>
-												<option value="" <?= $selected;?>>Please select Template</option>
+												<option value="" <?= $selected;?>>Please select Website</option>
 												<?php
-													foreach ($templates as $k => $v) :
+													foreach ($websites as $k => $v) :
 													$_selected = '';
-													if ($template == $v->id) {
+													if ($website == $v->id) {
 														$_selected = 'selected';
 													}
 												?>
-													<option value="<?= $v->id; ?>" <?= $_selected;?>><?= $v->name; ?></option>
+													<option value="<?= $v->id; ?>" <?= $_selected;?>><?= $v->display; ?></option>
 												<?php
 													endforeach;
 												else:
 												?>
-													<option value="">No Template!!!</option>
+													<option value="">No Website!!!</option>
 												<?php endif; ?>
 											</select>
 										</div>
@@ -65,7 +62,6 @@
 									</div>
 								</div>
 							</div>
-							
 						</div>
 						<div class="row">
 							<div class="col-md-6">
@@ -86,13 +82,13 @@
 							</div>
 							<div class="col-md-6">
 								<div class="form-group row">
-									<label class="col-sm-3 col-form-label">Domain</label>
+									<label class="col-sm-3 col-form-label">Tag Link</label>
 									<div class="col-sm-9">
 										<?php
-											echo $this->Form->input('domain', [
+											echo $this->Form->input('tag_links', [
 												'type' => 'text',
-												'class' => 'form-control',
-												'placeholder' => 'Domain',
+												'class' => 'form-control form-control-lg',
+												'placeholder' => 'Tag Link',
 												'label' => false,
 												'required' => false,
 											]);
@@ -100,9 +96,24 @@
 									</div>
 								</div>
 							</div>
-							
 						</div>
 						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group row">
+									<label class="col-sm-3 col-form-label">Icon</label>
+									<div class="col-sm-9">
+										<?php
+											echo $this->Form->input('icon', [
+												'type' => 'text',
+												'class' => 'form-control',
+												'placeholder' => 'Icon',
+												'label' => false,
+												'required' => false,
+											]);
+										?>
+									</div>
+								</div>
+							</div>
 							<div class="col-md-6">
 								<div class="form-group row">
 									<label class="col-sm-3 col-form-label">Code</label>
@@ -112,6 +123,24 @@
 												'type' => 'text',
 												'class' => 'form-control',
 												'placeholder' => 'Code',
+												'label' => false,
+												'required' => false,
+											]);
+										?>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group row">
+									<label class="col-sm-3 col-form-label">Sort</label>
+									<div class="col-sm-9">
+										<?php
+											echo $this->Form->input('sort', [
+												'type' => 'text',
+												'class' => 'form-control',
+												'placeholder' => 'Sort',
 												'label' => false,
 												'required' => false,
 											]);

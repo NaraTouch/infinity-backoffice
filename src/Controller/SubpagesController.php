@@ -1,69 +1,68 @@
 <?php
 namespace App\Controller;
 use Cake\Event\EventInterface;
-use App\Form\WebsitesForm;
+use App\Form\SubpagesForm;
 
-class WebsitesController extends AppController
+class SubpagesController extends AppController
 {
 	private $token;
 	public function initialize(): void
 	{
-		$this->loadComponent('Website');
-		$this->loadComponent('Template');
+		$this->loadComponent('Page');
+		$this->loadComponent('Subpage');
 		$this->loadComponent('Flash');
 	}
 
 	public function beforeFilter(EventInterface $event)
 	{
 		parent::beforeFilter($event);
-		$templates = [];
+		$pages = [];
 		if ($this->Auth->user()) {
 			$this->token = $this->Auth->user('token');
-			$templates = $this->Template->getTemplates($this->token);
+			$pages = $this->Page->getPages($this->token);
 		}
-		$this->set(['templates' => $templates]);
+		$this->set(['pages' => $pages]);
 	}
 
 	public function index()
 	{
-		$websites = [];
+		$data = [];
 		$keywords = $this->request->getQuery('keywords');
-		$template_id = $this->request->getQuery('template_id');
+		$page_id = $this->request->getQuery('page_id');
 		$conditions = [];
 		if ($keywords) {
 			$conditions['keywords'] = $keywords;
 		}
-		if ($template_id) {
-			$conditions['template_id'] = $template_id;
+		if ($page_id) {
+			$conditions['page_id'] = $page_id;
 		}
-		$response = $this->Website->getAllWebsites($this->token, $conditions);
+		$response = $this->Subpage->getAllSubpages($this->token, $conditions);
 		if($response){
 			$response = json_decode($response);
 			if ($response && $response->ErrorCode == '200') {
-				$websites = $response->Data;
+				$data = $response->Data;
 			} else {
 				$this->Flash->error($response->Message);
 			}
 		}
 		$this->set([
-			'websites' => $websites,
+			'data' => $data,
 		]);
 	}
 
 	public function add()
 	{
-		$website = new WebsitesForm();
+		$subpage = new SubpagesForm();
 		$active = true;
-		$super_user = false;
-		$template = null;
+		$page = null;
 		if ($this->request->is('post')) {
 			$request = $this->request->getData();
-			$response = $this->Website->createWebsite($this->token, $request);
+			$response = $this->Subpage->createSubpage($this->token, $request);
 			if($response){
 				$response = json_decode($response);
 				if ($response && $response->ErrorCode == '200') {
 					$this->Flash->success($response->Message);
-					$this->goingToUrl('Websites','/');
+					$this->goingToUrl('Subpages','/');
 				} else {
 					if (isset($response->Error)) {
 						foreach ($response->Error as $key => $value) {
@@ -80,43 +79,43 @@ class WebsitesController extends AppController
 			}
 		}
 		$this->set([
-			'website' => $website,
+			'subpage' => $subpage,
+			'page' => $page,
 			'active' => $active,
-			'super_user' => $super_user,
-			'template' => $template,
 			]);
 	}
-	
+
 	public function edit($id = null)
 	{
-		$website = new WebsitesForm();
+		$subpage = new SubpagesForm();
 		$active = true;
-		$template = null;
+		$page = null;
 		if ($id && $this->request->is('get')) {
 			$request = ['id' => $id];
-			$response = $this->Website->getWebsiteById($this->token, $request);
+			$response = $this->Subpage->getSubpageById($this->token, $request);
 			if($response){
 				$response = json_decode($response, true);
 				if ($response && $response['ErrorCode'] == '200') {
-						$website->setData($response['Data']);
-						$active = $response['Data']['active'];
-						$template = $response['Data']['template_id'];
+						$data = $response['Data'][0];
+						$subpage->setData($data);
+						$page = $data['page_id'];
+						$active = $data['active'];
 				} else {
 					$this->Flash->error($response['Message']);
-					$this->goingToUrl('Websites','/');
+					$this->goingToUrl('Subpages','/');
 				}
 			} else {
-				$this->Flash->error("Website Not Found");
-				$this->goingToUrl('Websites','/');
+				$this->Flash->error("Subpage Not Found");
+				$this->goingToUrl('Subpages','/');
 			}
 		} else if ($this->request->is('post')) {
 			$request = $this->request->getData();
-			$response = $this->Website->updateWebsite($this->token, $request);
+			$response = $this->Subpage->updateSubpage($this->token, $request);
 			if($response){
 				$response = json_decode($response);
 				if ($response && $response->ErrorCode == '200') {
 					$this->Flash->success($response->Message);
-					$this->goingToUrl('Websites','/');
+					$this->goingToUrl('Subpages','/');
 				} else {
 					if (isset($response->Error)) {
 						foreach ($response->Error as $key => $value) {
@@ -132,13 +131,13 @@ class WebsitesController extends AppController
 				}
 			}
 		} else {
-			$this->Flash->error("Website Not Found");
-			$this->goingToUrl('Websites','/');
+			$this->Flash->error("Subpage Not Found");
+			$this->goingToUrl('Subpages','/');
 		}
 		$this->set([
-			'website' => $website,
+			'subpage' => $subpage,
+			'page' => $page,
 			'active' => $active,
-			'template' => $template,
 			]);
 	}
 
@@ -146,17 +145,16 @@ class WebsitesController extends AppController
 	{
 		if ($id && $this->request->is('get')) {
 			$request = ['id' => $id];
-			$response = $this->Website->deleteWebsite($this->token, $request);
+			$response = $this->Subpage->deleteSubpage($this->token, $request);
 			if($response){
 				$response = json_decode($response);
 				if ($response && $response->ErrorCode == '200') {
 					$this->Flash->success($response->Message);
-					
 				} else {
 					$this->Flash->error($response->Message);
 				}
 			}
 		}
-		$this->goingToUrl('Websites','/');
+		$this->goingToUrl('Subpages','/');
 	}
 }
