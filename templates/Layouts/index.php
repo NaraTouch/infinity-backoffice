@@ -16,12 +16,66 @@
 							<div class="col-sm-2 col-12">
 								<div class="form-group row">
 									<div class="col-12">
-										<input 
-											type="text"
-											class="form-control"
-											name="keywords"
-											value="<?= ($this->request->getQuery('keywords')) ? $this->request->getQuery('keywords') : ''?>"
-											placeholder="Template Name"/>
+										<select class="js-example-basic-single w-100" name="subpage_id">
+											<?php
+												if (isset($subpages)) :
+													$default_s = 'selected';
+													$id = null;
+													if ($this->request->getQuery('subpage_id')) :
+														$id = $this->request->getQuery('subpage_id');
+														$default_s = '';
+													endif;
+												?>
+												<option value="" <?= $default_s;?>>Please select Sub Page</option>
+											<?php
+
+												foreach ($subpages as $key => $value) :
+												$selected = '';
+												if ($id == $value->id) {
+													$selected = 'selected';
+												}
+											?>
+												<option value="<?= $value->id; ?>" <?= $selected;?>><?= $value->display; ?></option>
+											<?php
+												endforeach;
+											else:
+											?>
+												<option value="">No Sub Page!!!</option>
+											<?php endif; ?>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-2 col-12">
+								<div class="form-group row">
+									<div class="col-12">
+										<select class="js-example-basic-single w-100" name="component_id">
+											<?php
+												if (isset($components)) :
+													$default_s = 'selected';
+													$id = null;
+													if ($this->request->getQuery('component_id')) :
+														$id = $this->request->getQuery('component_id');
+														$default_s = '';
+													endif;
+												?>
+												<option value="" <?= $default_s;?>>Please select Component</option>
+											<?php
+
+												foreach ($components as $key => $value) :
+												$selected = '';
+												if ($id == $value->id) {
+													$selected = 'selected';
+												}
+											?>
+												<option value="<?= $value->id; ?>" <?= $selected;?>><?= $value->name; ?></option>
+											<?php
+												endforeach;
+											else:
+											?>
+												<option value="">No Component!!!</option>
+											<?php endif; ?>
+										</select>
 									</div>
 								</div>
 							</div>
@@ -39,8 +93,8 @@
 							<thead>
 								<tr>
 									<th>#</th>
-									<th>Name</th>
-									<th>Description</th>
+									<th>Sub Page</th>
+									<th>Component</th>
 									<th>Sort</th>
 									<th>Status</th>
 									<th>Created</th>
@@ -53,8 +107,8 @@
 								?>
 									<tr>
 										<td><?= h($key) ?></td>
-										<td><?= h($value->name) ?></td>
-										<td><?= h($value->description) ?></td>
+										<td><?= h($value->subpage->display) ?></td>
+										<td><?= h($value->component->name) ?></td>
 										<td>
 											<label class="badge badge-success"><?= h($value->sort) ?></label>
 										</td>
@@ -71,9 +125,9 @@
 											if (!empty($features)
 												&& (isset($features['edit'])
 												&& $features['edit'] == true)):
-													echo $this->Html->link('Edit', [
-													'action' => 'edit',
-													$value->id
+												echo $this->Html->link('Edit', [
+														'action' => 'edit',
+														$value->id
 													],
 													[
 														'class' => 'btn btn-primary btn-sm',
@@ -81,12 +135,11 @@
 													]
 												);
 											endif;
-											
 											if (!empty($features)
 												&& (isset($features['delete'])
 												&& $features['delete'] == true)):
-													echo $this->Html->link('Delete', [
-													'action' => 'delete',
+												echo $this->Html->link('Delete', [
+														'action' => 'delete',
 														$value->id
 													],
 													[
@@ -103,7 +156,7 @@
 								?>
 								<?php else: ?>
 									<tr>
-										<td colspan="7" class="text-danger text-center"><?= __(NO_DATA) ?></td>
+										<td colspan="6" class="text-danger text-center"><?= __(NO_DATA) ?></td>
 									</tr>
 								<?php endif; ?>
 							</tbody>
