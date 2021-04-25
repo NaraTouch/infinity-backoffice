@@ -45,7 +45,7 @@ class ComponentComponent extends Component
 		$http_method = 'POST';
 		return $this->openUrlWithToken($url, $http_method, $token, $request);
 	}
-	
+
 	public function updateComponent($token = null, $request = [])
 	{
 		$url = $this->api_url.'/components/edit';
