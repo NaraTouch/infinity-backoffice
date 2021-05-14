@@ -12,12 +12,14 @@ class FeatureSettingsComponent extends Component
 
 	public function enableFeature($parram = null, $menu = null)
 	{
-		if (!empty($parram) || !empty($menu)) {
+		if (!empty($parram)) {
 			$features = [];
-			foreach ($menu as $key => $value) {
-				if ($value['name'] == $parram['controller']) {
-					foreach ($value['methods'] as $k => $v) {
-						$features[$v['name']] = true;
+			if (!empty($menu)) {
+				foreach ($menu as $key => $value) {
+					if ($value['name'] == $parram['controller']) {
+						foreach ($value['methods'] as $k => $v) {
+							$features[$v['name']] = true;
+						}
 					}
 				}
 			}
