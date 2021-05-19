@@ -14,6 +14,7 @@ class ComponentsForm extends Form
 				->addField('name', ['type' => 'string'])
 				->addField('table_name', ['type' => 'string'])
 				->addField('description', ['type' => 'string'])
+				->addField('script', ['type' => 'string'])
 				->addField('sort', 'integer')
 				->addField('active', 'boolean');
 	}

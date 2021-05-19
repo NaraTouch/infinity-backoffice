@@ -75,6 +75,7 @@
 									<th>Name</th>
 									<th>Domain</th>
 									<th>Template</th>
+									<th>Application</th>
 									<th>Display</th>
 									<th>Code</th>
 									<th>Status</th>
@@ -91,6 +92,7 @@
 										<td><?= h($value->name) ?></td>
 										<td><?= h($value->domain) ?></td>
 										<td><?= (isset($value->template->name)) ? h($value->template->name) : '-' ?></td>
+										<td><?= (isset($value->application->name)) ? h($value->application->name) : '-' ?></td>
 										<td><?= h($value->display) ?></td>
 										<td><?= h($value->code) ?></td>
 										<td>

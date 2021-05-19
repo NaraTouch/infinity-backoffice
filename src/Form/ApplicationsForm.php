@@ -4,7 +4,7 @@ namespace App\Form;
 use Cake\Form\Form;
 use Cake\Form\Schema;
 
-class ComponentsForm extends Form
+class ApplicationsForm extends Form
 {
 	protected function _buildSchema(Schema $schema): Schema
 	{
@@ -12,9 +12,10 @@ class ComponentsForm extends Form
 				->addField('id', 'integer')
 				->addField('template_id', 'integer')
 				->addField('name', ['type' => 'string'])
-				->addField('table_name', ['type' => 'string'])
-				->addField('description', ['type' => 'string'])
-				->addField('sort', 'integer')
+				->addField('display', ['type' => 'string'])
+				->addField('script', ['type' => 'string'])
+				->addField('layout', ['type' => 'string'])
+				->addField('menu', ['type' => 'string'])
 				->addField('active', 'boolean');
 	}
 

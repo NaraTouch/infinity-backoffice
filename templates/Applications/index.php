@@ -54,7 +54,7 @@
 											class="form-control"
 											name="keywords"
 											value="<?= ($this->request->getQuery('keywords')) ? $this->request->getQuery('keywords') : ''?>"
-											placeholder="Group Name"/>
+											placeholder="Application Name"/>
 									</div>
 								</div>
 							</div>
@@ -74,8 +74,7 @@
 									<th>#</th>
 									<th>Template</th>
 									<th>Name</th>
-									<th>Table Name</th>
-									<th>Description</th>
+									<th>Display</th>
 									<th>Status</th>
 									<th>Created</th>
 									<?= $this->element('component/th_action'); ?>
@@ -89,11 +88,7 @@
 										<td><?= h($key) ?></td>
 										<td><?= (isset($value->template->name)) ? h($value->template->name) : '-' ?></td>
 										<td><?= h($value->name) ?></td>
-										<td><?= h($value->table_name) ?></td>
-										<td><?= h($value->description) ?></td>
-										<td>
-											<label class="badge badge-success"><?= h($value->sort) ?></label>
-										</td>
+										<td><?= h($value->display) ?></td>
 										<td>
 											<?php if($value->active):?>
 											<label class="badge badge-success">Active</label>

@@ -5,10 +5,10 @@
 				<div class="card-body">
 					<?= $this->element('component/table_head'); ?>
 						<?php
-							echo $this->Form->create($component, [
+							echo $this->Form->create($application, [
 								'class' => 'form-sample',
 							]);
-							if (isset($component)) {
+							if (isset($application)) {
 								echo $this->Form->hidden('id');
 							}
 						?>
@@ -69,13 +69,13 @@
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group row">
-									<label class="col-sm-3 col-form-label">Table Name</label>
+									<label class="col-sm-3 col-form-label">Display</label>
 									<div class="col-sm-9">
 										<?php
-											echo $this->Form->input('table_name', [
+											echo $this->Form->input('display', [
 												'type' => 'text',
-												'class' => 'form-control form-control-lg',
-												'placeholder' => 'Table Name',
+												'class' => 'form-control',
+												'placeholder' => 'Display',
 												'label' => false,
 												'required' => false,
 											]);
@@ -85,13 +85,13 @@
 							</div>
 							<div class="col-md-6">
 								<div class="form-group row">
-									<label class="col-sm-3 col-form-label">Description</label>
+									<label class="col-sm-3 col-form-label">Script</label>
 									<div class="col-sm-9">
 										<?php
-											echo $this->Form->input('description', [
+											echo $this->Form->input('script', [
 												'type' => 'textarea',
 												'class' => 'form-control',
-												'placeholder' => 'Description',
+												'placeholder' => 'Script (Optional)',
 												'label' => false,
 												'required' => false,
 											]);
@@ -99,18 +99,17 @@
 									</div>
 								</div>
 							</div>
-							
 						</div>
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group row">
-									<label class="col-sm-3 col-form-label">Sort</label>
+									<label class="col-sm-3 col-form-label">Layout</label>
 									<div class="col-sm-9">
 										<?php
-											echo $this->Form->input('sort', [
-												'type' => 'text',
-												'class' => 'form-control form-control-lg',
-												'placeholder' => 'Sort',
+											echo $this->Form->input('layout', [
+												'type' => 'textarea',
+												'class' => 'form-control',
+												'placeholder' => 'Layout (Optional)',
 												'label' => false,
 												'required' => false,
 											]);
@@ -118,6 +117,24 @@
 									</div>
 								</div>
 							</div>
+							<div class="col-md-6">
+								<div class="form-group row">
+									<label class="col-sm-3 col-form-label">Menu</label>
+									<div class="col-sm-9">
+										<?php
+											echo $this->Form->input('menu', [
+												'type' => 'textarea',
+												'class' => 'form-control',
+												'placeholder' => 'Menu (Optional)',
+												'label' => false,
+												'required' => false,
+											]);
+										?>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group row">
 									<label class="col-sm-3 col-form-label">Status</label>

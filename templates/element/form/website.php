@@ -12,9 +12,6 @@
 								echo $this->Form->hidden('id');
 							}
 						?>
-						<p class="card-description">
-							Personal info
-						</p>
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group row">
@@ -65,7 +62,6 @@
 									</div>
 								</div>
 							</div>
-							
 						</div>
 						<div class="row">
 							<div class="col-md-6">
@@ -156,6 +152,41 @@
 												>
 												Inactive
 											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group row">
+									<label class="col-sm-3 col-form-label">Applications</label>
+									<div class="col-sm-9">
+										<div class="form-group">
+											<select class="js-example-basic-single w-100" name="application_id">
+												<?php
+												if (isset($applications)) :
+													$selected = 'selected';
+													if ($applications) {
+														$selected = '';
+													}
+												?>
+												<option value="" <?= $selected;?>>Please select Applications</option>
+												<?php
+													foreach ($applications as $k => $v) :
+													$_selected = '';
+													if ($application == $v->id) {
+														$_selected = 'selected';
+													}
+												?>
+													<option value="<?= $v->id; ?>" <?= $_selected;?>><?= $v->display; ?></option>
+												<?php
+													endforeach;
+												else:
+												?>
+													<option value="">No Applications!!!</option>
+												<?php endif; ?>
+											</select>
 										</div>
 									</div>
 								</div>

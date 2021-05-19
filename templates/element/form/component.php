@@ -120,6 +120,24 @@
 							</div>
 							<div class="col-md-6">
 								<div class="form-group row">
+									<label class="col-sm-3 col-form-label">Script</label>
+									<div class="col-sm-9">
+										<?php
+											echo $this->Form->input('script', [
+												'type' => 'textarea',
+												'class' => 'form-control',
+												'placeholder' => 'Script (Optional)',
+												'label' => false,
+												'required' => false,
+											]);
+										?>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group row">
 									<label class="col-sm-3 col-form-label">Status</label>
 									<?php
 										$_active = 'checked';

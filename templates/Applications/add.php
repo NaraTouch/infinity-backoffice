@@ -1,1 +1,1 @@
-<?= $this->element('form/component'); ?>
+<?= $this->element('form/application'); ?>

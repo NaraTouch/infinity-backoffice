@@ -2,7 +2,7 @@
 namespace App\Controller\Component;
 use Cake\Controller\Component;
 
-class ComponentComponent extends Component
+class ApplicationComponent extends Component
 {
 	private $api_url;
 
@@ -12,10 +12,10 @@ class ComponentComponent extends Component
 		$this->api_url = 'http://localhost/infinity-api';
 	}
 
-	public function getComponents($token = null)
+	public function getApplications($token = null)
 	{
 		$data = [];
-		$response = $this->getAllComponents($token);
+		$response = $this->getAllApplications($token);
 		if($response){
 			$response = json_decode($response);
 			if ($response && $response->ErrorCode == 200) {
@@ -25,37 +25,37 @@ class ComponentComponent extends Component
 		return $data;
 	}
 
-	public function getAllComponents($token = null, $request = [])
+	public function getAllApplications($token = null, $request = [])
 	{
-		$url = $this->api_url.'/components';
+		$url = $this->api_url.'/applications';
 		$http_method = 'POST';
 		return $this->openUrlWithToken($url, $http_method, $token, $request);
 	}
 
-	public function createComponent($token = null, $request = [])
+	public function createApplication($token = null, $request = [])
 	{
-		$url = $this->api_url.'/components/add';
+		$url = $this->api_url.'/applications/add';
 		$http_method = 'POST';
 		return $this->openUrlWithToken($url, $http_method, $token, $request);
 	}
 
-	public function getComponentById($token = null, $request = [])
+	public function getApplicationById($token = null, $request = [])
 	{
-		$url = $this->api_url.'/components/view';
+		$url = $this->api_url.'/applications/view';
 		$http_method = 'POST';
 		return $this->openUrlWithToken($url, $http_method, $token, $request);
 	}
 
-	public function updateComponent($token = null, $request = [])
+	public function updateApplication($token = null, $request = [])
 	{
-		$url = $this->api_url.'/components/edit';
+		$url = $this->api_url.'/applications/edit';
 		$http_method = 'POST';
 		return $this->openUrlWithToken($url, $http_method, $token, $request);
 	}
 
-	public function deleteComponent($token = null, $request = [])
+	public function deleteApplication($token = null, $request = [])
 	{
-		$url = $this->api_url.'/components/delete';
+		$url = $this->api_url.'/applications/delete';
 		$http_method = 'POST';
 		return $this->openUrlWithToken($url, $http_method, $token, $request);
 	}

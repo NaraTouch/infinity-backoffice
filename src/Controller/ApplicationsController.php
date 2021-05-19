@@ -1,15 +1,15 @@
 <?php
 namespace App\Controller;
 use Cake\Event\EventInterface;
-use App\Form\ComponentsForm;
+use App\Form\ApplicationsForm;
 
-class ComponentsController extends AppController
+class ApplicationsController extends AppController
 {
 	private $token;
 	public function initialize(): void
 	{
 		$this->loadComponent('Template');
-		$this->loadComponent('Component');
+		$this->loadComponent('Application');
 		$this->loadComponent('Flash');
 	}
 
@@ -36,7 +36,7 @@ class ComponentsController extends AppController
 		if ($template_id) {
 			$conditions['template_id'] = $template_id;
 		}
-		$response = $this->Component->getAllComponents($this->token, $conditions);
+		$response = $this->Application->getAllApplications($this->token, $conditions);
 		if($response){
 			$response = json_decode($response);
 			if ($response && $response->ErrorCode == '200') {
@@ -52,17 +52,17 @@ class ComponentsController extends AppController
 
 	public function add()
 	{
-		$component = new ComponentsForm();
+		$application = new ApplicationsForm();
 		$active = true;
 		$template = null;
 		if ($this->request->is('post')) {
 			$request = $this->request->getData();
-			$response = $this->Component->createComponent($this->token, $request);
+			$response = $this->Application->createApplication($this->token, $request);
 			if($response){
 				$response = json_decode($response);
 				if ($response && $response->ErrorCode == '200') {
 					$this->Flash->success($response->Message);
-					$this->goingToUrl('Components','/');
+					$this->goingToUrl('Applications','/');
 				} else {
 					if (isset($response->Error)) {
 						foreach ($response->Error as $key => $value) {
@@ -79,7 +79,7 @@ class ComponentsController extends AppController
 			}
 		}
 		$this->set([
-			'component' => $component,
+			'application' => $application,
 			'active' => $active,
 			'template' => $template,
 			]);
@@ -87,34 +87,34 @@ class ComponentsController extends AppController
 
 	public function edit($id = null)
 	{
-		$component = new ComponentsForm();
+		$application = new ApplicationsForm();
 		$active = true;
 		$template = null;
 		if ($id && $this->request->is('get')) {
 			$request = ['id' => $id];
-			$response = $this->Component->getComponentById($this->token, $request);
+			$response = $this->Application->getApplicationById($this->token, $request);
 			if($response){
 				$response = json_decode($response, true);
 				if ($response && $response['ErrorCode'] == '200') {
-						$component->setData($response['Data']);
+						$application->setData($response['Data']);
 						$active = $response['Data']['active'];
 						$template = $response['Data']['template_id'];
 				} else {
 					$this->Flash->error($response['Message']);
-					$this->goingToUrl('Components','/');
+					$this->goingToUrl('Applications','/');
 				}
 			} else {
-				$this->Flash->error("Component Not Found");
-				$this->goingToUrl('Components','/');
+				$this->Flash->error("Application Not Found");
+				$this->goingToUrl('Applications','/');
 			}
 		} else if ($this->request->is('post')) {
 			$request = $this->request->getData();
-			$response = $this->Component->updateComponent($this->token, $request);
+			$response = $this->Application->updateApplication($this->token, $request);
 			if($response){
 				$response = json_decode($response);
 				if ($response && $response->ErrorCode == '200') {
 					$this->Flash->success($response->Message);
-					$this->goingToUrl('Components','/');
+					$this->goingToUrl('Applications','/');
 				} else {
 					if (isset($response->Error)) {
 						foreach ($response->Error as $key => $value) {
@@ -130,11 +130,11 @@ class ComponentsController extends AppController
 				}
 			}
 		} else {
-			$this->Flash->error("Component Not Found");
-			$this->goingToUrl('Components','/');
+			$this->Flash->error("Application Not Found");
+			$this->goingToUrl('Applications','/');
 		}
 		$this->set([
-			'component' => $component,
+			'application' => $application,
 			'active' => $active,
 			'template' => $template,
 			]);
@@ -144,7 +144,7 @@ class ComponentsController extends AppController
 	{
 		if ($id && $this->request->is('get')) {
 			$request = ['id' => $id];
-			$response = $this->Component->deleteComponent($this->token, $request);
+			$response = $this->Application->deleteApplication($this->token, $request);
 			if($response){
 				$response = json_decode($response);
 				if ($response && $response->ErrorCode == '200') {
@@ -154,6 +154,6 @@ class ComponentsController extends AppController
 				}
 			}
 		}
-		$this->goingToUrl('Components','/');
+		$this->goingToUrl('Applications','/');
 	}
 }

@@ -10,6 +10,7 @@ class WebsitesController extends AppController
 	{
 		$this->loadComponent('Website');
 		$this->loadComponent('Template');
+		$this->loadComponent('Application');
 		$this->loadComponent('Flash');
 	}
 
@@ -17,11 +18,16 @@ class WebsitesController extends AppController
 	{
 		parent::beforeFilter($event);
 		$templates = [];
+		$applications = [];
 		if ($this->Auth->user()) {
 			$this->token = $this->Auth->user('token');
 			$templates = $this->Template->getTemplates($this->token);
+			$applications = $this->Application->getApplications($this->token);
 		}
-		$this->set(['templates' => $templates]);
+		$this->set([
+			'templates' => $templates,
+			'applications' => $applications
+		]);
 	}
 
 	public function index()
@@ -56,6 +62,7 @@ class WebsitesController extends AppController
 		$active = true;
 		$super_user = false;
 		$template = null;
+		$application = null;
 		if ($this->request->is('post')) {
 			$request = $this->request->getData();
 			$response = $this->Website->createWebsite($this->token, $request);
@@ -84,14 +91,16 @@ class WebsitesController extends AppController
 			'active' => $active,
 			'super_user' => $super_user,
 			'template' => $template,
+			'application' => $application,
 			]);
 	}
-	
+
 	public function edit($id = null)
 	{
 		$website = new WebsitesForm();
 		$active = true;
 		$template = null;
+		$application = null;
 		if ($id && $this->request->is('get')) {
 			$request = ['id' => $id];
 			$response = $this->Website->getWebsiteById($this->token, $request);
@@ -101,6 +110,7 @@ class WebsitesController extends AppController
 						$website->setData($response['Data']);
 						$active = $response['Data']['active'];
 						$template = $response['Data']['template_id'];
+						$application = $response['Data']['application_id'];
 				} else {
 					$this->Flash->error($response['Message']);
 					$this->goingToUrl('Websites','/');
@@ -139,6 +149,7 @@ class WebsitesController extends AppController
 			'website' => $website,
 			'active' => $active,
 			'template' => $template,
+			'application' => $application,
 			]);
 	}
 
