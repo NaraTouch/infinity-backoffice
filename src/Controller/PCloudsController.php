@@ -295,8 +295,8 @@ class PCloudsController extends AppController
 		if($this->request->getQuery('folder_id')) {
 			$folder_id = $this->request->getQuery('folder_id');
 		}
-		if($this->request->getQuery('folder_id')) {
-			$folder_id = $this->request->getQuery('folder_id');
+		if($this->request->getQuery('name')) {
+			$name = $this->request->getQuery('name');
 		}
 		if($this->request->getQuery('website_id')) {
 			$website_id = $this->request->getQuery('website_id');
