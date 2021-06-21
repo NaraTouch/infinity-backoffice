@@ -90,7 +90,15 @@
 									<tr>
 										<td><?= h($key) ?></td>
 										<td><?= (isset($value->website->display)) ? h($value->website->display) : '-' ?></td>
-										<td><?= h($value->image) ?></td>
+										<td>
+											<?php
+												$image = explode('size', $value->image);
+												$image_url = $image[0].'size=100x100';
+											?>
+											<a href="<?= $value->image; ?>" target="_blank">
+												<img class="rounded-0" src="<?= $image_url; ?>" alt="<?= $value->website->display;?>">
+											</a>
+										</td>
 										<td><?= h($value->display) ?></td>
 										<td><?= h($value->descriptions) ?></td>
 										<td><?= h($value->tag_links) ?></td>
