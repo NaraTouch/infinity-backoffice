@@ -259,8 +259,8 @@
 															.'&type='.$ext[1]
 															.'&size=100x100';
 												?>
-													<a href="<?=$url?>" target="_blank">
-														<img class="rounded-0" src="<?= $image_url;?>" alt="<?= $value->name;?>">
+													<a href="<?= $url; ?>" target="_blank">
+														<img class="rounded-0" src="<?= $image_url; ?>" alt="<?= $value->name; ?>">
 													</a>
 												<?php else:?>
 													<a class="h3">
@@ -321,29 +321,14 @@
 														);
 													endif;
 												else :
-                                                                                                        if (strtolower($value->icon) == 'image') :
-                                                                                                            $url = $list->metadata->pub_url.
-														'?fileid='.$value->fileid
-														.'&code='.$list->metadata->auth->code
-														.'&type='.$ext[1];
-                                                                                                        ?>
-                                                                                                        <button
-                                                                                                            id="copy-btn"
-                                                                                                            class="btn btn-success btn-sm"
-                                                                                                            data-clipboard-text="<?= $url;?>"
-                                                                                                        >Copy Link</button>
-                                                                                                        <?php
-//                                                                                                            echo $this->Html->link('Copy Link',
-//                                                                                                                    [],
-//                                                                                                                    [
-//                                                                                                                            'target' => '_self',
-//                                                                                                                            'id' => 'copy-link',
-//                                                                                                                            'data-link-image' => $url,
-//                                                                                                                            'class' => 'btn btn-success btn-sm',
-//                                                                                                                            'escape' => false,
-//                                                                                                                    ]
-//                                                                                                            );
-                                                                                                        endif;
+													if (strtolower($value->icon) == 'image') :
+														?>
+														<button
+															class="btn btn-success btn-sm copy-btn"
+															data-clipboard-text="<?= $url;?>"
+														>Copy Link</button>
+													<?php
+													endif;
 													if (!empty($features)
 														&& (isset($features['renameFile'])
 														&& $features['renameFile'] == true)):
