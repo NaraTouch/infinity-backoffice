@@ -74,6 +74,7 @@
 									<th>#</th>
 									<th>Website</th>
 									<th>Image</th>
+									<th>Thumbnail</th>
 									<th>Display</th>
 									<th>Descriptions</th>
 									<th>Tag Links</th>
@@ -97,6 +98,15 @@
 											?>
 											<a href="<?= $value->image; ?>" target="_blank">
 												<img class="rounded-0" src="<?= $image_url; ?>" alt="<?= $value->website->display;?>">
+											</a>
+										</td>
+										<td>
+											<?php
+												$image_thumb = explode('size', $value->thumb);
+												$image_thumb_url = $image_thumb[0].'size=100x100';
+											?>
+											<a href="<?= $value->thumb; ?>" target="_blank">
+												<img class="rounded-0" src="<?= $image_thumb_url; ?>" alt="<?= $value->website->display;?>">
 											</a>
 										</td>
 										<td><?= h($value->display) ?></td>

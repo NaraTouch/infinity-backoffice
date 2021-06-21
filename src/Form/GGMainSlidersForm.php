@@ -11,6 +11,7 @@ class GGMainSlidersForm extends Form
 				->addField('id', 'integer')
 				->addField('website_id', 'integer')
 				->addField('image', ['type' => 'string'])
+				->addField('thumb', ['type' => 'string'])
 				->addField('display', ['type' => 'string'])
 				->addField('descriptions', ['type' => 'string'])
 				->addField('tag_links', ['type' => 'string'])

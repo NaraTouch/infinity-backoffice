@@ -66,13 +66,13 @@
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group row">
-									<label class="col-sm-3 col-form-label">Display</label>
+									<label class="col-sm-3 col-form-label">Thumb</label>
 									<div class="col-sm-9">
 										<?php
-											echo $this->Form->input('display', [
+											echo $this->Form->input('thumb', [
 												'type' => 'text',
-												'class' => 'form-control form-control-lg',
-												'placeholder' => 'Display',
+												'class' => 'form-control',
+												'placeholder' => 'Thumb',
 												'label' => false,
 												'required' => false,
 											]);
@@ -82,13 +82,13 @@
 							</div>
 							<div class="col-md-6">
 								<div class="form-group row">
-									<label class="col-sm-3 col-form-label">Descriptions</label>
+									<label class="col-sm-3 col-form-label">Display</label>
 									<div class="col-sm-9">
 										<?php
-											echo $this->Form->input('descriptions', [
+											echo $this->Form->input('display', [
 												'type' => 'text',
-												'class' => 'form-control',
-												'placeholder' => 'Descriptions',
+												'class' => 'form-control form-control-lg',
+												'placeholder' => 'Display',
 												'label' => false,
 												'required' => false,
 											]);
@@ -132,6 +132,22 @@
 							</div>
 						</div>
 						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group row">
+									<label class="col-sm-3 col-form-label">Descriptions</label>
+									<div class="col-sm-9">
+										<?php
+											echo $this->Form->input('descriptions', [
+												'type' => 'textarea',
+												'class' => 'form-control',
+												'placeholder' => 'Descriptions',
+												'label' => false,
+												'required' => false,
+											]);
+										?>
+									</div>
+								</div>
+							</div>
 							<div class="col-md-6">
 								<div class="form-group row">
 									<label class="col-sm-3 col-form-label">Status</label>
