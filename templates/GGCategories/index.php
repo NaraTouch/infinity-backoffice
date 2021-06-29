@@ -73,10 +73,8 @@
 								<tr>
 									<th>#</th>
 									<th>Website</th>
-									<th>Image</th>
-									<th>Thumbnail</th>
-									<th>Display</th>
-									<th>Descriptions</th>
+									<th>Title</th>
+									<th>Icon</th>
 									<th>Tag Links</th>
 									<th>Sort</th>
 									<th>Status</th>
@@ -91,26 +89,16 @@
 									<tr>
 										<td><?= h($key) ?></td>
 										<td><?= (isset($value->website->display)) ? h($value->website->display) : '-' ?></td>
+										<td><?= h($value->title) ?></td>
 										<td>
 											<?php
-												$image = explode('size', $value->image);
+												$image = explode('size', $value->icon);
 												$image_url = $image[0].'size=100x100';
 											?>
-											<a href="<?= $value->image; ?>" target="_blank">
+											<a href="<?= $value->icon; ?>" target="_blank">
 												<img class="rounded-0" src="<?= $image_url; ?>" alt="<?= $value->website->display;?>">
 											</a>
 										</td>
-										<td>
-											<?php
-												$image_thumb = explode('size', $value->thumb);
-												$image_thumb_url = $image_thumb[0].'size=100x100';
-											?>
-											<a href="<?= $value->thumb; ?>" target="_blank">
-												<img class="rounded-0" src="<?= $image_thumb_url; ?>" alt="<?= $value->website->display;?>">
-											</a>
-										</td>
-										<td><?= h($value->display) ?></td>
-										<td><?= h($value->descriptions) ?></td>
 										<td><?= h($value->tag_links) ?></td>
 										<td>
 											<label class="badge badge-success"><?= h($value->sort) ?></label>
