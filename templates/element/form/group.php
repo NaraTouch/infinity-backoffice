@@ -12,9 +12,6 @@
 								echo $this->Form->hidden('id');
 							}
 						?>
-						<p class="card-description">
-							Personal info
-						</p>
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group row">

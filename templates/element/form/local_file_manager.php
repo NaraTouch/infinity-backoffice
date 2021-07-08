@@ -5,16 +5,13 @@
 				<div class="card-body">
 					<?= $this->element('component/table_head'); ?>
 						<?php
-							echo $this->Form->create($role, [
+							echo $this->Form->create($local_file_manager, [
 								'class' => 'form-sample',
 							]);
-							if (isset($role)) {
+							if (isset($local_file_manager)) {
 								echo $this->Form->hidden('id');
 							}
 						?>
-						<p class="card-description">
-							Personal info
-						</p>
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group row">
@@ -51,13 +48,13 @@
 							</div>
 							<div class="col-md-6">
 								<div class="form-group row">
-									<label class="col-sm-3 col-form-label">Name</label>
+									<label class="col-sm-3 col-form-label">Web Url</label>
 									<div class="col-sm-9">
 										<?php
-											echo $this->Form->input('name', [
+											echo $this->Form->input('web_url', [
 												'type' => 'text',
 												'class' => 'form-control',
-												'placeholder' => 'Name',
+												'placeholder' => 'Web Url',
 												'label' => false,
 												'required' => false,
 											]);
@@ -69,13 +66,13 @@
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group row">
-									<label class="col-sm-3 col-form-label">Display</label>
+									<label class="col-sm-3 col-form-label">Secret Key</label>
 									<div class="col-sm-9">
 										<?php
-											echo $this->Form->input('display', [
+											echo $this->Form->input('secret_key', [
 												'type' => 'text',
 												'class' => 'form-control',
-												'placeholder' => 'Display',
+												'placeholder' => 'Secret Key',
 												'label' => false,
 												'required' => false,
 											]);

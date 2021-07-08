@@ -27,7 +27,8 @@ if (!empty($features) &&
 		(isset($features['deleteFolder']) && $features['deleteFolder'] == true) ||
 		(isset($features['renameFolder']) && $features['renameFolder'] == true) ||
 		(isset($features['renameFile']) && $features['renameFile'] == true) ||
-		(isset($features['deleteFile']) && $features['deleteFile'] == true)
+		(isset($features['deleteFile']) && $features['deleteFile'] == true) ||
+		(isset($features['fileManager']) && $features['fileManager'] == true)
 ):
 ?>
 <th>Actions</th>

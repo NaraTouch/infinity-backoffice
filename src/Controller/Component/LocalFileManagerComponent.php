@@ -2,7 +2,7 @@
 namespace App\Controller\Component;
 use Cake\Controller\Component;
 
-class RoleComponent extends Component
+class LocalFileManagerComponent extends Component
 {
 	private $api_url;
 
@@ -12,50 +12,50 @@ class RoleComponent extends Component
 		$this->api_url = 'http://localhost/infinity-api';
 	}
 
-	public function getRoles($token = null)
+	public function getLocalFileManagers($token = null)
 	{
-		$roles = [];
-		$response = $this->getAllRoles($token);
+		$local_file_managers = [];
+		$response = $this->getAllLocalFileManagers($token);
 		if($response){
 			$response = json_decode($response);
 			if ($response && $response->ErrorCode == 200) {
-				$roles = $response->Data;
+				$local_file_managers = $response->Data;
 			}
 		}
-		return $roles;
+		return $local_file_managers;
 	}
 
-	public function getAllRoles($token = null, $request = [])
+	public function getAllLocalFileManagers($token = null, $request = [])
 	{
-		$url = $this->api_url.'/roles';
+		$url = $this->api_url.'/local-file-managers';
 		$http_method = 'POST';
 		return $this->openUrlWithToken($url, $http_method, $token, $request);
 	}
 
-	public function createRole($token = null, $request = [])
+	public function createLocalFileManager($token = null, $request = [])
 	{
-		$url = $this->api_url.'/roles/add';
+		$url = $this->api_url.'/local-file-managers/add';
 		$http_method = 'POST';
 		return $this->openUrlWithToken($url, $http_method, $token, $request);
 	}
 	
-	public function getRoleById($token = null, $request = [])
+	public function getLocalFileManagerById($token = null, $request = [])
 	{
-		$url = $this->api_url.'/roles/view';
+		$url = $this->api_url.'/local-file-managers/view';
 		$http_method = 'POST';
 		return $this->openUrlWithToken($url, $http_method, $token, $request);
 	}
 	
-	public function updateRole($token = null, $request = [])
+	public function updateLocalFileManager($token = null, $request = [])
 	{
-		$url = $this->api_url.'/roles/edit';
+		$url = $this->api_url.'/local-file-managers/edit';
 		$http_method = 'POST';
 		return $this->openUrlWithToken($url, $http_method, $token, $request);
 	}
 
-	public function deleteRole($token = null, $request = [])
+	public function deleteLocalFileManager($token = null, $request = [])
 	{
-		$url = $this->api_url.'/roles/delete';
+		$url = $this->api_url.'/local-file-managers/delete';
 		$http_method = 'POST';
 		return $this->openUrlWithToken($url, $http_method, $token, $request);
 	}

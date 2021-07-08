@@ -1,39 +1,37 @@
 <?php
 namespace App\Controller;
 use Cake\Event\EventInterface;
-use App\Form\RolesForm;
-use App\Form\PermissionsForm;
-class RolesController extends AppController
+use App\Form\LocalFileManagersForm;
+use App\Form\FolderForm;
+
+class LocalFileManagersController extends AppController
 {
 	private $token;
 	public function initialize(): void
 	{
-		$this->loadComponent('Role');
-		$this->loadComponent('Module');
-		$this->loadComponent('Permission');
+		
 		$this->loadComponent('Group');
+		$this->loadComponent('LocalFileManager');
+		$this->loadComponent('FrontEndFileManager');
 		$this->loadComponent('Flash');
 	}
 
 	public function beforeFilter(EventInterface $event)
 	{
-		parent::beforeFilter($event);
 		$groups = [];
-		$module_list = [];
+		parent::beforeFilter($event);
 		if ($this->Auth->user()) {
 			$this->token = $this->Auth->user('token');
-			$module_list = $this->Module->getModuleList($this->token, []);
 			$groups = $this->Group->getGroups($this->token);
 		}
 		$this->set([
 			'groups' => $groups,
-			'module_list' => $module_list,
 		]);
 	}
 
 	public function index()
 	{
-		$roles = [];
+		$local_file_managers = [];
 		$group_id = $this->request->getQuery('group_id');
 		$keywords = $this->request->getQuery('keywords');
 		$conditions = [];
@@ -43,32 +41,32 @@ class RolesController extends AppController
 		if ($keywords) {
 			$conditions['keywords'] = $keywords;
 		}
-		$response = $this->Role->getAllRoles($this->token, $conditions);
+		$response = $this->LocalFileManager->getAllLocalFileManagers($this->token, $conditions);
 		if($response){
 			$response = json_decode($response);
 			if ($response && $response->ErrorCode == '200') {
-				$roles = $response->Data;
+				$local_file_managers = $response->Data;
 			} else {
 				$this->Flash->error($response->Message);
 			}
 		}
 		$this->set([
-			'roles' => $roles,
+			'local_file_managers' => $local_file_managers,
 		]);
 	}
 
 	public function add()
 	{
-		$role = new RolesForm();
+		$local_file_manager = new LocalFileManagersForm();
 		$active = true;
 		if ($this->request->is('post')) {
 			$request = $this->request->getData();
-			$response = $this->Role->createRole($this->token, $request);
+			$response = $this->LocalFileManager->createLocalFileManager($this->token, $request);
 			if($response){
 				$response = json_decode($response);
 				if ($response && $response->ErrorCode == '200') {
 					$this->Flash->success($response->Message);
-					$this->goingToUrl('Roles','/');
+					$this->goingToUrl('LocalFileManagers','/');
 				} else {
 					if (isset($response->Error)) {
 						foreach ($response->Error as $key => $value) {
@@ -85,42 +83,42 @@ class RolesController extends AppController
 			}
 		}
 		$this->set([
-			'role' => $role,
+			'local_file_manager' => $local_file_manager,
 			'active' => $active
 			]);
 	}
 
 	public function edit($id = null)
 	{
-		$role = new RolesForm();
+		$local_file_manager = new LocalFileManagersForm();
 		$group = true;
 		$active = true;
 		if ($id && $this->request->is('get')) {
 			$request = ['id' => $id];
-			$response = $this->Role->getRoleById($this->token, $request);
+			$response = $this->LocalFileManager->getLocalFileManagerById($this->token, $request);
 			if($response) {
 				$response = json_decode($response, true);
 				if ($response && $response['ErrorCode'] == '200') {
 						$data = $response['Data'][0];
-						$role->setData($data);
+						$local_file_manager->setData($data);
 						$group = $data['group_id'];
 						$active = $data['active'];
 				} else {
 					$this->Flash->error($response['Message']);
-					$this->goingToUrl('Roles','/');
+					$this->goingToUrl('LocalFileManagers','/');
 				}
 			} else {
-				$this->Flash->error("Role Not Found");
-				$this->goingToUrl('Roles','/');
+				$this->Flash->error("LocalFileManager Not Found");
+				$this->goingToUrl('LocalFileManagers','/');
 			}
 		} else if ($this->request->is('post')) {
 			$request = $this->request->getData();
-			$response = $this->Role->updateRole($this->token, $request);
+			$response = $this->LocalFileManager->updateLocalFileManager($this->token, $request);
 			if($response) {
 				$response = json_decode($response);
 				if ($response && $response->ErrorCode == '200') {
 					$this->Flash->success($response->Message);
-					$this->goingToUrl('Roles','/');
+					$this->goingToUrl('LocalFileManagers','/');
 				} else {
 					if (isset($response->Error)) {
 						foreach ($response->Error as $key => $value) {
@@ -136,11 +134,11 @@ class RolesController extends AppController
 				}
 			}
 		} else {
-			$this->Flash->error("Role Not Found");
-			$this->goingToUrl('Roles','/');
+			$this->Flash->error("LocalFileManager Not Found");
+			$this->goingToUrl('LocalFileManagers','/');
 		}
 		$this->set([
-			'role' => $role,
+			'local_file_manager' => $local_file_manager,
 			'group' => $group,
 			'active' => $active
 			]);
@@ -150,7 +148,7 @@ class RolesController extends AppController
 	{
 		if ($id && $this->request->is('get')) {
 			$request = ['id' => $id];
-			$response = $this->Role->deleteRole($this->token, $request);
+			$response = $this->LocalFileManager->deleteLocalFileManager($this->token, $request);
 			if($response){
 				$response = json_decode($response);
 				if ($response && $response->ErrorCode == '200') {
@@ -160,49 +158,275 @@ class RolesController extends AppController
 				}
 			}
 		}
-		$this->goingToUrl('Roles','/');
+		$this->goingToUrl('LocalFileManagers','/');
 	}
 
-	public function permission($role_id = null)
+	
+	// Start front-end File Manager
+	public function fileManager()
 	{
-		$permission = new PermissionsForm();
-		$permission->setData(['role_id' => $role_id]);
-		$request_body = $this->request->getQuery();
-		$role_name = $request_body['name'];
-		$permission_list = $this->Permission->permissionListByRole($this->token, ['role_id' => $role_id]);
-		if ($this->request->is('post')) {
-			$request = $this->request->getData();
-			$permission_data['role_id'] = $request['role_id'];
-			$permission_data['permissions'] = [];
-			if (isset($request['permission'])) {
-				foreach ($request['permission'] as $key => $value) {
-					$_exp = explode("-", $value['method_id']);
-					$method_id = $_exp[0];
-					$module_id = $_exp[1];
-					$permission_data['permissions'][]= [
-						'role_id' => $request['role_id'],
-						'method_id' => $method_id,
-						'module_id' => $module_id,
+		$list = [];
+		if ($this->request->is('get')) {
+			$query = $this->request->getQuery();
+			$request = ['id' => $query['id']];
+			$local_file_acc = $this->LocalFileManager->getLocalFileManagerById($this->token, $request);
+			if($local_file_acc){
+				$local_file_acc = json_decode($local_file_acc);
+				if ($local_file_acc && $local_file_acc->ErrorCode == '200') {
+					$list_request = [
+						'secret_key' => $local_file_acc->Data[0]->secret_key,
+						'web_url' => $local_file_acc->Data[0]->web_url,
+						'path' => $query['path']
 					];
-				}
-			}
-			$response = $this->Permission->createPermission($this->token, $permission_data);
-			if($response){
-				$response = json_decode($response);
-				if ($response && $response->ErrorCode == '200') {
-					$this->Flash->success($response->Message);
-					$this->goIndex();
+					$response = $this->FrontEndFileManager->listing($list_request);
+					if($response){
+						$response = json_decode($response);
+						if ($response && $response->ErrorCode == '200') {
+							$list = $response->Data;
+						} else {
+							if (isset($response->Error)) {
+								foreach ($response->Error as $key => $value) {
+									$message = $key;
+									foreach ($value as $k => $v) {
+										$message .= ' ('.$k.') Error Message : '.$v;
+									}
+									$this->Flash->error($message);
+								}
+							} else {
+								$this->Flash->error($response->Message);
+							}
+						}
+					}
 				} else {
-					$this->Flash->error($response->Message);
-					$this->goIndex();
+					$this->Flash->error($local_file_acc->Message);
 				}
 			}
 		}
 		$this->set([
-			'permission_list' => $permission_list,
-			'permission' => $permission,
-			'role_name' => $role_name,
-			'role_id' => $role_id
-			]);
+			'list' => $list,
+		]);
+	}
+
+	public function deleteFolder()
+	{
+		if ($this->request->is('get')) {
+			$query = $this->request->getQuery();
+			$request = ['id' => $query['id']];
+			$local_file_acc = $this->LocalFileManager->getLocalFileManagerById($this->token, $request);
+			if($local_file_acc){
+				$local_file_acc = json_decode($local_file_acc);
+				if ($local_file_acc && $local_file_acc->ErrorCode == '200') {
+					$list_request = [
+						'secret_key' => $local_file_acc->Data[0]->secret_key,
+						'web_url' => $local_file_acc->Data[0]->web_url,
+						'path' => $query['dir_path'].$query['name'],
+					];
+					$response = $this->FrontEndFileManager->deleteFolder($list_request);
+					if($response){
+						$response = json_decode($response);
+						if ($response && $response->ErrorCode == '200') {
+							$this->Flash->success($response->Message);
+						} else {
+							if (isset($response->Error)) {
+								foreach ($response->Error as $key => $value) {
+									$message = $key;
+									foreach ($value as $k => $v) {
+										$message .= ' ('.$k.') Error Message : '.$v;
+									}
+									$this->Flash->error($message);
+								}
+							} else {
+								$this->Flash->error($response->Message);
+							}
+						}
+					}
+				} else {
+					$this->Flash->error($local_file_acc->Message);
+				}
+			}
+		}
+		$this->goingToUrlWithParam('LocalFileManagers','fileManager', $query);
+	}
+
+	public function deleteFile()
+	{
+		if ($this->request->is('get')) {
+			$query = $this->request->getQuery();
+			$request = ['id' => $query['id']];
+			$local_file_acc = $this->LocalFileManager->getLocalFileManagerById($this->token, $request);
+			if($local_file_acc){
+				$local_file_acc = json_decode($local_file_acc);
+				if ($local_file_acc && $local_file_acc->ErrorCode == '200') {
+					$list_request = [
+						'secret_key' => $local_file_acc->Data[0]->secret_key,
+						'web_url' => $local_file_acc->Data[0]->web_url,
+						'path' => $query['dir_path'],
+						'name' => $query['name']
+					];
+					$response = $this->FrontEndFileManager->deleteFile($list_request);
+					if($response){
+						$response = json_decode($response);
+						if ($response && $response->ErrorCode == '200') {
+							$this->Flash->success($response->Message);
+						} else {
+							if (isset($response->Error)) {
+								foreach ($response->Error as $key => $value) {
+									$message = $key;
+									foreach ($value as $k => $v) {
+										$message .= ' ('.$k.') Error Message : '.$v;
+									}
+									$this->Flash->error($message);
+								}
+							} else {
+								$this->Flash->error($response->Message);
+							}
+						}
+					}
+				} else {
+					$this->Flash->error($local_file_acc->Message);
+				}
+			}
+		}
+		$this->goingToUrlWithParam('LocalFileManagers','fileManager', $query);
+	}
+	
+	public function editFolder()
+	{
+		$folder = new FolderForm();
+		$query = $this->request->getQuery();
+		$name = $query['dir_path'].$query['name'];
+		$folder->setData(['name' => $name]);
+		if ($this->request->is('post')) {
+			$data = $this->request->getData();
+			$request = ['id' => $query['id']];
+			$local_file_acc = $this->LocalFileManager->getLocalFileManagerById($this->token, $request);
+			if($local_file_acc){
+				$local_file_acc = json_decode($local_file_acc);
+				if ($local_file_acc && $local_file_acc->ErrorCode == '200') {
+					$list_request = [
+						'secret_key' => $local_file_acc->Data[0]->secret_key,
+						'web_url' => $local_file_acc->Data[0]->web_url,
+						'path_name' => $name,
+						'to_path_name' => $data['name']
+					];
+					$response = $this->FrontEndFileManager->renameFolder($list_request);
+					if($response){
+						$response = json_decode($response);
+						if ($response && $response->ErrorCode == '200') {
+							$this->Flash->success($response->Message);
+						} else {
+							if (isset($response->Error)) {
+								foreach ($response->Error as $key => $value) {
+									$message = $key;
+									foreach ($value as $k => $v) {
+										$message .= ' ('.$k.') Error Message : '.$v;
+									}
+									$this->Flash->error($message);
+								}
+							} else {
+								$this->Flash->error($response->Message);
+							}
+						}
+					}
+				} else {
+					$this->Flash->error($local_file_acc->Message);
+				}
+			}
+			$this->goingToUrlWithParam('LocalFileManagers','fileManager', $query);
+		}
+		$this->set(['folder' => $folder]);
+	}
+	
+	public function editFile()
+	{
+		$folder = new FolderForm();
+		$query = $this->request->getQuery();
+		$name = $query['dir_path'].$query['name'];
+		$folder->setData(['name' => $name]);
+		if ($this->request->is('post')) {
+			$data = $this->request->getData();
+			$request = ['id' => $query['id']];
+			$local_file_acc = $this->LocalFileManager->getLocalFileManagerById($this->token, $request);
+			if($local_file_acc){
+				$local_file_acc = json_decode($local_file_acc);
+				if ($local_file_acc && $local_file_acc->ErrorCode == '200') {
+					$list_request = [
+						'secret_key' => $local_file_acc->Data[0]->secret_key,
+						'web_url' => $local_file_acc->Data[0]->web_url,
+						'path' => $query['dir_path'],
+						'name' => $name,
+						'to_name' => $data['name']
+					];
+					$response = $this->FrontEndFileManager->renameFile($list_request);
+					if($response){
+						$response = json_decode($response);
+						if ($response && $response->ErrorCode == '200') {
+							$this->Flash->success($response->Message);
+						} else {
+							if (isset($response->Error)) {
+								foreach ($response->Error as $key => $value) {
+									$message = $key;
+									foreach ($value as $k => $v) {
+										$message .= ' ('.$k.') Error Message : '.$v;
+									}
+									$this->Flash->error($message);
+								}
+							} else {
+								$this->Flash->error($response->Message);
+							}
+						}
+					}
+				} else {
+					$this->Flash->error($local_file_acc->Message);
+				}
+			}
+			$this->goingToUrlWithParam('LocalFileManagers','fileManager', $query);
+		}
+		$this->set(['folder' => $folder]);
+	}
+	
+	public function createFolderIfNotExists()
+	{
+		$folder = new FolderForm();
+		$query = $this->request->getQuery();
+		if ($this->request->is('post')) {
+			$data = $this->request->getData();
+			$request = ['id' => $query['id']];
+			$local_file_acc = $this->LocalFileManager->getLocalFileManagerById($this->token, $request);
+			if($local_file_acc){
+				$local_file_acc = json_decode($local_file_acc);
+				if ($local_file_acc && $local_file_acc->ErrorCode == '200') {
+					$data = $this->request->getData();
+					$list_request = [
+						'secret_key' => $local_file_acc->Data[0]->secret_key,
+						'web_url' => $local_file_acc->Data[0]->web_url,
+						'path' => $data['name'],
+					];
+					$response = $this->FrontEndFileManager->createFolder($list_request);
+					if($response){
+						$response = json_decode($response);
+						if ($response && $response->ErrorCode == '200') {
+							$this->Flash->success($response->Message);
+						} else {
+							if (isset($response->Error)) {
+								foreach ($response->Error as $key => $value) {
+									$message = $key;
+									foreach ($value as $k => $v) {
+										$message .= ' ('.$k.') Error Message : '.$v;
+									}
+									$this->Flash->error($message);
+								}
+							} else {
+								$this->Flash->error($response->Message);
+							}
+						}
+					}
+				} else {
+					$this->Flash->error($local_file_acc->Message);
+				}
+			}
+			$this->goingToUrlWithParam('LocalFileManagers','fileManager', $query);
+		}
+		$this->set(['folder' => $folder]);
 	}
 }

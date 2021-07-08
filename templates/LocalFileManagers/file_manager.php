@@ -3,6 +3,11 @@
 		'folder',
 	]);
 	echo $this->fetch('css');
+	$query = $this->request->getQuery();
+	$id = $query['id'];
+	$path = $query['path'];
+	$before_path = $query['path'];
+	$_current_dir = '';
 ?>
 <div class="content-wrapper">
 	<div class="row">
@@ -12,73 +17,64 @@
 					<div class="btn-group">
 						<?= $this->element('component/table_head'); ?>
 					</div>
-					<?php
-						$website_id = '';
-						if ($this->request->getQuery('website_id')) {
-							$website_id = $this->request->getQuery('website_id');
-						}
-						if ($list && isset($list)) :
-						$_dir_id = '';
-						$_current_dir = '';
-					?>
 					<div class="row">
 						<div class="col-12">
 							<nav aria-label="breadcrumb">
 								<ol class="breadcrumb bg-light border-0">
 									<?php
-										if ($list->metadata->path == '/') :
-											$_current_dir = '/';
-											$_dir_id = $list->metadata->folderid;
+										if ($list && isset($list)) :
+											$list_path = $list->path;
+											$_exp = explode("\\",$list_path);
+											if (count($_exp) == 2 && $_exp[1] == '') :
 									?>
 										<li class="breadcrumb-item">
 											<?php
 												echo $this->Html->link('Home', [
-													'controller' => 'PClouds',
-													'action' => 'index',
-													'?' =>
-														['website_id' => $website_id]
-												]);
-											?>
-										</li>
-									<?php
-										else :
-											$dir = explode('/', $list->metadata->path);
-											$_dir_id = $list->metadata->folderid;
-											$path = '';
-											foreach ($dir as $key => $value) :
-												if ($value) :
-													$path .= '/'.$value;
-													$_current_dir = $path;
-									?>
-										<li class="breadcrumb-item">
-											<?php
-												echo $this->Html->link($value, [
-													'controller' => 'PClouds',
-													'action' => 'index',
-													'?' =>
-														[
-															'website_id' => $website_id,
-															'path' => $path
-														]
+													'controller' => 'LocalFileManagers',
+													'action' => 'fileManager',
+													'?' => [
+														'id' => $id,
+														'path' => '\\'
+													]
 												]);
 											?>
 										</li>
 									<?php
 											else :
-									?>
-										<li class="breadcrumb-item">
-											<?php
-												echo $this->Html->link('Home', [
-													'controller' => 'PClouds',
-													'action' => 'index',
-													'?' =>
-														['website_id' => $website_id]
-												]);
-											?>
-										</li>
-									<?php
-												endif;
-											endforeach;
+												foreach ($_exp as $e => $ex) :
+													if ($e == 0) :
+												?>
+													<li class="breadcrumb-item">
+														<?php
+															echo $this->Html->link('Home', [
+																'controller' => 'LocalFileManagers',
+																'action' => 'fileManager',
+																'?' => [
+																	'id' => $id,
+																	'path' => '\\'
+																]
+															]);
+														?>
+													</li>
+												<?php
+													else:
+												?>
+													<li class="breadcrumb-item">
+														<?php
+															echo $this->Html->link($ex, [
+																'controller' => 'LocalFileManagers',
+																'action' => 'fileManager',
+																'?' => [
+																	'id' => $id,
+																	'path' => '\\'.$ex
+																]
+															]);
+														?>
+													</li>
+												<?php
+													endif;
+												endforeach;
+											endif;
 										endif;
 									?>
 								</ol>
@@ -102,19 +98,18 @@
 										<div class="dropdown-menu" aria-labelledby="dropdownMenuSizeButton3">
 											<h6 class="dropdown-header">Settings</h6>
 											<?php
+											
 											if (!empty($features)
 												&& (isset($features['createFolderIfNotExists'])
 												&& $features['createFolderIfNotExists'] == true)):
 													echo $this->Html->link(
 													'Create Folder' ,
 													[
-														'controller' => 'PClouds',
+														'controller' => 'LocalFileManagers',
 														'action' => 'createFolderIfNotExists',
-														'?' =>
-															[
-																'website_id' => $website_id,
-																'path' => $_current_dir,
-																'folder_id' => $_dir_id
+														'?' => [
+															'id' => $id,
+															'path' => $before_path,
 														],
 													],
 													[
@@ -134,9 +129,7 @@
 														'controller' => 'PClouds',
 														'action' => 'uploadFile',
 														'?' => [
-															'website_id' => $website_id,
-															'path' => $_current_dir,
-															'folder_id' => $_dir_id
+															
 														]
 													],
 													[
@@ -185,82 +178,58 @@
 										<th>Asset</th>
 										<th>Name</th>
 										<th>Sized</th>
-										<th>Date</th>
 										<?= $this->element('component/th_action'); ?>
 									</tr>
 								</thead>
 								<tbody>
-									<?php if ($list->metadata->contents && count($list->metadata->contents) > 0) :?>
-										<?php foreach ($list->metadata->contents as $key => $value):?>
+									<?php if ($list && ($list->directory && isset($list->directory))) :?>
+										<?php foreach ($list->directory as $key => $value):
+											$list_path = $list->path;
+											$name = $key;
+											$type = $value->type;
+											$info = $value->info;
+											$image_url = '';
+											if (!empty($info)) {
+												$image_url = $info->dirname.'\\'.$name;
+											}
+										?>
 										<tr>
 											<td>
 												<div class="form-check form-check-flat form-check-primary mt-0 mb-0">
 													<label class="form-check-label">
-														<?php
-															$id = '';
-															$type = '';
-															if (strtolower($value->icon) == 'folder') :
-																$type = 'folderid';
-																$id = $value->folderid;
-															elseif (strtolower($value->icon) == 'document') :
-																$type = 'fileid';
-																$id = $value->fileid;
-															elseif (strtolower($value->icon) == 'image') :
-																$type = 'fileid';
-																$id = $value->fileid;
-															endif;
-														?>
 														<input 
 															type="checkbox"
-															value="<?=$id?>"
+															value="<?= $name; ?>"
 															class="form-check-input"
-															data-website_id="<?=$website_id;?>"
-															data-path="<?=$_current_dir;?>"
-															data-type="<?=$type;?>"
+															data-type="<?= $type; ?>"
 														>
 													</label>
 												</div>
 											</td>
 											<td class="py-1">
-												<?php
-												if (strtolower($value->icon) == 'folder') :
+												<?php if (strtolower($type) == 'folder') :
 													$url = $this->Url->build([
-														'controller' => 'PClouds',
-														'action' => 'index',
+														'controller' => 'LocalFileManagers',
+														'action' => 'fileManager',
 														'?' => [
-															'website_id' => $website_id,
-															'path' => $value->path,
+															'id' => $id,
+															'path' => $list_path.'\\'.$name
 														]
 													]);
 												?>
-													<a href="<?= $url;?>" class="h3">
+													<a href="<?= $url; ?>" class="h3">
 														<i class="mdi mdi-folder"></i>
 													</a>
-												<?php elseif (strtolower($value->icon) == 'document') : ?>
+												<?php elseif (strtolower($type) == 'document') : ?>
 													<i class="mdi mdi-file-document"></i>
-												<?php elseif ($list->metadata->path != '/' && strtolower($value->icon) == 'image') :
-													$ext = explode('/', $value->contenttype);
-													$origin_width = 500;
-													$origin_height = 100;
-													if (isset($value->width)) {
-														$origin_width = $value->width;
-													}
-													if (isset($value->height)) {
-														$origin_height = $value->height;
-													}
-													$url = $list->metadata->pub_url.
-														'?fileid='.$value->fileid
-														.'&code='.$list->metadata->auth->code
-														.'&type='.$ext[1]
-														.'&size='.$origin_width.'x'.$origin_height;
-													$image_url = $list->metadata->pub_url.
-															'?fileid='.$value->fileid
-															.'&code='.$list->metadata->auth->code
-															.'&type='.$ext[1]
-															.'&size=100x100';
-												?>
-													<a href="<?= $url; ?>" target="_blank">
-														<img class="rounded-0" src="<?= $image_url; ?>" alt="<?= $value->name; ?>">
+												<?php elseif (strtolower($type) == 'image') : ?>
+													<a href="<?= $image_url; ?>" target="_blank">
+														<img class="rounded-0"
+															 src="<?= $image_url; ?>"
+															 alt="<?= $name; ?>"
+															 width="100"
+															 height="100"
+														>
 													</a>
 												<?php else:?>
 													<a class="h3">
@@ -268,30 +237,29 @@
 													</a>
 												<?php endif;?>
 											</td>
-											<td><?= h($value->name)?></td>
+											<td><?= h($name)?></td>
 											<td>
 												<?php
-													if (strtolower($value->icon) == 'image' || strtolower($value->icon) == 'document') :
-														echo number_format($value->size / 1024, 2) . ' KB';
+													if (strtolower($type) == 'image' || strtolower($type) == 'document') :
+														echo number_format($info->filesize / 1024, 2) . ' KB';
 													else :
 														echo '-';
 													endif;
 												?>
 											</td>
-											<td><?= date('Y-m-d H:i:s', strtotime($value->created)); ?></td>
 											<td>
 												<?php
-												if (strtolower($value->icon) == 'folder') :
+												if (strtolower($type) == 'folder') :
 													if (!empty($features)
 														&& (isset($features['renameFolder'])
 														&& $features['renameFolder'] == true)):
 														echo $this->Html->link('Edit', [
 																	'action' => 'edit_folder',
 																	'?' => [
-																		'website_id' => $website_id,
-																		'path' => $_current_dir,
-																		'name' => $value->name,
-																		'folder_id' => $value->folderid,
+																		'id' => $id,
+																		'dir_path' => $list_path,
+																		'name' => $name,
+																		'path' => $before_path,
 																	]
 																],
 																[
@@ -306,11 +274,12 @@
 														&& (isset($features['deleteFolder'])
 														&& $features['deleteFolder'] == true)):
 														echo $this->Html->link('Delete', [
-																'action' => 'delete_folder',
+																'action' => 'deleteFolder',
 																'?' => [
-																	'website_id' => $website_id,
-																	'path' => $_current_dir,
-																	'folder_id' => $value->folderid,
+																	'id' => $id,
+																	'dir_path' => $list_path,
+																	'name' => $name,
+																	'path' => $before_path,
 																]
 															],
 															[
@@ -321,11 +290,11 @@
 														);
 													endif;
 												else :
-													if (strtolower($value->icon) == 'image') :
+													if (strtolower($type) == 'image') :
 														?>
 														<button
 															class="btn btn-success btn-sm copy-btn"
-															data-clipboard-text="<?= $url;?>"
+															data-clipboard-text="<?= $image_url;?>"
 														>Copy Link</button>
 													<?php
 													endif;
@@ -335,10 +304,10 @@
 														echo $this->Html->link('Edit', [
 																	'action' => 'edit_file',
 																	'?' => [
-																		'website_id' => $website_id,
-																		'path' => $_current_dir,
-																		'name' => $value->name,
-																		'file_id' => $value->fileid,
+																		'id' => $id,
+																		'dir_path' => $list_path,
+																		'name' => $name,
+																		'path' => $before_path,
 																	]
 																],
 																[
@@ -352,11 +321,12 @@
 														&& (isset($features['deleteFile'])
 														&& $features['deleteFile'] == true)):
 														echo $this->Html->link('Delete', [
-																'action' => 'delete_file',
+																'action' => 'deleteFile',
 																'?' => [
-																	'website_id' => $website_id,
-																	'path' => $_current_dir,
-																	'file_id' => $value->fileid,
+																	'id' => $id,
+																	'dir_path' => $list_path,
+																	'name' => $name,
+																	'path' => $before_path,
 																]
 															],
 															[
@@ -380,14 +350,6 @@
 							</table>
 						</div>
 					</div>
-					<?php else: ?>
-					<h4 class="card-title text-center">File not found!!!</h4>
-					<div class="media text-center">
-						<div class="media-body">
-							<p class="card-text text-danger">please refresh your browser.</p>
-						</div>
-					</div>
-					<?php endif; ?>
 					
 				</div>
 			</div>

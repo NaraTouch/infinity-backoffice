@@ -54,7 +54,7 @@
 											class="form-control" 
 											name="keywords"
 											value="<?= ($this->request->getQuery('keywords')) ? $this->request->getQuery('keywords') : ''?>"
-											placeholder="Role Name"/>
+											placeholder="Web Url"/>
 									</div>
 								</div>
 							</div>
@@ -73,22 +73,22 @@
 								<tr>
 									<th>#</th>
 									<th>Group</th>
-									<th>Name</th>
-									<th>Display</th>
+									<th>Web Url</th>
+									<th>Secret Key</th>
 									<th>Status</th>
 									<th>Created</th>
 									<?= $this->element('component/th_action'); ?>
 								</tr>
 							</thead>
 							<tbody>
-								<?php if($roles):
-									foreach ($roles as $key => $value):
+								<?php if($local_file_managers):
+									foreach ($local_file_managers as $key => $value):
 								?>
 									<tr>
 										<td><?= h($key) ?></td>
 										<td><?= h($value->group->display) ?></td>
-										<td><?= h($value->name) ?></td>
-										<td><?= h($value->display) ?></td>
+										<td><?= h($value->web_url) ?></td>
+										<td><?= h($value->secret_key) ?></td>
 										<td>
 											<?php if($value->active):?>
 											<label class="badge badge-success">Active</label>
@@ -128,13 +128,14 @@
 											endif;
 											
 											if (!empty($features)
-												&& (isset($features['permission'])
-												&& $features['permission'] == true)):
-												echo $this->Html->link('Permission', [
-														'action' => 'permission',
-														$value->id,
-														'?' =>
-															['name' => $value->display]
+												&& (isset($features['fileManager'])
+												&& $features['fileManager'] == true)):
+												echo $this->Html->link('File Manager', [
+														'action' => 'fileManager',
+														'?' => [
+															'id' => $value->id,
+															'path' => '\\'
+														]
 													],
 													[
 														'class' => 'btn btn-warning btn-sm',
