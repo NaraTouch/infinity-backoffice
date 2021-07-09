@@ -41,6 +41,7 @@
 										</li>
 									<?php
 											else :
+												$str_ex = '';
 												foreach ($_exp as $e => $ex) :
 													if ($e == 0) :
 												?>
@@ -58,20 +59,23 @@
 													</li>
 												<?php
 													else:
+														if ($ex) :
+															$str_ex .= '\\'.$ex;
 												?>
-													<li class="breadcrumb-item">
-														<?php
-															echo $this->Html->link($ex, [
-																'controller' => 'LocalFileManagers',
-																'action' => 'fileManager',
-																'?' => [
-																	'id' => $id,
-																	'path' => '\\'.$ex
-																]
-															]);
-														?>
-													</li>
+														<li class="breadcrumb-item">
+															<?php
+																echo $this->Html->link($ex, [
+																	'controller' => 'LocalFileManagers',
+																	'action' => 'fileManager',
+																	'?' => [
+																		'id' => $id,
+																		'path' => $str_ex
+																	]
+																]);
+															?>
+														</li>
 												<?php
+														endif;
 													endif;
 												endforeach;
 											endif;
@@ -126,10 +130,11 @@
 												&& $features['uploadFile'] == true)):
 												echo $this->Html->link('Upload Files' ,
 													[
-														'controller' => 'PClouds',
+														'controller' => 'LocalFileManagers',
 														'action' => 'uploadFile',
 														'?' => [
-															
+															'id' => $id,
+															'path' => $before_path,
 														]
 													],
 													[
@@ -182,15 +187,31 @@
 									</tr>
 								</thead>
 								<tbody>
-									<?php if ($list && ($list->directory && isset($list->directory))) :?>
+									<?php if ($list && (isset($list->directory))) :?>
 										<?php foreach ($list->directory as $key => $value):
 											$list_path = $list->path;
 											$name = $key;
 											$type = $value->type;
 											$info = $value->info;
 											$image_url = '';
+											$image_path = '';
 											if (!empty($info)) {
-												$image_url = $info->dirname.'\\'.$name;
+												$_exp_dirname = explode("\\",$info->dirname);
+												$str_img_url = '';
+												foreach ($_exp_dirname as $x_dir => $p_dir) :
+													if ($p_dir) :
+														$str_img_url .= $p_dir.'/';
+													endif;
+												endforeach;
+												$image_url = $str_img_url.$name;
+												$_exp = explode("\\",$list_path);
+												$str_img_path = '';
+												foreach ($_exp as $x => $p) :
+													if ($p) :
+														$str_img_path .= $p.'/';
+													endif;
+												endforeach;
+												$image_path = 'assets/'.$str_img_path.$name;
 											}
 										?>
 										<tr>
@@ -201,7 +222,10 @@
 															type="checkbox"
 															value="<?= $name; ?>"
 															class="form-check-input"
+															data-id="<?= $id; ?>"
+															data-path="<?= $list_path; ?>"
 															data-type="<?= $type; ?>"
+															data-name="<?= $name; ?>"
 														>
 													</label>
 												</div>
@@ -295,7 +319,11 @@
 														<button
 															class="btn btn-success btn-sm copy-btn"
 															data-clipboard-text="<?= $image_url;?>"
-														>Copy Link</button>
+														>Copy Full Url</button>
+														<button
+															class="btn btn-warning btn-sm copy-btn"
+															data-clipboard-text="<?= $image_path;?>"
+														>Copy Path</button>
 													<?php
 													endif;
 													if (!empty($features)
@@ -359,7 +387,7 @@
 <?php
 	echo $this->Html->script([
 		'jquery-3.6.0.min',
-		'file-scritp',
+		'local-file-scritp',
 	]);
 	echo $this->fetch('script');
 ?>

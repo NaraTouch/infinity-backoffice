@@ -31,16 +31,16 @@ $(document).ready(function()
 		}
 	}
 
-	function uploadFile(path, folder_id, droppedFiles, website_id)
+	function uploadFile(id, path, droppedFiles)
 	{
 		var formData = new FormData();
 		for(var i = 0; i < droppedFiles.length; i++)
 		{
-				var progresshash = droppedFiles[i].lastModified+'-'+i;
-				formData.append('file', droppedFiles[i]);
-				var name = droppedFiles[i].name;
-				var param = '?website_id='+website_id+'&name='+name+'&path='+path+'&folder_id='+folder_id+'&progresshash='+progresshash;
-				ajaxUploadFile(formData, param, progresshash);
+			var progresshash = droppedFiles[i].lastModified+'-'+i;
+			formData.append('file', droppedFiles[i]);
+			var name = droppedFiles[i].name;
+			var param = '?id='+id+'&path='+path+'&name='+name;
+			ajaxUploadFile(formData, param, progresshash);
 		}
 	}
 
@@ -94,7 +94,7 @@ $(document).ready(function()
 
 	function ajaxUploadFile(formData, param, progresshash) {
 		$.ajax({
-			url: base_url+'PClouds/uploadFile'+param,
+			url: base_url+'LocalFileManagers/uploadFile'+param,
 			dataType: 'text',
 			type: 'post',
 			data: formData,
@@ -127,9 +127,8 @@ $(document).ready(function()
 
 	$("#dropFiles").on('drop', function(event)
 	{
-			var website_id = $(this).data('website_id');
+			var id = $(this).data('id');
 			var path = $(this).data('path');
-			var folder_id = $(this).data('folder_id');
 			event.preventDefault();
 			event.stopPropagation();
 			if(event.originalEvent.dataTransfer){
@@ -137,7 +136,7 @@ $(document).ready(function()
 					var droppedFiles = event.originalEvent.dataTransfer.files;
 					listFileUpload(droppedFiles);
 					setTimeout(function(){
-						uploadFile(path, folder_id, droppedFiles, website_id);
+						uploadFile(id, path, droppedFiles);
 					}, 100);
 				}
 			}
@@ -163,9 +162,8 @@ $(document).ready(function()
 
 		// change inner text
 		$fileInput.on('change', function() {
-			var website_id = $(this).data('website_id');
+			var id = $(this).data('id');
 			var path = $(this).data('path');
-			var folder_id = $(this).data('folder_id');
 			var files = $(this)[0].files;
 			var filesCount = files.length;
 			if (filesCount <= 100) {
@@ -179,7 +177,7 @@ $(document).ready(function()
 				var verify_upload = trFileUpload(files);
 				if (verify_upload) {
 					setTimeout(function(){
-							uploadFile(path, folder_id, files, website_id);
+							uploadFile(id, path, files);
 					}, 100);
 				} else {
 					alert('each file must be smaller that 10MB and total size of all file must be lower than 40MB.');
@@ -189,7 +187,7 @@ $(document).ready(function()
 				alert('We are allowed only 100file per upload.');
 			}
 		});
-		$("#checkAll").click(function(){
+		$("#checkAll").click(function() {
 			$('input:checkbox').not(this).prop('checked', this.checked);
 		});
 		$("input:checkbox").click(function(){
@@ -198,15 +196,15 @@ $(document).ready(function()
 		$("#deleteAllFile").click(function(event){
 //			event.preventDefault();
 			$("input:checkbox[type=checkbox]:checked").each(function(){
-				var website_id = $(this).data('website_id');
-				var path = $(this).data('path');
+				var id = $(this).data('id');
 				var type = $(this).data('type');
-				var id = $(this).val();
+				var path = $(this).data('path');
+				var name = $(this).data('name');
 				var formData = new FormData();
 				if (path && type) {
-					formData.append(type, id);
+					formData.append('id', id);
 					formData.append("path", path);
-					formData.append("website_id", website_id);
+					formData.append("name", name);
 					ajaxDeletFileOrFolder(formData, type);
 				}
 			});
@@ -214,13 +212,13 @@ $(document).ready(function()
 	
 		function ajaxDeletFileOrFolder(formData, type) {
 			var sub_url = '';
-			if (type === 'folderid') {
+			if (type === 'folder') {
 				sub_url = 'ajaxDeleteFolder';
-			} else if (type === 'fileid') {
+			} else if (type === 'image') {
 				sub_url = 'ajaxDeleteFile';
 			}
 			$.ajax({
-				url: base_url+'PClouds/'+sub_url,
+				url: base_url+'LocalFileManagers/'+sub_url,
 				dataType: 'text',
 				type: 'post',
 				data: formData,

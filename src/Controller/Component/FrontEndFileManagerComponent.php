@@ -92,43 +92,50 @@ class FrontEndFileManagerComponent extends Component
 		return $response;
 	}
 
-	public function uploadFile($token = null, $request = null, $file = [])
+	public function uploadFile($request = [])
 	{
-		$url = $this->api_url.'/pclouds/uploadfile';
-		return $this->openFileUrl($token, $url, $request, $file);
+		$web_url = $request['web_url'];
+		unset($request['web_url']);
+		$url = $web_url.'files/upload-file';
+		$http_method = 'POST';
+		return $this->openFileUrl($url, $request, $http_method);
 	}
-	private function openFileUrl($token = null, $url = null, $param = [], $file = [])
+
+	private function openFileUrl($url = null, $request = [], $http_method = null)
 	{
-		if (!$url || !$param) {
+		
+		if (!$url || !$request) {
 			return [];
 		}
-		$str_param = http_build_query($param);
 		$header = [
 			'Content-Type: multipart/form-data',
-			'Authorization: Bearer '.$token
 		];
+		
 		$file_data['file'] = [
-			'tmp_name' => $file['file']->getFile(),
-			'error' => $file['file']->getError(),
-			'name' => $file['file']->getClientFilename(),
-			'type' => $file['file']->getClientMediaType(),
-			'size' => $file['file']->getSize(),
+			'tmp_name' => $request['file']->getFile(),
+			'error' => $request['file']->getError(),
+			'name' => $request['file']->getClientFilename(),
+			'type' => $request['file']->getClientMediaType(),
+			'size' => $request['file']->getSize(),
 		];
-		$cfile = ['file' => new \CURLFile(
+		$cfile = [
+			'path' => $request['path'],
+			'secret_key' => $request['secret_key'],
+			'file' => new \CURLFile(
 				$file_data['file']['tmp_name'],
 				$file_data['file']['type'],
 				$file_data['file']['name'])
 			];
 		$curl = curl_init();
 		curl_setopt_array($curl, [
-			CURLOPT_URL => $url.'?'.$str_param,
+			CURLOPT_URL => $url,
 			CURLOPT_RETURNTRANSFER => true,
 			CURLOPT_ENCODING => '',
 			CURLOPT_MAXREDIRS => 10,
 			CURLOPT_TIMEOUT => 0,
 			CURLOPT_FOLLOWLOCATION => true,
 			CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-			CURLOPT_CUSTOMREQUEST => 'POST',
+			CURLOPT_CUSTOMREQUEST => $http_method,
 			CURLOPT_HTTPHEADER => $header,
 			CURLOPT_POSTFIELDS => $cfile,
 		]);

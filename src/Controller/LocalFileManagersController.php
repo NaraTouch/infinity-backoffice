@@ -219,7 +219,7 @@ class LocalFileManagersController extends AppController
 					$list_request = [
 						'secret_key' => $local_file_acc->Data[0]->secret_key,
 						'web_url' => $local_file_acc->Data[0]->web_url,
-						'path' => $query['dir_path'].$query['name'],
+						'path' => $query['dir_path'].'\\'.$query['name'],
 					];
 					$response = $this->FrontEndFileManager->deleteFolder($list_request);
 					if($response){
@@ -294,7 +294,7 @@ class LocalFileManagersController extends AppController
 	{
 		$folder = new FolderForm();
 		$query = $this->request->getQuery();
-		$name = $query['dir_path'].$query['name'];
+		$name = $query['dir_path'].'\\'.$query['name'];
 		$folder->setData(['name' => $name]);
 		if ($this->request->is('post')) {
 			$data = $this->request->getData();
@@ -341,7 +341,7 @@ class LocalFileManagersController extends AppController
 	{
 		$folder = new FolderForm();
 		$query = $this->request->getQuery();
-		$name = $query['dir_path'].$query['name'];
+		$name = $query['name'];
 		$folder->setData(['name' => $name]);
 		if ($this->request->is('post')) {
 			$data = $this->request->getData();
@@ -400,7 +400,7 @@ class LocalFileManagersController extends AppController
 					$list_request = [
 						'secret_key' => $local_file_acc->Data[0]->secret_key,
 						'web_url' => $local_file_acc->Data[0]->web_url,
-						'path' => $data['name'],
+						'path' => $query['path'].'\\'.$data['name'],
 					];
 					$response = $this->FrontEndFileManager->createFolder($list_request);
 					if($response){
@@ -428,5 +428,185 @@ class LocalFileManagersController extends AppController
 			$this->goingToUrlWithParam('LocalFileManagers','fileManager', $query);
 		}
 		$this->set(['folder' => $folder]);
+	}
+
+	public function uploadFile()
+	{
+		if ($this->request->is('post')) {
+			$http_status = 404;
+			$message = '';
+			$data = [];
+			$error = [];
+			if ($this->request->is('ajax')) {
+				$param = $this->request->getQuery();
+				$file= $this->request->getData();
+				$request = ['id' => $param['id']];
+				$local_file_acc = $this->LocalFileManager->getLocalFileManagerById($this->token, $request);
+				if($local_file_acc){
+					$local_file_acc = json_decode($local_file_acc);
+					if ($local_file_acc && $local_file_acc->ErrorCode == '200') {
+						$list_request = [
+							'secret_key' => $local_file_acc->Data[0]->secret_key,
+							'web_url' => $local_file_acc->Data[0]->web_url,
+							'path' => $param['path'],
+							'file' => $file['file'],
+						];
+						$response = $this->FrontEndFileManager->uploadFile($list_request);
+						if($response){
+							$response = json_decode($response);
+							if ($response && $response->ErrorCode == '200') {
+								$http_status = $response->ErrorCode;
+								$message = $response->Message;
+								$data = $response->Data;
+								$error = $response->Error;
+							} else {
+								$error = $response->Error;
+								$http_status = $response->ErrorCode;
+								$message = $response->Message;
+							}
+						}
+					}
+				}
+			} else {
+				$http_status = 404;
+				$message = 'Request Not found!!!';
+			}
+			$response = [
+				'ErrorCode' => $http_status,
+				'Message' => $message,
+				'Data' => $data,
+				'Error' => $error
+			];
+			return $this->response->withType('application/json')
+				->withStatus($http_status)
+				->withStringBody(json_encode($response));
+		}
+	}
+	
+	public function ajaxDeleteFolder()
+	{
+		if ($this->request->is('post')) {
+			$http_status = 404;
+			$message = '';
+			$data = [];
+			$error = [];
+			if ($this->request->is('ajax')) {
+				$form_data = $this->request->getData();
+				$request = ['id' => $form_data['id']];
+				$local_file_acc = $this->LocalFileManager->getLocalFileManagerById($this->token, $request);
+				$param = [
+					'id' => $form_data['id'],
+					'path' => $form_data['path'],
+				];
+				if($local_file_acc){
+					$local_file_acc = json_decode($local_file_acc);
+					if ($local_file_acc && $local_file_acc->ErrorCode == '200') {
+						$list_request = [
+							'secret_key' => $local_file_acc->Data[0]->secret_key,
+							'web_url' => $local_file_acc->Data[0]->web_url,
+							'path' => $form_data['path'].'\\'.$form_data['name'],
+						];
+						$response = $this->FrontEndFileManager->deleteFolder($list_request);
+						if($response){
+							$response = json_decode($response);
+							if ($response && $response->ErrorCode == '200') {
+								$http_status = $response->ErrorCode;
+								$message = $response->Message;
+								$data = $response->Data;
+								if (isset($response->Error)) {
+									$error = $response->Error;
+								}
+								$this->Flash->success($response->Message);
+							} else {
+								if (isset($response->Error)) {
+									$error = $response->Error;
+								}
+								$http_status = 200;
+								$message = $response->Message;
+								$this->Flash->error($response->Message);
+							}
+						}
+					}
+				}
+				$this->goingToUrlWithParam('LocalFileManagers','fileManager', $param);
+			} else {
+				$http_status = 404;
+				$message = 'Request Not found!!!';
+			}
+			$response = [
+				'ErrorCode' => $http_status,
+				'Message' => $message,
+				'Data' => $data,
+				'Error' => $error
+			];
+			return $this->response->withType('application/json')
+				->withStatus($http_status)
+				->withStringBody(json_encode($response));
+			
+		}
+	}
+	
+	public function ajaxDeleteFile()
+	{
+		if ($this->request->is('post')) {
+			$http_status = 404;
+			$message = '';
+			$data = [];
+			$error = [];
+			if ($this->request->is('ajax')) {
+				$form_data = $this->request->getData();
+				$request = ['id' => $form_data['id']];
+				$local_file_acc = $this->LocalFileManager->getLocalFileManagerById($this->token, $request);
+				$param = [
+					'id' => $form_data['id'],
+					'path' => $form_data['path'],
+				];
+				if($local_file_acc){
+					$local_file_acc = json_decode($local_file_acc);
+					if ($local_file_acc && $local_file_acc->ErrorCode == '200') {
+						$list_request = [
+							'secret_key' => $local_file_acc->Data[0]->secret_key,
+							'web_url' => $local_file_acc->Data[0]->web_url,
+							'path' => $form_data['path'],
+							'name' => $form_data['name']
+						];
+						$response = $this->FrontEndFileManager->deleteFile($list_request);
+						if($response){
+							$response = json_decode($response);
+							if ($response && $response->ErrorCode == '200') {
+								$http_status = $response->ErrorCode;
+								$message = $response->Message;
+								$data = $response->Data;
+								if (isset($response->Error)) {
+									$error = $response->Error;
+								}
+								$this->Flash->success($response->Message);
+							} else {
+								if (isset($response->Error)) {
+									$error = $response->Error;
+								}
+								$http_status = 200;
+								$message = $response->Message;
+								$this->Flash->error($response->Message);
+							}
+						}
+					}
+				}
+				$this->goingToUrlWithParam('LocalFileManagers','fileManager', $param);
+			} else {
+				$http_status = 404;
+				$message = 'Request Not found!!!';
+			}
+			$response = [
+				'ErrorCode' => $http_status,
+				'Message' => $message,
+				'Data' => $data,
+				'Error' => $error
+			];
+			return $this->response->withType('application/json')
+				->withStatus($http_status)
+				->withStringBody(json_encode($response));
+			
+		}
 	}
 }
